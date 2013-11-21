@@ -1,0 +1,40 @@
+{
+	"patternName": "myFirstPattern",
+	// USES % for door left position & size
+	"pattern": [
+	{
+		// POOM
+		"stepID" : 1,
+		"doors" : [{
+			"position": 20,
+			"size": 20
+		}, {
+			"position": 60,
+			"size": 20	
+		}]
+	}, {
+		// CHACK
+		"stepID" : 5,
+		"doors" : [{
+			"position": 40,
+			"size": 20
+		}]
+	}, {
+		// POOM
+		"stepID" : 9,
+		"doors" : [{
+			"position": 20,
+			"size": 20
+		}, {
+			"position": 60,
+			"size": 20	
+		}]
+	}, {
+		// CHACK
+		"stepID" : 13,
+		"doors" : [{
+			"position": 40,
+			"size": 20
+		}]
+	}] 
+}

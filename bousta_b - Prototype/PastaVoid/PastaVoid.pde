@@ -22,9 +22,10 @@ private int lastMillis = 0;
 
 void setup() {
   config = new Config(loadJSONObject("config.json"));
+  config.dump();
   
   minim = new Minim(this);
-  player = minim.loadFile(config.getMusicPath(0));
+  player = minim.loadFile("music" + java.io.File.separator + config.getMusicPath(0));
   
   bpm = 94.f;
   bpms = (bpm / 60.f) / 1000.f;

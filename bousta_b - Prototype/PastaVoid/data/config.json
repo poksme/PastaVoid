@@ -1,7 +1,7 @@
 {
-	"levels" : [ {
-		"music": "music/DefiantOrder.mp3",
-		"script" : "music_script/DefiantOrder.json"
+	"levels" : [{
+		"music": "defiant_order.mp3",
+		"script" : "defiant_order.json"
 		}],
 	"version" : "0.1a"
 }
