@@ -1,6 +1,5 @@
 import org.multiply.processing.*;
 
-
 import ddf.minim.spi.*;
 import ddf.minim.signals.*;
 import ddf.minim.*;
@@ -11,16 +10,22 @@ import ddf.minim.effects.*;
 Minim minim;
 AudioPlayer player;
 AudioInput input;
+
 float bpm;
 float bpms;
 boolean poom = false;
+
+Config config;
 
 private TimedEventGenerator changeColor;
 private int lastMillis = 0;
 
 void setup() {
+  config = new Config(loadJSONObject("config.json"));
+  
   minim = new Minim(this);
-  player = minim.loadFile("DefiantOrder.mp3");
+  player = minim.loadFile(config.getMusicPath(0));
+  
   bpm = 94.f;
   bpms = (bpm / 60.f) / 1000.f;
   changeColor = new TimedEventGenerator(
