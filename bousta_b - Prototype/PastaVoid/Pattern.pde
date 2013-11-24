@@ -8,7 +8,12 @@ class Pattern {
     }
   }
   
-  void dump() {
-    println("Contains : " + _steps.size() + " steps");
+  String toString() {
+    String ret = "[Pattern]";
+    ret += " Steps number: " + _steps.size();
+    for (int i = 0; i < _steps.size(); i++) {
+      ret += "\n\t\t\t\t" + _steps.get(i);
+    }
+    return ret;
   }
 }

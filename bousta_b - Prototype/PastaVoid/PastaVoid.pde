@@ -14,6 +14,7 @@ AudioInput input;
 float bpm;
 float bpms;
 boolean poom = false;
+PrintWriter debug;
 
 Config config;
 
@@ -21,8 +22,11 @@ private TimedEventGenerator changeColor;
 private int lastMillis = 0;
 
 void setup() {
+  debug = createWriter("log.txt");
   config = new Config(loadJSONObject("config.json"));
-  config.dump();
+  debug.println(config);
+  debug.flush();
+  debug.close();
   
   minim = new Minim(this);
   player = minim.loadFile("music" + java.io.File.separator + config.getMusicPath(0));

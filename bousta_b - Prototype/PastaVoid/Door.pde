@@ -6,4 +6,10 @@ class Door {
     _position = position;
     _size = size;
   }
+
+  String toString() {
+    String ret = "[Door]";
+    ret += " Position: " + _position + ", Size: " + _size;
+    return ret;
+  }
 }

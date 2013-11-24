@@ -8,9 +8,10 @@ class  LevelPart {
     _endBar = endBar;
     _pattern = pattern;
   }
-  
-  void  dump() {
-    println("Start Bar: " + _startBar + ", End Bar: " + _endBar + ", Pattern Info: ");
-    _pattern.dump();
+
+  String toString() {
+    String ret = "[Level Part]";
+    ret += " Start Bar: " + _startBar + ", End Bar: " + _endBar + ", Pattern: " + "\n\t\t\t" + _pattern;
+    return ret;
   }
 }

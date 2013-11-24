@@ -13,7 +13,13 @@ class Step {
     }
   }
   
-  void dump() {
-    println("Step Id: " + _stepId);
+
+ String toString() {
+    String ret = "[Step]";
+    ret += " ID: " + _stepId;
+    for (int i = 0; i < _doors.size(); i++) {
+      ret += "\n\t\t\t\t\t" + _doors.get(i);
+    }
+    return ret;
   }
 }

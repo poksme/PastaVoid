@@ -21,10 +21,12 @@ class Config {
     return _levels.get(trackNumber).getScriptPath();
   }
   
-  void dump() {
-    println("Version: " + _version + "\n");
+  String toString() {
+    String ret = "[Config]";
+    ret += " Version: " + _version + ", Level number : " + _levels.size();
     for (int i = 0; i < _levels.size(); i++) {
-      _levels.get(i).dump();
+      ret += "\n\t" + _levels.get(i);
     }
+    return ret;
   }
 }

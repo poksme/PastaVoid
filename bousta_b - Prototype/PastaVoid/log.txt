@@ -1,0 +1,63 @@
+[Config] Version: 0.1a, Level number : 1
+	[Level] Music Path: defiant_order.mp3, Script Path: defiant_order.json, Name: Defiant Order, Artist: Birdy Nam Nam, BPM: 94.0, Pattern Number: 4
+		[Level Part] Start Bar: 1, End Bar: 7, Pattern: 
+			[Pattern] Steps number: 4
+				[Step] ID: 1
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 5
+					[Door] Position: 40, Size: 20
+				[Step] ID: 9
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 13
+					[Door] Position: 40, Size: 20
+		[Level Part] Start Bar: 8, End Bar: 8, Pattern: 
+			[Pattern] Steps number: 4
+				[Step] ID: 1
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 5
+					[Door] Position: 40, Size: 20
+				[Step] ID: 9
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 13
+					[Door] Position: 40, Size: 20
+		[Level Part] Start Bar: 9, End Bar: 11, Pattern: 
+			[Pattern] Steps number: 4
+				[Step] ID: 1
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 5
+					[Door] Position: 40, Size: 20
+				[Step] ID: 9
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 13
+					[Door] Position: 40, Size: 20
+		[Level Part] Start Bar: 12, End Bar: 15, Pattern: 
+			[Pattern] Steps number: 4
+				[Step] ID: 1
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 5
+					[Door] Position: 40, Size: 20
+				[Step] ID: 9
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 13
+					[Door] Position: 40, Size: 20
+	[Pattern Library] Library size: 1
+		[Key Value Pair] Key: myFirstPattern, Value:
+			[Pattern] Steps number: 4
+				[Step] ID: 1
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 5
+					[Door] Position: 40, Size: 20
+				[Step] ID: 9
+					[Door] Position: 20, Size: 20
+					[Door] Position: 60, Size: 20
+				[Step] ID: 13
+					[Door] Position: 40, Size: 20
