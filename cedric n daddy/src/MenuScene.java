@@ -17,12 +17,16 @@ public class MenuScene implements IScene {
 
     @Override
     public void update() {
-
+        if (PastaVoid.pApplet.keyPressed && PastaVoid.pApplet.key == 'a') {
+            GameScene.loadGameScene();
+            PastaVoid.pApplet.game.getSceneManager().removeScene(this);
+        }
     }
 
     @Override
     public void draw() {
-
+        PastaVoid.pApplet.background(255);
+        PastaVoid.pApplet.line(0, 0, 500, 500);
     }
 
     @Override

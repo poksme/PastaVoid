@@ -43,12 +43,12 @@ public class SceneManager {
 
         //deleting the scene that should be deleted
         for (int i = 0; i < this.toDelete.size(); ++i) {
-            this.scenes.remove(this.toAdd.get(i));
+            this.scenes.remove(this.toDelete.get(i));
         }
         this.toDelete.clear();
 
         //update all scenes
-        for (int i = this.scenes.size(); i > 0; --i) {
+        for (int i = 0; i < this.scenes.size(); ++i) {
             if (this.scenes.get(i).isUpdated()) {
                 this.scenes.get(i).update();
             }
@@ -58,7 +58,7 @@ public class SceneManager {
     public void        draw() {
 
         //draw all scenes
-        for (int i = this.scenes.size(); i > 0; --i) {
+        for (int i = 0; i < this.scenes.size(); ++i) {
             if (this.scenes.get(i).isDrawn()) {
                 this.scenes.get(i).draw();
             }

@@ -13,6 +13,7 @@ public class Game {
         PastaVoid.pApplet.size(800, 600);
         this.sceneManager = new SceneManager();
         this.getSceneManager().start();
+//        this.getSceneManager().addScene(new TestScene());
         this.getSceneManager().addScene(new MenuScene());
         //create GameScene
         //create GUiGameScene (GameScene)
