@@ -1,0 +1,35 @@
+{
+	"patternName": "myFirstPattern",
+	"pattern": [
+	{
+        "stepID" : 1,
+        "doors" : [{
+                "position": 20,
+                "size": 20
+        }, {
+                "position": 60,
+                "size": 20        
+        }]
+	}, {
+        "stepID" : 5,
+        "doors" : [{
+                "position": 40,
+                "size": 20
+        }]
+	}, {
+        "stepID" : 9,
+        "doors" : [{
+                "position": 20,
+                "size": 20
+        }, {
+                "position": 60,
+                "size": 20        
+        }]
+	}, {
+        "stepID" : 13,
+        "doors" : [{
+                "position": 40,
+                "size": 20
+        }]
+	}] 
+}
