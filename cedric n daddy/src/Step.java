@@ -5,14 +5,16 @@
  * Time: 11:29 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Wall {
+public class Step {
     public  int     x;
     public  int     y;
     public  int     holeSize;
+    public boolean  isWall;
 
-    public Wall(int x, int y, int holeSize) {
+    public Step(int x, int y, int holeSize, boolean isWall) {
         this.x = x;
         this.y = y;
         this.holeSize = holeSize;
+        this.isWall = isWall;
     }
 }
