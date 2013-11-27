@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PastaVoid:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PastaVoid_jar</output-path>
+    <root id="archive" name="PastaVoid.jar">
+      <element id="module-output" name="PastaVoid" />
+      <element id="library" level="project" name="libraries" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core/library/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/minim/library/minim.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/minim/library/jsminim.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/minim/library/mp3spi1.9.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/minim/library/jl1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/minim/library/tritonus_share.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/minim/library/tritonus_aos.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core/library/gluegen-rt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core/library/jogl-all.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/launch4j/lib/xstream.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/launch4j/launch4j.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/serial/library/serial.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/serial/library/jssc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/net/library/net.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/dxf/dxfviewer.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/dxf/library/dxf.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/video/library/gstreamer-java.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/video/library/video.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/modes/java/libraries/video/library/jna.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/ant-launcher.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/ant.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/antlr.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/com.ibm.icu_4.4.2.v20110823.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/jdi.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/jdimodel.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/jna.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/org-netbeans-swing-outline.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/org.eclipse.osgi_3.8.1.v20120830-144521.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/pde.jar" path-in-jar="/" />
+      <element id="dir-copy" path="/Applications/Processing.app/Contents" />
+      <element id="dir-copy" path="$PROJECT_DIR$/data" />
+      <element id="library" level="application" name="core" />
+    </root>
+  </artifact>
+</component>

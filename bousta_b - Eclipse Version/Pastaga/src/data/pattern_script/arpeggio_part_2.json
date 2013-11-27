@@ -1,0 +1,29 @@
+{
+	"patternName": "arpeggioPart2",
+	"pattern": [
+	{
+        "stepID" : 0,
+        "doors" : [{
+                "position": 90,
+                "size": 20
+                }]
+        }, {
+        "stepID" : 7,
+        "doors" : [{
+                "position": 54,
+                "size": 20
+                }]
+        }, {
+        "stepID" : 8,
+        "doors" : [{
+                "position": 48,
+                "size": 20
+                }]
+        }, {
+        "stepID" : 15,
+        "doors" : [{
+                "position": 12,
+                "size": 20
+                }]
+        }] 
+}

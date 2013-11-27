@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_cedric_n_daddy" default="compile.module.cedric_n_daddy">
+  <dirname property="module.cedric_n_daddy.basedir" file="${ant.file.module_cedric_n_daddy}"/>
+  
+  <property name="module.jdk.home.cedric_n_daddy" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.cedric_n_daddy" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.cedric_n_daddy" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.cedric_n_daddy" value="${compiler.args}"/>
+  
+  <property name="cedric_n_daddy.output.dir" value="${module.cedric_n_daddy.basedir}/out/production/cedric n daddy"/>
+  <property name="cedric_n_daddy.testoutput.dir" value="${module.cedric_n_daddy.basedir}/out/test/cedric n daddy"/>
+  
+  <path id="cedric_n_daddy.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cedric_n_daddy.module.production.classpath">
+    <path refid="${module.jdk.classpath.cedric_n_daddy}"/>
+    <path refid="library.core.classpath"/>
+    <path refid="library.libraries.classpath"/>
+  </path>
+  
+  <path id="cedric_n_daddy.runtime.production.module.classpath">
+    <pathelement location="${cedric_n_daddy.output.dir}"/>
+    <path refid="library.core.classpath"/>
+    <path refid="library.libraries.classpath"/>
+  </path>
+  
+  <path id="cedric_n_daddy.module.classpath">
+    <path refid="${module.jdk.classpath.cedric_n_daddy}"/>
+    <pathelement location="${cedric_n_daddy.output.dir}"/>
+    <path refid="library.core.classpath"/>
+    <path refid="library.libraries.classpath"/>
+  </path>
+  
+  <path id="cedric_n_daddy.runtime.module.classpath">
+    <pathelement location="${cedric_n_daddy.testoutput.dir}"/>
+    <pathelement location="${cedric_n_daddy.output.dir}"/>
+    <path refid="library.core.classpath"/>
+    <path refid="library.libraries.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.cedric_n_daddy">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cedric_n_daddy">
+    <patternset refid="excluded.from.module.cedric_n_daddy"/>
+  </patternset>
+  
+  <path id="cedric_n_daddy.module.sourcepath">
+    <dirset dir="${module.cedric_n_daddy.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.cedric_n_daddy" depends="compile.module.cedric_n_daddy.production,compile.module.cedric_n_daddy.tests" description="Compile module cedric n daddy"/>
+  
+  <target name="compile.module.cedric_n_daddy.production" depends="register.custom.compilers" description="Compile module cedric n daddy; production classes">
+    <mkdir dir="${cedric_n_daddy.output.dir}"/>
+    <javac2 destdir="${cedric_n_daddy.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.cedric_n_daddy}/javac">
+      <compilerarg line="${compiler.args.cedric_n_daddy}"/>
+      <bootclasspath refid="cedric_n_daddy.module.bootclasspath"/>
+      <classpath refid="cedric_n_daddy.module.production.classpath"/>
+      <src refid="cedric_n_daddy.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.cedric_n_daddy"/>
+    </javac2>
+    
+    <copy todir="${cedric_n_daddy.output.dir}">
+      <fileset dir="${module.cedric_n_daddy.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.cedric_n_daddy.tests" depends="register.custom.compilers,compile.module.cedric_n_daddy.production" description="compile module cedric n daddy; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cedric_n_daddy" description="cleanup module">
+    <delete dir="${cedric_n_daddy.output.dir}"/>
+    <delete dir="${cedric_n_daddy.testoutput.dir}"/>
+  </target>
+</project>
