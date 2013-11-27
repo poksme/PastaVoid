@@ -12,19 +12,19 @@
     <file path="/Scene.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1384823494154" ignored="false" />
     <file path="/Game.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385542434891" ignored="false" />
     <file path="/SceneManager.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1384824533361" ignored="false" />
-    <file path="/WallViewer.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385543473368" ignored="false" />
+    <file path="/WallViewer.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385553139505" ignored="false" />
     <file path="/Walls.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1384822775148" ignored="false" />
     <file path="/Wall.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1384822600226" ignored="false" />
     <file path="/MenuScene.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1384824492422" ignored="false" />
-    <file path="/StepManager.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385538687508" ignored="false" />
+    <file path="/StepManager.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385552993108" ignored="false" />
     <file path="/Door.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385537288217" ignored="false" />
-    <file path="/Step.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385537702707" ignored="false" />
+    <file path="/Step.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385551193400" ignored="false" />
     <file path="/Pattern.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385537693565" ignored="false" />
     <file path="/LevelPart.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385537784040" ignored="false" />
-    <file path="/Level.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385539672126" ignored="false" />
+    <file path="/Level.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385552271904" ignored="false" />
     <file path="/Config.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385540134311" ignored="false" />
     <file path="/Main.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385540152740" ignored="false" />
-    <file path="/TestScene.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385542568888" ignored="false" />
+    <file path="/TestScene.java" changelist="3b49dad8-0300-4a44-b134-c993dc6b8155" time="1385550582118" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -75,7 +76,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -94,30 +94,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StopWatch.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameEngine/StopWatch.java">
+      <file leaf-file-name="TestScene.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PastaGame/TestScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="30" column="29" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestScene.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PastaGame/TestScene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WallViewer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WallViewer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PastaGame/WallViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="64" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
+            <state line="22" column="38" selection-start="584" selection-end="584" vertical-scroll-proportion="0.5094737">
               <folding />
             </state>
           </provider>
@@ -126,16 +115,7 @@
       <file leaf-file-name="StepManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PastaGame/StepManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Config/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="5" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+            <state line="28" column="9" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,10 +126,8 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PastaGame/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="38" column="22" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,10 +141,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Level.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Config/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="34" selection-start="2892" selection-end="2892" vertical-scroll-proportion="1.0857843">
+            <state line="118" column="9" selection-start="4137" selection-end="4137" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pattern.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/Pattern.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,6 +172,17 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="StepInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/StepInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="16" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -193,22 +193,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Config/Step.java" />
-        <option value="$PROJECT_DIR$/src/Config/LevelPart.java" />
-        <option value="$PROJECT_DIR$/src/StepManager.java" />
         <option value="$PROJECT_DIR$/src/TestScene.java" />
         <option value="$PROJECT_DIR$/src/WallViewer.java" />
         <option value="$PROJECT_DIR$/src/PastaGame/PastaVoid.java" />
         <option value="$PROJECT_DIR$/src/GameEngine/StopWatch.java" />
         <option value="$PROJECT_DIR$/src/GameEngine/Rect.java" />
         <option value="$PROJECT_DIR$/src/PastaGame/MenuScene.java" />
-        <option value="$PROJECT_DIR$/src/Config/Level.java" />
         <option value="$PROJECT_DIR$/src/Config/Config.java" />
         <option value="$PROJECT_DIR$/src/PastaGame/Main.java" />
+        <option value="$PROJECT_DIR$/src/PastaGame/Game.java" />
         <option value="$PROJECT_DIR$/src/PastaGame/TestScene.java" />
+        <option value="$PROJECT_DIR$/src/Config/Step.java" />
+        <option value="$PROJECT_DIR$/src/Config/StepInfo.java" />
+        <option value="$PROJECT_DIR$/src/Config/Pattern.java" />
+        <option value="$PROJECT_DIR$/src/Config/Level.java" />
         <option value="$PROJECT_DIR$/src/PastaGame/StepManager.java" />
         <option value="$PROJECT_DIR$/src/PastaGame/WallViewer.java" />
-        <option value="$PROJECT_DIR$/src/PastaGame/Game.java" />
       </list>
     </option>
   </component>
@@ -260,7 +260,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -408,6 +407,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,10 +424,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -473,6 +474,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -498,19 +512,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -587,7 +588,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -604,8 +605,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.8487208" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.7217125" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27828747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.80428135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19571866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -707,21 +708,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/Step.java">
+    <entry file="file://$PROJECT_DIR$/src/Config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="44" column="5" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/Pattern.java">
+    <entry file="file://$PROJECT_DIR$/src/GameEngine/StopWatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="12" column="31" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameEngine/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PastaGame/TestScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="29" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -732,42 +743,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/Config/Pattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="5" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PastaGame/StepManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Config/StepInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PastaGame/TestScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
+        <state line="13" column="16" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PastaGame/WallViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="64" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameEngine/StopWatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,26 +770,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PastaGame/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameEngine/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+        <state line="38" column="22" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="34" selection-start="2892" selection-end="2892" vertical-scroll-proportion="1.0857843">
+        <state line="118" column="9" selection-start="4137" selection-end="4137" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PastaGame/StepManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PastaGame/WallViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="38" selection-start="584" selection-end="584" vertical-scroll-proportion="0.5094737">
+          <folding />
         </state>
       </provider>
     </entry>

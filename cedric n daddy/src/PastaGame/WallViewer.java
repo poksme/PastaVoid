@@ -20,8 +20,8 @@ public class WallViewer {
     private PVector     screenPosition;
     private int         sizeX;
     private int         sizeY;
-    float               farPlane = 0.6f;
-    float               nearPlane = 1.5f;
+    float               farPlane = 0.5f;
+    float               nearPlane = 1.0f;
     float               isoPlanX;
     private TestScene   parent;
     private float stepPerMilliSec;

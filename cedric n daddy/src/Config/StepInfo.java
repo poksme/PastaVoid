@@ -11,11 +11,11 @@ import java.util.ArrayList;
  * Time: 16:31
  * To change this template use File | Settings | File Templates.
  */
-public class Step {
+public class StepInfo {
     int stepId;
     ArrayList<Door> doors;
 
-    public Step(JSONObject doorInfo) {
+    public StepInfo(JSONObject doorInfo) {
         stepId = doorInfo.getInt("stepID");
 
         JSONArray doors = doorInfo.getJSONArray("doors");
@@ -27,7 +27,7 @@ public class Step {
     }
 
     public String toString() {
-        String ret = "[Step]";
+        String ret = "[StepInfo]";
         ret += " ID: " + stepId;
         for (int i = 0; i < doors.size(); i++) {
             ret += "\n\t\t\t\t\t" + doors.get(i);

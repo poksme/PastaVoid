@@ -32,7 +32,7 @@ public class Game {
         //create GUiGameScene (Gamescene)
 
         config = new Config(Main.pApplet.loadJSONObject("config.json"));
-        this.getSceneManager().addScene(new TestScene(config.getLevels().get(0).getBpm()));
+        this.getSceneManager().addScene(new TestScene(config));
 
         minim = new Minim(Main.pApplet);
         player = minim.loadFile("music" + java.io.File.separator + config.getLevels().get(0).getMusicPath());

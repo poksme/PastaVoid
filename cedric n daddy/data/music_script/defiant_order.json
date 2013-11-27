@@ -2,24 +2,25 @@
 	"name": "Defiant Order",
 	"artist" : "Birdy Nam Nam",
 	"bpm" : 94.0,
+	"barNumber": 84,
 	"patternPaths" : [
 		"my_first_pattern.json"
 	],
 	"patterns" : [{
-		"startBar": 1,
-		"endBar": 7,
+		"startBar": 0,
+		"endBar": 80,
 		"patternName" : "myFirstPattern"
 	}, {
-		"startBar": 8,
-		"endBar": 8,
+		"startBar": 81,
+		"endBar": 81,
 		"patternName" : "myFirstPattern"
 	}, {
-		"startBar": 9,
-		"endBar": 11,
+		"startBar": 82,
+		"endBar": 82,
 		"patternName" : "myFirstPattern"
 	}, {
-		"startBar": 12,
-		"endBar": 15,
+		"startBar": 83,
+		"endBar": 83,
 		"patternName" : "myFirstPattern"
 	}]
 }

@@ -1,5 +1,6 @@
 package PastaGame;
 
+import Config.Config;
 import GameEngine.IScene;
 import processing.core.PVector;
 
@@ -18,14 +19,16 @@ public class TestScene implements IScene {
     private StepManager walls;
     private WallViewer  viewer;
     private float       speed;
+    private Config      config;
 
-    public TestScene(float speed) {
-        this.speed = speed;
+    public TestScene(Config config) {
+        this.config = config;
+        this.speed = config.getLevels().get(0).getBpm();
     }
 
     @Override
     public void start() {
-        this.walls = new StepManager();
+        this.walls = new StepManager(this);
         this.walls.generate();
         this.viewer = new WallViewer(this, this.walls, 500, 500);
         this.viewer.setScreenPosition(new PVector(100, 0));
@@ -70,5 +73,9 @@ public class TestScene implements IScene {
 
     public void setSpeed(float speed) {
         this.speed = speed;
+    }
+
+    public Config getConfig() {
+        return config;
     }
 }

@@ -21,6 +21,7 @@ public class Level {
     String scriptPath;
     String name;
     String artist;
+    int barNumber;
     float bpm;
     ArrayList<LevelPart> patterns;
     HashMap<String, Pattern> patternLibrary;
@@ -34,6 +35,7 @@ public class Level {
         name = musicScript.getString("name");
         artist = musicScript.getString("artist");
         bpm = musicScript.getFloat("bpm");
+        barNumber = musicScript.getInt("barNumber");
         patternLibrary = new HashMap<String, Pattern>(patternPaths.size());
 
         // Create HashMap with pattern name / pattern object from the patternPaths
@@ -57,7 +59,7 @@ public class Level {
 
     public String toString() {
         String ret = "[Level]";
-        ret += " Music Path: " + musicPath + ", Script Path: " + scriptPath + ", Name: " + name + ", Artist: " + artist + ", BPM: " + bpm + ", Pattern Number: " + patterns.size();
+        ret += " Music Path: " + musicPath + ", Script Path: " + scriptPath + ", Name: " + name + ", Artist: " + artist + ", BPM: " + bpm + ", bar number" + barNumber + ", Pattern Number: " + patterns.size();
         for (int i = 0; i < patterns.size(); i++) {
             ret += "\n\t\t" + patterns.get(i);
         }
@@ -96,5 +98,42 @@ public class Level {
 
     public HashMap<String, Pattern> getPatternLibrary() {
         return patternLibrary;
+    }
+
+    public int getBarNumber() {
+        return barNumber;
+    }
+    public boolean hasDoor(int stepID) {
+        for (int i = 0; i < patterns.size(); i++) {
+            LevelPart tmpLp = patterns.get(i);
+            int barId = ((stepID) / 16);
+            if (barId >= tmpLp.getStartBar() && barId <= tmpLp.getEndBar()) {
+                Pattern tmpPat = tmpLp.getPattern();
+                int relativeStepId = ((stepID) % 16);
+                for (int j = 0; j < tmpPat.getStepInfos().size(); j++) {
+                    if (tmpPat.getStepInfos().get(j).getStepId() == relativeStepId) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public StepInfo getStepInfo(int stepID) {
+        for (int i = 0; i < patterns.size(); i++) {
+            LevelPart tmpLp = patterns.get(i);
+            int barId = (stepID / 16);
+            if (barId >= tmpLp.getStartBar() && barId <= tmpLp.getEndBar()) {
+                Pattern tmpPat = tmpLp.getPattern();
+                int relativeStepId = (stepID % 16);
+                for (int j = 0; j < tmpPat.getStepInfos().size(); j++) {
+                    if (tmpPat.getStepInfos().get(j).getStepId() == relativeStepId) {
+                        return tmpPat.getStepInfos().get(j);
+                    }
+                }
+            }
+        }
+        return null;
     }
 }

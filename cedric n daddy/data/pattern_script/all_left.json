@@ -2,6 +2,12 @@
 	"patternName": "allLeft",
 	"pattern": [
         {
+                "stepID" : 0,
+                "doors" : [{
+                        "position": 0,
+                        "size": 20
+                }]
+        }, {
                 "stepID" : 1,
                 "doors" : [{
                         "position": 0,
@@ -87,12 +93,6 @@
                 }]
         }, {
                 "stepID" : 15,
-                "doors" : [{
-                        "position": 0,
-                        "size": 20
-                }]
-        }, {
-                "stepID" : 16,
                 "doors" : [{
                         "position": 0,
                         "size": 20

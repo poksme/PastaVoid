@@ -12,25 +12,25 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Pattern {
-    ArrayList<Step> steps;
+    ArrayList<StepInfo> stepInfos;
 
     public Pattern(JSONArray patterns) {
-        steps = new ArrayList<Step>(patterns.size());
+        stepInfos = new ArrayList<StepInfo>(patterns.size());
         for (int i = 0; i < patterns.size(); i++) {
-            steps.add(new Step(patterns.getJSONObject(i)));
+            stepInfos.add(new StepInfo(patterns.getJSONObject(i)));
         }
     }
 
     public String toString() {
         String ret = "[Pattern]";
-        ret += " Steps number: " + steps.size();
-        for (int i = 0; i < steps.size(); i++) {
-            ret += "\n\t\t\t\t" + steps.get(i);
+        ret += " Steps number: " + stepInfos.size();
+        for (int i = 0; i < stepInfos.size(); i++) {
+            ret += "\n\t\t\t\t" + stepInfos.get(i);
         }
         return ret;
     }
 
-    public ArrayList<Step> getSteps() {
-        return steps;
+    public ArrayList<StepInfo> getStepInfos() {
+        return stepInfos;
     }
 }
