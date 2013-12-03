@@ -1,6 +1,8 @@
 Player player;
 
 public void setup(){
+  frameRate(30);
+  registerMethod("keyEvent", this);  //keyboad handler
   size(800, 480);
   smooth();
   player = new Player();
@@ -14,10 +16,10 @@ public void keyEvent(KeyEvent e)
           
              break;
           case LEFT:
-          player.move(LEFT);
+          player.findMove(LEFT);
             break;
           case RIGHT:
-           player._posX += player._speed;
+          player.findMove(RIGHT);
            break;
       }
   }

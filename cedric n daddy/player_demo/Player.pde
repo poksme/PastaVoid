@@ -6,27 +6,39 @@ class Player {
   float  _sizeY;
   String  _effect; //(enum)
   String  _effectList[] = {"NONE", "REVERSE"};
+  float   _easing = 0.1;
+  float   _targetX;
+  float   _dx;
   
   Player() {
+    
     _posX = width/2;
-    _speed = 1;
+    _speed = 10.0f;
     _scale = 1;
     _sizeX = 50;
     _sizeY = 50;
     _effect = "NONE";
+     _targetX = width/2;
   }
   
   void update() {
-    _posX = mouseX;
+    //_posX = mouseX;
+    //_speed += 10.f;
+    _dx = _targetX - _posX;
+    if(abs(_dx) > 1) {
+      _posX += _dx * _easing;
+    }
   }
   
-  void move(int direction) {
+  void findMove(int direction) {
         //tableaau[_effect] ==>Appel bonne fonction move  } 
-        if (_effect == "NONE") {
-          
+        if (_effect == "NONE")
+          movePlayer(direction);
+         else if (_effect == "ELASTIC") {
+          moveElastic(direction);
         }
         else if (_effect == "REVERSE") {
-          
+          moveReverse(direction);
         }
   }
   
@@ -34,17 +46,36 @@ class Player {
   {
      _effect = effect;
   }
-  
-  void moveReverse(int direction) {
+   void moveElastic(int direction) {
+    float    speed = 10.0f;
       if (direction == LEFT){
-        //Verifie collision
+        _posX += speed;
       }
       else if (direction == RIGHT) {
-        //Verifie collision
+        _posX -= speed;
+      }   
+  }
+   void movePlayer(int direction) {
+    float    speed = 10.0f;
+    if (direction == LEFT){
+        _targetX += speed;
+      }
+      else if (direction == RIGHT) {
+        _targetX -= speed;
+      }   
+  }
+  
+  void moveReverse(int direction) {
+    float    speed = 6.0f;
+      if (direction == LEFT){
+        _posX += speed;
+      }
+      else if (direction == RIGHT) {
+        _posX -= speed;
       }   
   }
   
   void draw() {
-    ellipse(_posX, 400, _sizeX * _scale, _sizeY * _scale);
+     ellipse(_posX, 400, _sizeX * _scale, _sizeY * _scale);
   }
 }
