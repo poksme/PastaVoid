@@ -5,8 +5,8 @@ class Player {
   float  _sizeX;
   float  _sizeY;
   String  _effect; //(enum)
-  String  _effectList[] = {"NONE", "REVERSE"};
-  float   _easing = 0.1;
+  String  _effectList[] = {"NONE", "REVERSE", "ELASTIC"};
+  float   _easing = 0.2;
   float   _targetX;
   float   _dx;
   
@@ -17,7 +17,7 @@ class Player {
     _scale = 1;
     _sizeX = 50;
     _sizeY = 50;
-    _effect = "NONE";
+    _effect = "ELASTIC";
      _targetX = width/2;
   }
   
@@ -31,7 +31,9 @@ class Player {
   }
   
   void findMove(int direction) {
-        //tableaau[_effect] ==>Appel bonne fonction move  } 
+      if (canMove(direction) == false)
+        return;
+        //tableaau[_effect] ==>Appel bonne fonction move  }
         if (_effect == "NONE")
           movePlayer(direction);
          else if (_effect == "ELASTIC") {
@@ -42,36 +44,48 @@ class Player {
         }
   }
   
+  boolean  canMove(int direction) {
+    if (_effect != "REVERSE" && direction == LEFT && (_targetX - (_sizeX * _scale / 2)) >= 0
+      ||_effect != "REVERSE" && direction == RIGHT && (_targetX + (_sizeX * _scale / 2)) <= width
+      || _effect == "REVERSE" && direction == RIGHT && (_targetX - (_sizeX * _scale / 2)) >= 0
+      ||_effect == "REVERSE" && direction == LEFT && (_targetX + (_sizeX * _scale / 2)) <= width)
+     return true;
+    else
+     return false;
+
+  }
+  
   void setEffect(String effect)
   {
      _effect = effect;
   }
-   void moveElastic(int direction) {
-    float    speed = 10.0f;
+  
+  void moveElastic(int direction) {
+    float    speed = 50.0f;
       if (direction == LEFT){
-        _posX += speed;
+        _posX -= speed;
       }
       else if (direction == RIGHT) {
-        _posX -= speed;
+        _posX += speed;
       }   
   }
-   void movePlayer(int direction) {
+  void movePlayer(int direction) {
+    float    speed = 10.0f;
+    if (direction == LEFT){
+        _targetX -= speed;
+      }
+      else if (direction == RIGHT) {
+        _targetX += speed;
+      }   
+  }
+  
+  void moveReverse(int direction) {
     float    speed = 10.0f;
     if (direction == LEFT){
         _targetX += speed;
       }
       else if (direction == RIGHT) {
         _targetX -= speed;
-      }   
-  }
-  
-  void moveReverse(int direction) {
-    float    speed = 6.0f;
-      if (direction == LEFT){
-        _posX += speed;
-      }
-      else if (direction == RIGHT) {
-        _posX -= speed;
       }   
   }
   
