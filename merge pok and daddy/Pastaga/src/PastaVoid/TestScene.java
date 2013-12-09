@@ -44,6 +44,7 @@ public class TestScene extends AScene {
 
     public void draw(Game parent) {
 
+    	// THIS MAY BE NEED FOR BETTER BLUR ?
 //        parent.smooth();
         parent.background(0);
         this.camera.draw(parent);
