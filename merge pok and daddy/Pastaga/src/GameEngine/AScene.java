@@ -1,0 +1,46 @@
+package GameEngine;
+
+import java.util.ArrayList;
+
+import PastaVoid.Game;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: KMU
+ * Date: 11/14/13
+ * Time: 10:52 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public abstract class AScene {
+	
+	// PRIVATE PROPERTIES
+	private boolean isUpdatable;
+	private boolean isDrawable;
+
+	// ABSTRACT METHODS
+    abstract public void start();
+    abstract public void update(long elapsedTime);
+    abstract public void draw(Game parent);
+
+	// IF OVERRIDE CONSTRUCTOR DON'T FORGET TO CALL SUPER()
+	public AScene(boolean isUpdatable, boolean isDrawable) {
+		this.isDrawable = isDrawable;
+		this.isUpdatable = isUpdatable;
+	}
+	
+    public boolean  isDrawable() {
+    	return this.isDrawable;
+    }
+    
+    public boolean  isUpdatable() {
+    	return this.isUpdatable;
+    }
+    
+    public void     setDrawable(boolean drawable) {
+    	this.isDrawable = drawable;
+    }
+    
+    public void     setUpdatable(boolean updatable) {
+    	this.isUpdatable = updatable;
+    }
+}
