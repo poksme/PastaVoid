@@ -22,7 +22,6 @@ public class Game {
     AudioPlayer             player;
 
     void    start() {
-        Main.pApplet.size(800, 600);
         this.sceneManager = new SceneManager();
         this.getSceneManager().start();
         this.watch = new StopWatch();
@@ -36,7 +35,7 @@ public class Game {
 
         minim = new Minim(Main.pApplet);
         player = minim.loadFile("music" + java.io.File.separator + config.getLevels().get(0).getMusicPath());
-        player.play();
+        //player.play();
         Main.pApplet.println(config);
     }
 

@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PastaVoid.iml" filepath="$PROJECT_DIR$/PastaVoid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/tools/MovieMaker/MovieMaker.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/tools/MovieMaker/MovieMaker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cedric n daddy.iml" filepath="$PROJECT_DIR$/cedric n daddy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/dxf/dxf1.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/dxf/dxf1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/glw/glw.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/glw/glw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/glw/glw1.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/glw/glw1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/net/net.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/net/net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/net/net1.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/net/net1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/pdf/pdf.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/pdf/pdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/pdf/pdf1.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/pdf/pdf1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/serial/serial.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/serial/serial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/serial/serial1.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/serial/serial1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/video/video.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/video/video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/video/video1.iml" filepath="$PROJECT_DIR$/out/artifacts/PastaVoid_jar/PastaVoid/Java/modes/java/libraries/video/video1.iml" />
     </modules>
   </component>
 </project>

@@ -43,7 +43,17 @@ public class TestScene implements IScene {
 
     @Override
     public void draw() {
+        Main.pApplet.smooth();
         Main.pApplet.background(255);
+        Main.pApplet.stroke(0, 255, 0);
+        Main.pApplet.strokeWeight(8);
+        this.viewer.draw();
+        Main.pApplet.filter(Main.pApplet.blur);
+        //Main.pApplet.filter(Main.pApplet.BLUR, 6);
+
+        Main.pApplet.stroke(0, 255, 0);
+        Main.pApplet.strokeWeight(2);
+
         this.viewer.draw();
     }
 

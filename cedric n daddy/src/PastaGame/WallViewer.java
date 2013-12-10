@@ -78,11 +78,15 @@ public class WallViewer {
         return spoint;
     }
 
+    private void    _drawLine(float startX, float startY, float endX, float endY) {
+        Main.pApplet.line(startX, startY, endX, endY);
+    }
+
     public void     drawLineInScreenPoint(float x, float y, float x1, float y1) {
 //        System.out.printf("%f %f %f %f\n", x, y, x1, y1);
         PVector start = this.worldPointToScreenPoint(new PVector(x, y));
         PVector end = this.worldPointToScreenPoint(new PVector(x1, y1));
-        Main.pApplet.line(start.x, start.y, end.x, end.y);
+        this._drawLine(start.x, start.y, end.x, end.y);
     }
 
     private void    _drawStep(Step step, float posy) {
@@ -95,8 +99,8 @@ public class WallViewer {
     }
 
     public void     draw() {
-        Main.pApplet.rect( this.screenPosition.x, this.screenPosition.y,
-                this.sizeX, this.sizeY);
+//        Main.pApplet.rect( this.screenPosition.x, this.screenPosition.y,
+//                this.sizeX, this.sizeY);
         Step[] walls = this.mwalls.getWalls();
         for (int i = 0; i < walls.length; ++i) {
             float posy = walls[i].y - this.offset;
