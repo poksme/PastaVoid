@@ -2,12 +2,14 @@ package PastaVoid;
 
 import processing.core.*;
 import ddf.minim.*;
+import GameEngine.KeysManager;
 import GameEngine.StopWatch;
 import Configuration.Config;
 import GameEngine.SceneManager;
 import processing.opengl.PShader;
 import processing.core.*;
 import processing.opengl.*;
+import processing.event.KeyEvent;
 
 public class Game extends PApplet {
 
@@ -66,6 +68,14 @@ public class Game extends PApplet {
         this.filter(this.blur);       
         this.blur.set("horizontalPass", 0);
         this.filter(this.blur);
+    }
+    
+    public void keyPressed(KeyEvent event) {
+    	KeysManager.getInstance().setPressed(event.getKeyCode());
+    }
+    
+    public void keyReleased(KeyEvent event) {
+    	KeysManager.getInstance().setReleased(event.getKeyCode());
     }
     
     public void draw() {
