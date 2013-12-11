@@ -40,9 +40,11 @@ public class Game extends PApplet {
         this.println(config);
 
         this.sceneManager = SceneManager.getInstance();
-        this.sceneManager.addScene(new LevelScene(this, config));
+        
+        LevelScene tmpLevelScene = new LevelScene(this, config);
+        this.sceneManager.addScene(tmpLevelScene);
+        this.sceneManager.addScene(new PlayerScene(this, Game.WIDTH, tmpLevelScene));
         this.sceneManager.addScene(new MenuScene(this));
-        this.sceneManager.addScene(new PlayerScene(this, Game.WIDTH));
 
         // SHADER
         this.blur = loadShader("shaders/sepBlur.glsl");
