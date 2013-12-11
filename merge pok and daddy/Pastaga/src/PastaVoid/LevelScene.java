@@ -22,8 +22,8 @@ public class LevelScene extends AScene {
     private Config      config;
     private IsoCamera   camera;
 
-    public LevelScene(Config config) {
-    	super(true, true); // VISIBLE UPDTABLE
+    public LevelScene(Game game, Config config) {
+    	super(game, true, true); // VISIBLE UPDTABLE
         this.config = config;
         this.speed = config.getLevels().get(0).getBpm();
     }
@@ -51,15 +51,15 @@ public class LevelScene extends AScene {
         this.getCamera().draw(parent);
 
 
-        parent.stroke(255, 255, 255);
-        parent.strokeWeight(1);
-        this.viewer.draw(parent);
-//        parent.blur();
-        
-        parent.stroke(100, 127, 255, 210);
+        parent.stroke(108, 91, 242);
         parent.strokeWeight(6);
         this.viewer.draw(parent);
         parent.blur();
+        
+        parent.stroke(68, 51, 202);
+        parent.strokeWeight(2);
+        this.viewer.draw(parent);
+//        parent.blur();
        
 
 

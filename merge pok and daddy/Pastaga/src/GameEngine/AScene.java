@@ -16,6 +16,7 @@ public abstract class AScene {
 	// PRIVATE PROPERTIES
 	private boolean isUpdatable;
 	private boolean isDrawable;
+	private Game	game;
 
 	// ABSTRACT METHODS
     abstract public void start();
@@ -23,7 +24,8 @@ public abstract class AScene {
     abstract public void draw(Game parent);
 
 	// IF OVERRIDE CONSTRUCTOR DON'T FORGET TO CALL SUPER()
-	public AScene(boolean isUpdatable, boolean isDrawable) {
+	public AScene(Game game, boolean isUpdatable, boolean isDrawable) {
+		this.game = game;
 		this.isDrawable = isDrawable;
 		this.isUpdatable = isUpdatable;
 	}

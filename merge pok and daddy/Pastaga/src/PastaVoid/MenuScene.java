@@ -4,8 +4,8 @@ import GameEngine.AScene;
 
 public class MenuScene extends AScene {
 	
-    public MenuScene() {
-    	super(true, true); // UPDTABLE AND DRAWABLE
+    public MenuScene(Game game) {
+    	super(game, true, true); // UPDTABLE AND DRAWABLE
     }
     
 	public void start() {
