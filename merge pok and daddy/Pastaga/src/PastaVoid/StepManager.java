@@ -18,9 +18,9 @@ public class StepManager {
     private float   holeMaxSize = 15;
     private int     sizeX = 100;
     private int     sizeY;
-    private TestScene parent;
+    private LevelScene parent;
 
-    public StepManager(TestScene parent) {
+    public StepManager(LevelScene parent) {
         this.parent = parent;
     }
 

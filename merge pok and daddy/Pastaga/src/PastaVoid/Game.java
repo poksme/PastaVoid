@@ -30,15 +30,16 @@ public class Game extends PApplet {
         
         // FONT
         this.font = this.loadFont("fonts" + java.io.File.separator + "Orbitron-Light-48.vlw");
-        this.textFont(this.font, 48);
+//        this.textFont(this.font, 48);
+      this.textFont(this.font, 12);
         
         // CONF
         this.config = new Config(this);
         this.println(config);
 
         this.sceneManager = SceneManager.getInstance();
-        this.sceneManager.addScene(new TestScene(config));
-//        this.sceneManager.addScene(new MenuScene());
+        this.sceneManager.addScene(new LevelScene(config));
+        this.sceneManager.addScene(new MenuScene());
 
         // SHADER
         this.blur = loadShader("shaders/sepBlur.glsl");

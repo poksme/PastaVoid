@@ -12,7 +12,7 @@ import processing.core.PVector;
  * To change this template use File | Settings | File Templates.
  */
 
-public class TestScene extends AScene {
+public class LevelScene extends AScene {
 
     private boolean     updated = true;
     private boolean     drawn = true;
@@ -22,7 +22,7 @@ public class TestScene extends AScene {
     private Config      config;
     private IsoCamera   camera;
 
-    public TestScene(Config config) {
+    public LevelScene(Config config) {
     	super(true, true); // VISIBLE UPDTABLE
         this.config = config;
         this.speed = config.getLevels().get(0).getBpm();

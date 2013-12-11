@@ -24,10 +24,10 @@ public class WallViewer {
     float               farPlane = 0.5f;
     float               nearPlane = 1.0f;
     float               isoPlanX;
-    private TestScene   parent;
+    private LevelScene   parent;
     private float stepPerMilliSec;
 
-    public WallViewer(TestScene parent, StepManager walls, int sizeX, int sizeY) {
+    public WallViewer(LevelScene parent, StepManager walls, int sizeX, int sizeY) {
         this.parent = parent;
         this.mwalls = walls;
         this.viewHeight = 16.5f;

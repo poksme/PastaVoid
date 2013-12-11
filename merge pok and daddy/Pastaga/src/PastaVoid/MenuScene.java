@@ -19,7 +19,7 @@ public class MenuScene extends AScene {
 
 	public void draw(Game parent) {
         parent.fill(0, 102, 153);
-        parent.text("DEMO", 400, 300);		
+        parent.text("DEMO", -5, -12, 0);		
 	}
 
 }
