@@ -68,13 +68,6 @@ public class Game extends PApplet {
         
         // START WATCH IN THE SETUP
 //        this.watch.start();
-        
-<<<<<<< HEAD
-=======
-        
-//        this.player.play();
->>>>>>> e0e29e7a279ed2118e1995a9d4b83decdc055802
-
         this.sceneManager.start();
     }
     
