@@ -42,7 +42,7 @@ public class LevelScene extends AScene {
     public void draw(Game parent) {
 
     	// THIS MAY BE NEED FOR BETTER BLUR ?
-//        parent.smooth();
+        parent.smooth();
         parent.background(0);
         this.getCamera().draw(parent);
 
@@ -55,10 +55,33 @@ public class LevelScene extends AScene {
         parent.stroke(68, 51, 202);
         parent.strokeWeight(2);
         this.walls.draw(parent);
-//        parent.blur();
        
-
-
+        
+        //TMP!
+        //ceci est tmp
+        float posy = this.camera.getOffset() + 0.5f;
+        float width = 10.0f;
+        float height = 0.4f;
+        
+        WallCollision wc = this.walls.isColliding(new PVector(50.0f, posy), new PVector(width, height));
+        
+        if (wc != null) {
+            parent.stroke(255, 0, 0);
+        } else {
+            parent.stroke(0, 255, 0);
+        }
+        
+        
+        parent.line(50.0f - width /2, posy - height / 2, 50.0f + width /2, posy - height / 2);
+        parent.line(50.0f - width /2, posy + 0.2f, 50.0f + width /2, posy + height / 2);
+        parent.line(50.0f - width /2, posy - height / 2, 50.0f - width /2, posy + height / 2);
+        parent.line(50.0f + width /2, posy - height / 2, 50.0f + width /2, posy + height / 2);
+        
+        parent.stroke(255, 255, 0);
+        parent.fill(255, 255, 0);
+        if (wc != null) {
+            parent.ellipse(wc.getCollisionPoint().x, wc.getCollisionPoint().y, 5.0f, 0.2f);        	
+        }
     }
 
     public float getSpeed() {

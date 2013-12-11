@@ -58,7 +58,34 @@ public class StepManager {
         parent.line( 0, y, 0, y + this.getSizeY());
         parent.line(this.getSizeX(), y, this.getSizeX(), y + this.getSizeY());
     }
+
+    //version POS,SIZE
+//    public WallCollision	isColliding(PVector pos, PVector size) {
+//    	int yPos = Math.round(pos.y);
+//    	
+//    	//size.y must be < 0.5f (tmp)
+//    	if (yPos > this.getSizeY()) {
+//        	return null;    		
+//    	}
+//    	Step step = this.walls[yPos];
+//    	if (!step.isWall) {
+//        	return null;    		
+//    	}
+//    	if ((pos.x) > step.x - step.holeSize / 2 && pos.x < (step.x + size.x) + step.holeSize / 2) {
+//        	return null;
+//    	}
+//    	float posX = 0.0f;
+//    	if ((pos.x) > step.x - step.holeSize / 2) {
+//    		posX = pos.x;
+//    	} else {
+//    		posX = pos.x + size.x;
+//    	}
+//    	WallCollision coll = new WallCollision(step, new PVector(posX, yPos));
+//		return coll;
+//    }
+
     
+    //version CENTER/SIZE
     public WallCollision	isColliding(PVector pos, PVector size) {
     	int yPos = Math.round(pos.y);
     	
@@ -67,14 +94,17 @@ public class StepManager {
         	return null;    		
     	}
     	Step step = this.walls[yPos];
-    	if ((pos.x) > step.x - step.holeSize / 2 && pos.x < (step.x + size.x) + step.holeSize / 2) {
+    	if (!step.isWall) {
+        	return null;    		
+    	}
+    	if ((pos.x - size.x / 2) > step.x - step.holeSize / 2 && (pos.x + size.x / 2) < step.x + step.holeSize / 2) {
         	return null;
     	}
     	float posX = 0.0f;
-    	if ((pos.x) > step.x - step.holeSize / 2) {
-    		posX = pos.x;
+    	if ((pos.x - size.x / 2) < step.x - step.holeSize / 2) {
+    		posX = pos.x - size.x / 2;
     	} else {
-    		posX = pos.x + size.x;
+    		posX = pos.x + size.x / 2;
     	}
     	WallCollision coll = new WallCollision(step, new PVector(posX, yPos));
 		return coll;
