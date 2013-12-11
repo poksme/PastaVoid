@@ -2,6 +2,12 @@
 	"levels" : [{
 		"music": "defiant_order.mp3",
 		"script" : "defiant_order.json"
+		},{
+		"music": "aerodynamic.mp3",
+		"script" : "aerodynamic.json"
+		},{
+		"music": "endless_fantasy.mp3",
+		"script" : "endless_fantasy.json"
 		}],
-	"version" : "0.1a"
+	"version" : "0.2a"
 }
