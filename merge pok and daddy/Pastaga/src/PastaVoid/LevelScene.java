@@ -29,16 +29,17 @@ public class LevelScene extends AScene {
     }
 
     public void start() {
-        this.walls = new StepManager(this);
-        this.walls.generate();
-        this.viewer = new WallViewer(this, this.walls, 500, 500);
+        this.setWalls(new StepManager(this));
+        this.getWalls().generate();
+        this.viewer = new WallViewer(this, this.getWalls(), 500, 500);
         this.viewer.setScreenPosition(new PVector(100, 0));
         this.viewer.setSizeX(600);
         this.viewer.setSizeY(600);
-        this.camera = new IsoCamera();
+        this.setCamera(new IsoCamera(this));
     }
 
     public void update(long timeElapsed) {
+    	this.getCamera().update(timeElapsed);
         this.viewer.update(timeElapsed);
     }
 
@@ -47,7 +48,7 @@ public class LevelScene extends AScene {
     	// THIS MAY BE NEED FOR BETTER BLUR ?
 //        parent.smooth();
         parent.background(0);
-        this.camera.draw(parent);
+        this.getCamera().draw(parent);
 
 
         parent.stroke(255, 255, 255);
@@ -75,4 +76,20 @@ public class LevelScene extends AScene {
     public Config getConfig() {
         return config;
     }
+
+	public StepManager getWalls() {
+		return walls;
+	}
+
+	public void setWalls(StepManager walls) {
+		this.walls = walls;
+	}
+
+	public IsoCamera getCamera() {
+		return camera;
+	}
+
+	public void setCamera(IsoCamera camera) {
+		this.camera = camera;
+	}
 }

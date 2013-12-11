@@ -54,19 +54,13 @@ public class WallViewer {
         this.offset += this.stepPerMilliSec * elapsedTime;
     }
 
-    public PVector  worldPointToScreenPoint(PVector wpoint) {
-        PVector   spoint = new PVector(wpoint.x, this.viewHeight - wpoint.y);
-        return spoint;
-    }
-
-    private void    _drawLine(PApplet parent, float startX, float startY, float endX, float endY) {
-        parent.line(startX - this.mwalls.getSizeX() / 2, -startY, 0.0f, endX - this.mwalls.getSizeX() / 2, -endY, 0.0f);
-    }
-
     public void     drawLineInScreenPoint(PApplet parent, float x, float y, float x1, float y1) {
-        PVector start = this.worldPointToScreenPoint(new PVector(x, y));
-        PVector end = this.worldPointToScreenPoint(new PVector(x1, y1));
-        this._drawLine(parent, start.x, start.y, end.x, end.y);
+    	
+//    	parent.line(x, y, 0.0f, x1, y1, 0.0f);
+    	parent.line(x, y, x1, y1);
+//        PVector start = this.worldPointToScreenPoint(new PVector(x, y));
+//        PVector end = this.worldPointToScreenPoint(new PVector(x1, y1));
+//        this._drawLine(parent, start.x, start.y, end.x, end.y);
     }
 
     private void    _drawStep(PApplet parent, Step step, float posy) {
@@ -82,12 +76,15 @@ public class WallViewer {
         Step[] walls = this.mwalls.getWalls();
         for (int i = 0; i < walls.length; ++i) {
             float posy = walls[i].y - this.offset;
-            if (posy < this.viewHeight && posy > 0) {
-                this._drawStep(parent, walls[i], this.viewHeight - posy);
-            }
+            //this._drawStep(parent, walls[i], posy);
+            this._drawStep(parent, walls[i], walls[i].y);
+//            if (posy < this.viewHeight && posy > 0) {
+//                this._drawStep(parent, walls[i], posy);
+//            }
         }
-        this.drawLineInScreenPoint(parent, 0, 0, 0, this.viewHeight);
-        this.drawLineInScreenPoint(parent, this.mwalls.getSizeX(), 0, this.mwalls.getSizeX(), this.viewHeight);
+        float y = this.parent.getCamera().getOffset();
+        this.drawLineInScreenPoint(parent, 0, y, 0, y + this.mwalls.getSizeY());
+        this.drawLineInScreenPoint(parent, this.mwalls.getSizeX(), y, this.mwalls.getSizeX(), y + this.mwalls.getSizeY());
     }
 
     public int getSizeX() {
