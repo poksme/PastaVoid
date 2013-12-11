@@ -17,7 +17,6 @@ public class LevelScene extends AScene {
     private boolean     updated = true;
     private boolean     drawn = true;
     private StepManager walls;
-    private WallViewer  viewer;
     private float       speed;
     private Config      config;
     private IsoCamera   camera;
@@ -31,16 +30,11 @@ public class LevelScene extends AScene {
     public void start() {
         this.setWalls(new StepManager(this));
         this.getWalls().generate();
-        this.viewer = new WallViewer(this, this.getWalls(), 500, 500);
-        this.viewer.setScreenPosition(new PVector(100, 0));
-        this.viewer.setSizeX(600);
-        this.viewer.setSizeY(600);
         this.setCamera(new IsoCamera(this));
     }
 
     public void update(long timeElapsed) {
     	this.getCamera().update(timeElapsed);
-        this.viewer.update(timeElapsed);
     }
 
     public void draw(Game parent) {
@@ -53,12 +47,12 @@ public class LevelScene extends AScene {
 
         parent.stroke(108, 91, 242);
         parent.strokeWeight(6);
-        this.viewer.draw(parent);
+        this.walls.draw(parent);
         parent.blur();
         
         parent.stroke(68, 51, 202);
         parent.strokeWeight(2);
-        this.viewer.draw(parent);
+        this.walls.draw(parent);
 //        parent.blur();
        
 

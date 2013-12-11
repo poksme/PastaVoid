@@ -17,7 +17,7 @@ public class Game extends PApplet {
     private AudioPlayer		player;
     private Config      	config;
     private PFont			font;
-    public 	PShader      blur;
+    public 	PShader      	blur;
 
     public static void main(String args[]) {
 //        PApplet.main(new String[] { "--present", "PastaVoid.Game" });

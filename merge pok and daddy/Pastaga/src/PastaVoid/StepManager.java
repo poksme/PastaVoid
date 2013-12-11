@@ -1,5 +1,6 @@
 package PastaVoid;
 
+import processing.core.PApplet;
 import Configuration.Door;
 import Configuration.StepInfo;
 
@@ -36,20 +37,27 @@ public class StepManager {
                 this.getWalls()[i] = new Step(0, i, 0, false);
             }
         }
-        // GENERATE POOM CHAK
-//        for (int i = 0; i < sizeY; i++) {
-//            int relativeStep = i % 16;
-//            int holeSize = 10;
-//            if (relativeStep == 0 || relativeStep == 8) { // KICK
-//                this.getWalls()[i] = new Step(15, i, holeSize, true);
-//            } else if (relativeStep == 4 || relativeStep == 12) { // SNARE
-//                this.getWalls()[i] = new Step(35, i, holeSize, true);
-//            } else {
-//                this.getWalls()[i] = new Step(0, i, 0, false);
-//            }
-//        }
     }
 
+    private void    _drawStep(PApplet parent, Step step, float posy) {
+        if (!step.isWall) {
+            return;
+        }
+        //for now draw a wall with only one hole
+        parent.line(0, posy, step.x - step.holeSize / 2, posy);
+        parent.line(step.x + step.holeSize / 2, posy, this.getSizeX(), posy);
+    }
+
+    public void     draw(PApplet parent) {
+        Step[] walls = this.walls;
+        for (int i = 0; i < walls.length; ++i) {
+            this._drawStep(parent, walls[i], walls[i].y);
+        }
+        float y = this.parent.getCamera().getOffset();
+        parent.line( 0, y, 0, y + this.getSizeY());
+        parent.line(this.getSizeX(), y, this.getSizeX(), y + this.getSizeY());
+    }
+    
     public float getHoleMinSize() {
         return holeMinSize;
     }
