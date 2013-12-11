@@ -18,12 +18,18 @@ public class KeysManager {
 	    EKeys(int id) { this.id = id; }
 	    public int getValue() { return id; }
 	}
-	private Map<EKeys, Boolean> pressedKeys;
+	private Map<EKeys, Boolean> bufferedKeys;
+	private Map<EKeys, Boolean> prevPressedKeys;
+	private Map<EKeys, Boolean> curPressedKeys;
 	private EKeys[] watchedKeys;
     private KeysManager() {
-    	pressedKeys = new HashMap<EKeys, Boolean>();
+    	bufferedKeys = new HashMap<EKeys, Boolean>();
+    	prevPressedKeys = new HashMap<EKeys, Boolean>();
+    	curPressedKeys = new HashMap<EKeys, Boolean>();
     	for (EKeys key : EKeys.values()) {
-    		pressedKeys.put(key, false);
+    		bufferedKeys.put(key, false);
+    		prevPressedKeys.put(key, false);
+    		bufferedKeys.put(key, false);
     	}
     	watchedKeys = EKeys.values();
     }
@@ -52,17 +58,28 @@ public class KeysManager {
     
 	public void setPressed(int keyCode) {
 		if (isWatched(keyCode)) {
-			pressedKeys.put(intToEKeys(keyCode), true);
+			bufferedKeys.put(intToEKeys(keyCode), true);
 		}		
 	}
 
 	public void setReleased(int keyCode) {		
 		if (isWatched(keyCode)) {
-			pressedKeys.put(intToEKeys(keyCode), false);
+			bufferedKeys.put(intToEKeys(keyCode), false);
 		}		
 	}
 	
 	public boolean keyIsPressed(EKeys key) {
-		return pressedKeys.get(key);
+		return bufferedKeys.get(key);
+	}
+	
+	public boolean keyIsPressedOnce(EKeys key) {
+		return curPressedKeys.get(key) && !prevPressedKeys.get(key);
+	}
+	
+	public void update() {
+    	for (EKeys key : EKeys.values()) {
+    		prevPressedKeys.put(key, curPressedKeys.get(key));
+    		curPressedKeys.put(key, bufferedKeys.get(key));
+    	}
 	}
 }

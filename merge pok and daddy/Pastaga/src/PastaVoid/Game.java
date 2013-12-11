@@ -32,8 +32,8 @@ public class Game extends PApplet {
         
         // FONT
         this.font = this.loadFont("fonts" + java.io.File.separator + "Orbitron-Light-48.vlw");
-//        this.textFont(this.font, 48);
-      this.textFont(this.font, 12);
+        this.textFont(this.font, 48);
+//      this.textFont(this.font, 12);
         
         // CONF
         this.config = new Config(this);
@@ -83,6 +83,7 @@ public class Game extends PApplet {
     
     public void draw() {
     	fill(255, 255, 255);
+    	KeysManager.getInstance().update();
         sceneManager.update(this.watch.getElapsedTime());
         this.watch.start();
         sceneManager.draw(this);
