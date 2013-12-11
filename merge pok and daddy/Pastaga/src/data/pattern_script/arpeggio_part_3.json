@@ -4,98 +4,98 @@
 	{
         "stepID" : 0,
         "doors" : [{
-                "position": 12,
-                "size": 20
+                "position": 0.12,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 1,
         "doors" : [{
-                "position": 12,
-                "size": 20
+                "position": 0.12,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 2,
         "doors" : [{
-                "position": 18,
-                "size": 20
+                "position": 0.18,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 3,
         "doors" : [{
-                "position": 24,
-                "size": 20
+                "position": 0.24,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 4,
         "doors" : [{
-                "position": 30,
-                "size": 20
+                "position": 0.30,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 5,
         "doors" : [{
-                "position": 36,
-                "size": 20
+                "position": 0.36,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 6,
         "doors" : [{
-                "position": 42,
-                "size": 20
+                "position": 0.42,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 7,
         "doors" : [{
-                "position": 48,
-                "size": 20
+                "position": 0.48,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 8,
         "doors" : [{
-                "position": 54,
-                "size": 20
+                "position": 0.54,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 9,
         "doors" : [{
-                "position": 60,
-                "size": 20
+                "position": 0.60,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 10,
         "doors" : [{
-                "position": 66,
-                "size": 20
+                "position": 0.66,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 11,
         "doors" : [{
-                "position": 72,
-                "size": 20
+                "position": 0.72,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 12,
         "doors" : [{
-                "position": 78,
-                "size": 20
+                "position": 0.78,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 13,
         "doors" : [{
-                "position": 84,
-                "size": 20
+                "position": 0.84,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 14,
         "doors" : [{
-                "position": 90,
-                "size": 20
+                "position": 0.90,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 15,
         "doors" : [{
-                "position": 90,
-                "size": 20
+                "position": 0.90,
+                "size": 0.20
                 }]
         }] 
 }

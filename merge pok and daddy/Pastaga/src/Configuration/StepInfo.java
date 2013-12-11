@@ -21,8 +21,8 @@ public class StepInfo {
         JSONArray doors = doorInfo.getJSONArray("doors");
         this.doors =  new ArrayList<Door>(doors.size());
         for (int i = 0; i < doors.size(); i++) {
-            this.doors.add(new Door(doors.getJSONObject(i).getInt("position"),
-                    doors.getJSONObject(i).getInt("size")));
+            this.doors.add(new Door(doors.getJSONObject(i).getFloat("position"),
+                    doors.getJSONObject(i).getFloat("size")));
         }
     }
 

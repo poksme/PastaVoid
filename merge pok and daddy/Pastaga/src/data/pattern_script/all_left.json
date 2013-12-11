@@ -5,97 +5,97 @@
                 "stepID" : 0,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 1,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 2,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 3,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 4,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 5,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 6,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 7,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 8,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 9,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 10,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 11,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 12,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 13,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 14,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }, {
                 "stepID" : 15,
                 "doors" : [{
                         "position": 0,
-                        "size": 20
+                        "size": 0.2
                 }]
         }] 
 }

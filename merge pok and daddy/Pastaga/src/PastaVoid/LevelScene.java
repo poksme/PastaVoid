@@ -60,10 +60,10 @@ public class LevelScene extends AScene {
         //TMP!
         //ceci est tmp
         float posy = this.camera.getOffset() + 0.5f;
-        float width = 10.0f;
+        float width = 0.1f;
         float height = 0.4f;
         
-        WallCollision wc = this.walls.isColliding(new PVector(50.0f, posy), new PVector(width, height));
+        WallCollision wc = this.walls.isColliding(new PVector(0.5f, posy), new PVector(width, height));
         
         if (wc != null) {
             parent.stroke(255, 0, 0);
@@ -72,15 +72,22 @@ public class LevelScene extends AScene {
         }
         
         
-        parent.line(50.0f - width /2, posy - height / 2, 50.0f + width /2, posy - height / 2);
-        parent.line(50.0f - width /2, posy + 0.2f, 50.0f + width /2, posy + height / 2);
-        parent.line(50.0f - width /2, posy - height / 2, 50.0f - width /2, posy + height / 2);
-        parent.line(50.0f + width /2, posy - height / 2, 50.0f + width /2, posy + height / 2);
+        parent.line(0.50f - width /2, posy - height / 2, 0.50f + width /2, posy - height / 2);
+        parent.line(0.50f - width /2, posy + 0.2f, 0.50f + width /2, posy + height / 2);
+        parent.line(0.50f - width /2, posy - height / 2, 0.50f - width /2, posy + height / 2);
+        parent.line(0.50f + width /2, posy - height / 2, 0.50f + width /2, posy + height / 2);
         
+        float z = 1.0f;
+        
+//        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f + width /2, posy - height / 2, z);
+//        parent.line(0.50f - width /2, posy + 0.2f, z, 0.50f + width /2, posy + height / 2, z);
+//        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f - width /2, posy + height / 2, z);
+//        parent.line(0.50f + width /2, posy - height / 2, z, 0.50f + width /2, posy + height / 2, z);
+
         parent.stroke(255, 255, 0);
         parent.fill(255, 255, 0);
         if (wc != null) {
-            parent.ellipse(wc.getCollisionPoint().x, wc.getCollisionPoint().y, 5.0f, 0.2f);        	
+            parent.ellipse(wc.getCollisionPoint().x, wc.getCollisionPoint().y, 0.05f, 0.2f);        	
         }
     }
 

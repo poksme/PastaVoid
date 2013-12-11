@@ -4,26 +4,26 @@
 	{
         "stepID" : 0,
         "doors" : [{
-                "position": 90,
-                "size": 20
+                "position": 0.90,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 7,
         "doors" : [{
-                "position": 54,
-                "size": 20
+                "position": 0.54,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 8,
         "doors" : [{
-                "position": 48,
-                "size": 20
+                "position": 0.48,
+                "size": 0.20
                 }]
         }, {
         "stepID" : 15,
         "doors" : [{
-                "position": 12,
-                "size": 20
+                "position": 0.12,
+                "size": 0.20
                 }]
         }] 
 }

@@ -59,7 +59,7 @@ public class Game extends PApplet {
 //        this.watch.start();
         
         
-        this.player.play();
+        //this.player.play();
 
         this.sceneManager.start();
     }

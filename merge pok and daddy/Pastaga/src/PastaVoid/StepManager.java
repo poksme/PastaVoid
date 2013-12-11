@@ -16,10 +16,8 @@ import Configuration.StepInfo;
 public class StepManager {
 
     private Step[]  walls;
-    private float   holeMinSize = 5;
-    private float   holeMaxSize = 15;
-    private int     sizeX = 100;
-    private int     sizeY;
+    private float     sizeX = 1.0f;
+    private float     sizeY;
     private LevelScene parent;
 
     public StepManager(LevelScene parent) {
@@ -28,7 +26,7 @@ public class StepManager {
 
     public  void    generate() {
         this.sizeY = this.parent.getConfig().getLevels().get(0).getBarNumber() * 16; // bar number x step per bar
-        this.setWalls(new Step[sizeY]);
+        this.setWalls(new Step[(int)sizeY]);
 
         for (int i = 0; i < sizeY; i++) {
             if (parent.getConfig().getLevels().get(0).hasDoor(i)) {
@@ -55,8 +53,8 @@ public class StepManager {
             this._drawStep(parent, walls[i], walls[i].y);
         }
         float y = this.parent.getCamera().getOffset();
-        parent.line( 0, y, 0, y + this.getSizeY());
-        parent.line(this.getSizeX(), y, this.getSizeX(), y + this.getSizeY());
+        parent.line( 0, y, 0, y + 32.0f);
+        parent.line(this.getSizeX(), y, this.getSizeX(), y + 32.0f);
     }
 
     //version POS,SIZE
@@ -110,22 +108,6 @@ public class StepManager {
 		return coll;
     }
     
-    public float getHoleMinSize() {
-        return holeMinSize;
-    }
-
-    public void setHoleMinSize(float holeMinSize) {
-        this.holeMinSize = holeMinSize;
-    }
-
-    public float getHoleMaxSize() {
-        return holeMaxSize;
-    }
-
-    public void setHoleMaxSize(float holeMaxSize) {
-        this.holeMaxSize = holeMaxSize;
-    }
-
     public Step[] getWalls() {
         return walls;
     }
@@ -134,19 +116,19 @@ public class StepManager {
         this.walls = walls;
     }
 
-    public int getSizeX() {
+    public float getSizeX() {
         return sizeX;
     }
 
-    public void setSizeX(int sizeX) {
+    public void setSizeX(float sizeX) {
         this.sizeX = sizeX;
     }
 
-    public int getSizeY() {
+    public float getSizeY() {
         return sizeY;
     }
 
-    public void setSizeY(int sizeY) {
+    public void setSizeY(float sizeY) {
         this.sizeY = sizeY;
     }
 }

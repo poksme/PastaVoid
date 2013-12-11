@@ -8,10 +8,10 @@ package Configuration;
  * To change this template use File | Settings | File Templates.
  */
 public class Door {
-    int position;
-    int size;
+    float position;
+    float size;
 
-    public Door(int position, int size) {
+    public Door(float position, float size) {
         this.position = position;
         this.size = size;
     }
@@ -22,11 +22,11 @@ public class Door {
         return ret;
     }
 
-    public int getPosition() {
+    public float getPosition() {
         return position;
     }
 
-    public int getSize() {
+    public float getSize() {
         return size;
     }
 }
