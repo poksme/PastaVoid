@@ -1,5 +1,7 @@
 package PastaVoid;
 
+import java.util.ArrayList;
+
 import processing.core.*;
 import ddf.minim.*;
 import GameEngine.KeysManager;
@@ -12,11 +14,10 @@ import processing.opengl.*;
 import processing.event.KeyEvent;
 
 public class Game extends PApplet {
-
     private SceneManager    sceneManager;
     private StopWatch		watch;
     private Minim			minim;
-    private AudioPlayer		player;
+    private ArrayList<AudioPlayer>		songPlayer;
     private Config      	config;
     private PFont			font;
     public 	PShader      	blur;
@@ -26,6 +27,14 @@ public class Game extends PApplet {
     	PApplet.main(new String[] { "PastaVoid.Game" });
       }
     
+    public ArrayList<AudioPlayer> getSongPlayer() {
+    	return songPlayer;
+    }
+    
+    public Minim getMinim() {
+    	return minim;
+    }
+    
     public void setup() {
         size(800, 600, P3D);
         background(0);
@@ -33,7 +42,12 @@ public class Game extends PApplet {
         // FONT
         this.font = this.loadFont("fonts" + java.io.File.separator + "Orbitron-Light-48.vlw");
         this.textFont(this.font, 48);
-//      this.textFont(this.font, 12);
+
+      	// MUSIC PLAYER
+      	this.minim = new Minim(this);
+      	this.songPlayer = new ArrayList<AudioPlayer>();
+//        this.player = minim.loadFile("music" + java.io.File.separator + "defiant_order.mp3");// config.getLevels().get(0).getMusicPath());
+
         
         // CONF
         this.config = new Config(this);
@@ -44,14 +58,11 @@ public class Game extends PApplet {
         LevelScene tmpLevelScene = new LevelScene(this, config);
         this.sceneManager.addScene(tmpLevelScene);
         this.sceneManager.addScene(new PlayerScene(this, Game.WIDTH, tmpLevelScene));
-        this.sceneManager.addScene(new MenuScene(this));
+        this.sceneManager.addScene(new MenuScene(this, config));
 
         // SHADER
         this.blur = loadShader("shaders/sepBlur.glsl");
         
-      	// MUSIC PLAYER
-      	this.minim = new Minim(this);
-        this.player = minim.loadFile("music" + java.io.File.separator + "defiant_order.mp3");// config.getLevels().get(0).getMusicPath());
 
         this.watch = new StopWatch();
         
@@ -59,7 +70,7 @@ public class Game extends PApplet {
 //        this.watch.start();
         
         
-        this.player.play();
+//        this.player.play();
 
         this.sceneManager.start();
     }

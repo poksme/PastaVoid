@@ -16,7 +16,7 @@ public abstract class AScene {
 	// PRIVATE PROPERTIES
 	private boolean isUpdatable;
 	private boolean isDrawable;
-	private Game	game;
+	protected Game	game;
 
 	// ABSTRACT METHODS
     abstract public void start();
