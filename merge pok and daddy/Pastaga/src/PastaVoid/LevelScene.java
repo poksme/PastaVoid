@@ -21,6 +21,7 @@ public class LevelScene extends AScene {
     private Config      config;
     private IsoCamera   camera;
 
+    
     public LevelScene(Game game, Config config) {
     	super(game, true, true); // VISIBLE UPDTABLE
         this.config = config;
@@ -35,6 +36,7 @@ public class LevelScene extends AScene {
 
     public void update(long timeElapsed) {
     	this.getCamera().update(timeElapsed);
+    	
     }
 
     public void draw(Game parent) {

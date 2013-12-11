@@ -1,6 +1,7 @@
 package PastaVoid;
 
 import processing.core.PApplet;
+import processing.core.PVector;
 import Configuration.Door;
 import Configuration.StepInfo;
 
@@ -56,6 +57,27 @@ public class StepManager {
         float y = this.parent.getCamera().getOffset();
         parent.line( 0, y, 0, y + this.getSizeY());
         parent.line(this.getSizeX(), y, this.getSizeX(), y + this.getSizeY());
+    }
+    
+    public WallCollision	isColliding(PVector pos, PVector size) {
+    	int yPos = Math.round(pos.y);
+    	
+    	//size.y must be < 0.5f (tmp)
+    	if (yPos > this.getSizeY()) {
+        	return null;    		
+    	}
+    	Step step = this.walls[yPos];
+    	if ((pos.x) > step.x - step.holeSize / 2 && pos.x < (step.x + size.x) + step.holeSize / 2) {
+        	return null;
+    	}
+    	float posX = 0.0f;
+    	if ((pos.x) > step.x - step.holeSize / 2) {
+    		posX = pos.x;
+    	} else {
+    		posX = pos.x + size.x;
+    	}
+    	WallCollision coll = new WallCollision(step, new PVector(posX, yPos));
+		return coll;
     }
     
     public float getHoleMinSize() {
