@@ -38,7 +38,7 @@ public class StepManager {
         }
     }
 
-    private void    _drawStep(PApplet parent, Step step, float posy) {
+    private void    _drawStep(Game parent, Step step, float posy) {
         if (!step.isWall) {
             return;
         }
@@ -47,7 +47,9 @@ public class StepManager {
         parent.line(step.x + step.holeSize / 2, posy, this.getSizeX(), posy);
     }
 
-    public void     draw(PApplet parent) {
+    public void     draw(Game parent) {
+    	parent.pushMatrix();
+        //parent.scale(1.0f, 1.0f, 1.0f);
         Step[] walls = this.walls;
         for (int i = 0; i < walls.length; ++i) {
             this._drawStep(parent, walls[i], walls[i].y);
@@ -55,6 +57,7 @@ public class StepManager {
         float y = this.parent.getCamera().getOffset();
         parent.line( 0, y, 0, y + 32.0f);
         parent.line(this.getSizeX(), y, this.getSizeX(), y + 32.0f);
+        parent.popMatrix();
     }
 
     //version POS,SIZE

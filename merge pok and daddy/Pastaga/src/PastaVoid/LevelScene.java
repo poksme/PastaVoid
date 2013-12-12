@@ -48,12 +48,12 @@ public class LevelScene extends AScene {
 
 
         parent.stroke(108, 91, 242);
-        parent.strokeWeight(6);
+        parent.strokeWeight(0.15f);
         this.walls.draw(parent);
         parent.blur();
         
         parent.stroke(68, 51, 202);
-        parent.strokeWeight(2);
+        parent.strokeWeight(0.05f);
         this.walls.draw(parent);
        
         
@@ -77,12 +77,12 @@ public class LevelScene extends AScene {
         parent.line(0.50f - width /2, posy - height / 2, 0.50f - width /2, posy + height / 2);
         parent.line(0.50f + width /2, posy - height / 2, 0.50f + width /2, posy + height / 2);
         
-        float z = 1.0f;
+        float z = 0.1f;
         
-//        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f + width /2, posy - height / 2, z);
-//        parent.line(0.50f - width /2, posy + 0.2f, z, 0.50f + width /2, posy + height / 2, z);
-//        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f - width /2, posy + height / 2, z);
-//        parent.line(0.50f + width /2, posy - height / 2, z, 0.50f + width /2, posy + height / 2, z);
+        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f + width /2, posy - height / 2, z);
+        parent.line(0.50f - width /2, posy + 0.2f, z, 0.50f + width /2, posy + height / 2, z);
+        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f - width /2, posy + height / 2, z);
+        parent.line(0.50f + width /2, posy - height / 2, z, 0.50f + width /2, posy + height / 2, z);
 
         parent.stroke(255, 255, 0);
         parent.fill(255, 255, 0);
