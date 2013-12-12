@@ -18,7 +18,7 @@ class Player {
     _sizeX = 50;
     _sizeY = 50;
     _effect = "ELASTIC";
-     _targetX = width/2;
+    _targetX = width/2;
   }
   
   void update() {
@@ -61,13 +61,14 @@ class Player {
   }
   
   void moveElastic(int direction) {
-    float    speed = 50.0f;
-      if (direction == LEFT){
-        _posX -= speed;
-      }
-      else if (direction == RIGHT) {
-        _posX += speed;
-      }   
+    float    speed = 30.0f;
+    
+    if (direction == LEFT){
+      _targetX -= speed;
+    }
+    else if (direction == RIGHT) {
+      _targetX += speed;
+    }   
   }
   void movePlayer(int direction) {
     float    speed = 10.0f;

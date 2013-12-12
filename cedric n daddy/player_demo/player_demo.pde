@@ -33,6 +33,12 @@ public void keyEvent(KeyEvent e)
   }
 }   
 
+void keyReleased() {
+  if (player._effect == "ELASTIC") {
+    player._targetX = width/2;
+  }
+}
+
 public void draw() {
   background(255);
   player.draw();

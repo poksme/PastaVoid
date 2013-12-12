@@ -73,7 +73,7 @@ public class LevelScene extends AScene {
         
         //TMP!
         //ceci est tmp
-        float posy = this.camera.getOffset() + 0.5f;
+        /*float posy = this.camera.getOffset() + 0.5f;
         float width = 0.1f;
         float height = 0.4f;
         
@@ -102,7 +102,7 @@ public class LevelScene extends AScene {
         parent.fill(255, 255, 0);
         if (wc != null) {
             parent.ellipse(wc.getCollisionPoint().x, wc.getCollisionPoint().y, 0.05f, 0.2f);        	
-        }
+        }*/
     }
 
     public float getSpeed() {
