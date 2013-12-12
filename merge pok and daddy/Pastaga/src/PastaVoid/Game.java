@@ -55,9 +55,9 @@ public class Game extends PApplet {
 
         this.sceneManager = SceneManager.getInstance();
         
-        LevelScene tmpLevelScene = new LevelScene(this, config);
-        this.sceneManager.addScene(tmpLevelScene);
-        this.sceneManager.addScene(new PlayerScene(this, Game.WIDTH, tmpLevelScene));
+//        LevelScene tmpLevelScene = new LevelScene(this, config);
+//        this.sceneManager.addScene(tmpLevelScene);
+//        this.sceneManager.addScene(new PlayerScene(this, Game.WIDTH, tmpLevelScene));
         this.sceneManager.addScene(new MenuScene(this, config));
 
         // SHADER
@@ -69,6 +69,10 @@ public class Game extends PApplet {
         // START WATCH IN THE SETUP
 //        this.watch.start();
         this.sceneManager.start();
+    }
+    
+    public Config getConfig() {
+    	return this.config;
     }
     
     public void blur() {
@@ -89,6 +93,7 @@ public class Game extends PApplet {
     }
     
     public void draw() {
+    	background(0);
     	fill(255, 255, 255);
     	KeysManager.getInstance().update();
         sceneManager.update(this.watch.getElapsedTime());
