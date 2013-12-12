@@ -34,8 +34,7 @@ public class ParticleSystem {
 		        particles.remove(i);
 		      }
 		    }
-		  }		
-	}
+		  }
 	
 	public	void	draw(Game parent) {
 		parent.pushMatrix();
