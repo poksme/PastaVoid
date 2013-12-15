@@ -82,6 +82,13 @@
                 "position": 0.50,
                 "size": 0.30
         }]
+	},
+	{
+        "stepID" : 13,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
 	}]
 	}] 
 }

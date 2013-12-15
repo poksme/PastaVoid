@@ -45,14 +45,14 @@
         "stepID" : 6,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.20
         }]
 	},
 	{
         "stepID" : 7,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.20
         }]
 	},
 	{
@@ -73,14 +73,14 @@
         "stepID" : 10,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.20
         }]
 	},
 	{
         "stepID" : 11,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.20
         }]
 	}]
 	}] 
