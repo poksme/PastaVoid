@@ -3,6 +3,7 @@
 	"artist" : "Daft Punk",
 	"bpm" : 123,
 	"barNumber": 84,
+	"introDelay": 0,
 	"patternPaths" : [
 		"my_first_pattern.json",
 		"arpeggio_part_1.json",

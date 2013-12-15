@@ -8,6 +8,9 @@
 		},{
 		"music": "endless_fantasy.mp3",
 		"script" : "endless_fantasy.json"
+		},{
+		"music": "paris.mp3",
+		"script" : "paris.json"
 		}],
 	"version" : "0.2a"
 }
