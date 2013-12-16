@@ -106,13 +106,69 @@
 		"startBar": 22,
 		"endBar": 22,
 		"patternName" : "paris_break_1"
-	},{
+	}, {
 		"startBar": 23,
 		"endBar": 23,
 		"patternName" : "paris_intro_5"
-	},{
+	}, {
 		"startBar": 24,
-		"endBar": 83,
+		"endBar": 24,
+		"patternName" : "paris_intro_1_bis"
+	}, {
+		"startBar": 25,
+		"endBar": 25,
+		"patternName" : "paris_intro_2"
+	}, {
+		"startBar": 26,
+		"endBar": 26,
+		"patternName" : "paris_intro_3"
+	}, {
+		"startBar": 27,
+		"endBar": 27,
+		"patternName" : "paris_intro_4"
+	}, {
+		"startBar": 28,
+		"endBar": 28,
+		"patternName" : "paris_intro_1_bis"
+	}, {
+		"startBar": 29,
+		"endBar": 29,
+		"patternName" : "paris_intro_2"
+	}, {
+		"startBar": 30,
+		"endBar": 30,
+		"patternName" : "paris_intro_3"
+	}, {
+		"startBar": 31,
+		"endBar": 31,
+		"patternName" : "paris_intro_5"
+	}, {
+		"startBar": 32,
+		"endBar": 32,
+		"patternName" : "paris_intro_1_bis"
+	}, {
+		"startBar": 33,
+		"endBar": 33,
+		"patternName" : "paris_intro_2"
+	}, {
+		"startBar": 34,
+		"endBar": 34,
+		"patternName" : "paris_intro_3"
+	}, {
+		"startBar": 35,
+		"endBar": 35,
+		"patternName" : "paris_intro_4"
+	},{
+		"startBar": 36,
+		"endBar": 36,
+		"patternName" : "paris_intro_1_bis"
+	}, {
+		"startBar": 37,
+		"endBar": 37,
+		"patternName" : "paris_intro_2"
+	},{
+		"startBar": 38,
+		"endBar": 84,
 		"patternName" : "myFirstPattern"
 	}]
 }

@@ -1,0 +1,35 @@
+{
+	"patternName": "aerodynamic_intro_to_left",
+	"pattern": [
+	{
+        "stepID" : 0,
+        "doors" : [{
+                "position": 0.80,
+                "size": 0.30
+        }]
+	}, {
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.60,
+                "size": 0.30
+        }]
+	}, {
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 10,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.20
+        }]
+	},{
+        "stepID" : 12,
+        "doors" : [{
+                "position": 0.30,
+                "size": 0.20
+        }]
+	}] 
+}

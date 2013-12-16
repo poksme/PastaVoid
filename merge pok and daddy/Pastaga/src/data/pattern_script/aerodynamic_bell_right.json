@@ -1,0 +1,11 @@
+{
+	"patternName": "aerodynamic_bell_right",
+	"pattern": [
+	{
+        "stepID" : 2,
+        "doors" : [{
+                "position": 0.85,
+                "size": 0.30
+        }]
+	}] 
+}
