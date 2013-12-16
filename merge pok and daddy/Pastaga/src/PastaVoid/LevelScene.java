@@ -1,5 +1,6 @@
 package PastaVoid;
 
+import ddf.minim.AudioPlayer;
 import Configuration.Config;
 import GameEngine.AScene;
 import GameEngine.KeysManager;
@@ -28,9 +29,11 @@ public class LevelScene extends AScene {
     private boolean		isPaused;
     //should be in GUIScene
     private PauseMenuScene	pauseMenu;
+    private AudioPlayer playingSong;
     
-    public LevelScene(Game game, Configuration.Level level) {
+    public LevelScene(Game game, Configuration.Level level, AudioPlayer playingSong) {
     	super(game, true, true); // VISIBLE UPDTABLE
+    	this.playingSong = playingSong;
         this.level = level;
         this.speed = level.getBpm();
         this.delayTime = level.getIntroDelay();
@@ -80,6 +83,10 @@ public class LevelScene extends AScene {
     	}
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
     		this.togglePause();
+    	}
+    	if (!this.playingSong.isPlaying()) {
+    		// PRINT AND OF GAME SCREEN AND GO BACK TO MAIN MENU
+    		SceneManager.getInstance().removeScene(this);
     	}
     }
 

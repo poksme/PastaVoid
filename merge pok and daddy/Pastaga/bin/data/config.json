@@ -11,6 +11,9 @@
 		},{
 		"music": "paris.mp3",
 		"script" : "paris.json"
+		},{
+		"music": "wdpk.mp3",
+		"script" : "wdpk.json"
 		}],
 	"version" : "0.2a"
 }

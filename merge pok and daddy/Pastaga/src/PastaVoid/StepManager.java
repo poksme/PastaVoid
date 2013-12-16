@@ -94,7 +94,7 @@ public class StepManager {
     		return null;
     	}
     	//size.y must be < 0.5f (tmp)
-    	if (yPos > this.getSizeY()) {
+    	if (yPos >= this.getSizeY()) {
         	return null;    		
     	}
     	Step step = this.walls[yPos];
