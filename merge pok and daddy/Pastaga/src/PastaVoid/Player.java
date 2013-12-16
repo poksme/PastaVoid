@@ -3,14 +3,13 @@ package PastaVoid;
 import processing.core.PVector;
 import GameEngine.Color;
 import GameEngine.KeysManager;
-import GameEngine.AScene;
 
 public class Player {
 
 	float  _posX;
 	float  _scale = 1.f;
 	float  _sizeX = 0.075f;
-	float  _speed = 0.07f / 200f;//0.010f;
+	float  _speed = 0.07f / 100f;//0.010f;
 	//int	   _widthScreen;
 	float  _yDeg = 45.f;
 	LevelScene	_levelScene;
@@ -90,9 +89,9 @@ public class Player {
 		parent.pushMatrix();
 		parent.translate(_posX, _levelScene.getCamera().getOffset() + 0.5f, 0.f);
 		
-		
+		float rotateSpeed = 2.0f;
 		parent.rotateX(parent.radians(67.f));
-		parent.rotateY(parent.radians(_yDeg));
+		parent.rotateY(parent.radians(_yDeg) * rotateSpeed);
 		
 		parent.stroke(_color.red, _color.green, _color.blue);
 		parent.strokeWeight(0.05f);

@@ -43,6 +43,8 @@ public class MenuScene extends AScene {
 		}
 		if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER)) {
 			game.getSongPlayer().get(curSong).play();
+			game.setCurrentSong(game.getSongPlayer().get(curSong));
+			//game.getSongPlayer().get(curSong).mute();
 			this.setDrawable(false);
 			this.setUpdatable(false);
 	        LevelScene levelScene = new LevelScene(game, game.getConfig().getLevels().get(curSong));

@@ -21,6 +21,7 @@ public class Game extends PApplet {
     private Config      	config;
     private PFont			font;
     public 	PShader      	blur;
+    private AudioPlayer		currentSong;
 
     public static void main(String args[]) {
 //        PApplet.main(new String[] { "--present", "PastaVoid.Game" });
@@ -116,4 +117,12 @@ public class Game extends PApplet {
 		 minim.stop();
     	super.exit();
     }
+    
+    public AudioPlayer	getCurrentSong() {
+    	return this.currentSong;
+    }
+    
+	public void setCurrentSong(AudioPlayer currentSong) {
+		this.currentSong = currentSong;
+	}
 }

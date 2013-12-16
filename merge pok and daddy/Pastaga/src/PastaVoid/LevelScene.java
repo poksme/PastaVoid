@@ -24,6 +24,7 @@ public class LevelScene extends AScene {
     private int			delayTime;
     private boolean		delayDone;
     private	Player		player;
+    private boolean		isPaused;
 
     
     public LevelScene(Game game, Configuration.Level level) {
@@ -33,6 +34,7 @@ public class LevelScene extends AScene {
         this.delayTime = level.getIntroDelay();
         this.delayDone = false;
         this.player = new Player(this);
+        this.isPaused = false;
     }
 
     public void start() {
@@ -52,12 +54,23 @@ public class LevelScene extends AScene {
     			System.out.println(delayTime);
     		}
     	} else {
-    		this.getCamera().update(timeElapsed);
-            this.player.update(timeElapsed);
-            WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
-        	this.player.computeCollision(wc);
-    	}    	
-    	if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.SPACE)) { 
+    		if (!this.isPaused) {
+        		this.getCamera().update(timeElapsed);
+                this.player.update(timeElapsed);
+                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
+            	this.player.computeCollision(wc);    			
+    		}
+    	}
+    	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
+    		if (!this.isPaused) {
+    			this.isPaused = true;
+    			//cut sound
+    			this.game.getCurrentSong().pause();
+    		} else {
+    			this.isPaused = false;
+    			//resume sound
+    			this.game.getCurrentSong().play();
+    		}
 		// ADD PAUSE HERE
     	}
     }
@@ -80,41 +93,7 @@ public class LevelScene extends AScene {
         parent.strokeWeight(0.05f);
         this.walls.draw(parent);
         this.player.draw(parent);
-       
-        
-        //TMP!
-        //ceci est tmp
-        /*float posy = this.camera.getOffset() + 0.5f;
-        float width = 0.1f;
-        float height = 0.4f;
-        
-        WallCollision wc = this.walls.isColliding(new PVector(0.5f, posy), new PVector(width, height));
-        
-        if (wc != null) {
-            parent.stroke(255, 0, 0);
-        } else {
-            parent.stroke(0, 255, 0);
-        }
-        
-        
-        parent.line(0.50f - width /2, posy - height / 2, 0.50f + width /2, posy - height / 2);
-        parent.line(0.50f - width /2, posy + 0.2f, 0.50f + width /2, posy + height / 2);
-        parent.line(0.50f - width /2, posy - height / 2, 0.50f - width /2, posy + height / 2);
-        parent.line(0.50f + width /2, posy - height / 2, 0.50f + width /2, posy + height / 2);
-        
-        float z = 0.1f;
-        
-        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f + width /2, posy - height / 2, z);
-        parent.line(0.50f - width /2, posy + 0.2f, z, 0.50f + width /2, posy + height / 2, z);
-        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f - width /2, posy + height / 2, z);
-        parent.line(0.50f + width /2, posy - height / 2, z, 0.50f + width /2, posy + height / 2, z);
-
-        parent.stroke(255, 255, 0);
-        parent.fill(255, 255, 0);
-        if (wc != null) {
-            parent.ellipse(wc.getCollisionPoint().x, wc.getCollisionPoint().y, 0.05f, 0.2f);        	
-        }*/
-    }
+     }
 
     public float getSpeed() {
         return speed;
