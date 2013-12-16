@@ -45,9 +45,9 @@ public class MenuScene extends AScene {
 			game.getSongPlayer().get(curSong).play();
 			this.setDrawable(false);
 			this.setUpdatable(false);
-	        LevelScene tmpLevelScene = new LevelScene(game, game.getConfig().getLevels().get(curSong));
-	        SceneManager.getInstance().addScene(tmpLevelScene);
-	        SceneManager.getInstance().addScene(new PlayerScene(game, game.WIDTH, tmpLevelScene));
+	        LevelScene levelScene = new LevelScene(game, game.getConfig().getLevels().get(curSong));
+	        SceneManager.getInstance().addScene(levelScene);
+//	        SceneManager.getInstance().addScene(new Player(game, game.WIDTH, tmpLevelScene));
 		}
 	}
 

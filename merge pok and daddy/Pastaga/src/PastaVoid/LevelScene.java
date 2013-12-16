@@ -21,8 +21,9 @@ public class LevelScene extends AScene {
     private float       speed;
     private Configuration.Level      level;
     private IsoCamera   camera;
-    private int delayTime;
+    private int			delayTime;
     private boolean		delayDone;
+    private	Player		player;
 
     
     public LevelScene(Game game, Configuration.Level level) {
@@ -31,12 +32,14 @@ public class LevelScene extends AScene {
         this.speed = level.getBpm();
         this.delayTime = level.getIntroDelay();
         this.delayDone = false;
+        this.player = new Player(this);
     }
 
     public void start() {
         this.setWalls(new StepManager(this));
         this.getWalls().generate();
         this.setCamera(new IsoCamera(this));
+        this.player.start();
     }
 
     public void update(long timeElapsed) {
@@ -50,9 +53,12 @@ public class LevelScene extends AScene {
     		}
     	} else {
     		this.getCamera().update(timeElapsed);
-    	}
+            this.player.update(timeElapsed);
+            WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
+        	this.player.computeCollision(wc);
+    	}    	
     	if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.SPACE)) { 
-    		// ADD PAUSE HERE
+		// ADD PAUSE HERE
     	}
     }
 
@@ -67,11 +73,13 @@ public class LevelScene extends AScene {
         parent.stroke(108, 91, 242);
         parent.strokeWeight(0.15f);
         this.walls.draw(parent);
+        this.player.draw(parent);
         parent.blur();
         
         parent.stroke(68, 51, 202);
         parent.strokeWeight(0.05f);
         this.walls.draw(parent);
+        this.player.draw(parent);
        
         
         //TMP!
