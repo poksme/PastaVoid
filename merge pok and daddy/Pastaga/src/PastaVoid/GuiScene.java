@@ -49,7 +49,8 @@ public class GuiScene extends AScene{
 		parent.fill(0);
 		parent.strokeWeight(0);
 		parent.rect(20, 20, 40, _gaugeHeight);
-		parent.println(_hit);
+		// COMMENTED BECAUSE A PRINT AT EACH DRAW SLOW DOWN MY COMPUTER
+//		parent.println(_hit);
 		// TODO Auto-generated method stub
 	}
 	

@@ -73,7 +73,7 @@ public class LevelScene extends AScene {
     			delayDone = true;
     	    	this.getCamera().update(delayTime * -1);		
     		} else {
-    			System.out.println(delayTime);
+//    			System.out.println(delayTime);
     		}
     	} else {
     		if (!this.isPaused) {
@@ -87,9 +87,11 @@ public class LevelScene extends AScene {
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
     		this.togglePause();
     	}
-    	if (!this.playingSong.isPlaying()) {
+    	if (!this.playingSong.isPlaying() && !this.isPaused) {
     		// PRINT AND OF GAME SCREEN AND GO BACK TO MAIN MENU
     		SceneManager.getInstance().removeScene(this);
+    		SceneManager.getInstance().removeScene(guiScene);
+    		SceneManager.getInstance().addScene(new GameOverScene(42, this.game, true, true));
     	}
     }
 

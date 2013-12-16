@@ -3,8 +3,8 @@
 	"artist" : "M.O.O.N",
 	"bpm" : 99.0,
 	"barNumber": 84,
-	"playerSpeed" : 0.0005;
-	"introDelay": 300,
+	"playerSpeed" : 0.0005,
+	"introDelay": 200,
 	"patternPaths" : [
 		"paris_intro_1.json",
 		"paris_intro_1_bis.json",
