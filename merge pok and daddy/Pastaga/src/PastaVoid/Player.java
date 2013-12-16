@@ -15,7 +15,7 @@ public class Player {
 	LevelScene	_levelScene;
 	PVector		_boundingBox;
 	Color		_color;
-	boolean		_playerColliding;
+	private boolean		_playerColliding;
 	  
 //	public Player(Game game, int widthScreen, LevelScene levelScene) {
 //		super(game, true, true);
@@ -33,7 +33,7 @@ public class Player {
 	    float bboxScale = 0.7f;
 	    _boundingBox = new PVector(_sizeX * bboxScale, _sizeX * 4f * bboxScale);
 	    _color = new Color(255, 255, 255);
-	    _playerColliding = false;
+	    setIsPlayerColliding(false);
 	}
 
 	public void start() {
@@ -54,36 +54,46 @@ public class Player {
 		}
 	}
 
-	
-	private void	onStartCollision() {
-		_color.red = 255;
-		_color.green = 0;
-		_color.blue = 0;		
+	public void	onPassedStep() {
+//		System.out.println("Successfully passed a step!");
+		_levelScene.getGuiScene().playerPass();
+		_color.red = 0;
+		_color.green = 255;
+		_color.blue = 0;
 	}
 	
-	private void	onColliding() {
+	public void	onStartCollision() {
+		this._playerColliding = true;
+		_color.red = 255;
+		_color.green = 0;
+		_color.blue = 0;
+		_levelScene.getGuiScene().playerTouched();
+	}
+	
+	public void	onColliding() {
 		
 	}
 	
-	private void	onEndCollision() {
+	public void	onEndCollision() {
+		this._playerColliding = false;
 		_color.red = 255;
 		_color.green = 255;
 		_color.blue = 255;		
 	}
 	
-	public void	computeCollision(WallCollision wc) {
-		boolean n_playerColliding = (wc != null);
-		if (n_playerColliding && _playerColliding == false) {
-			onStartCollision();
-		} else if (!n_playerColliding && _playerColliding == true) {
-			onEndCollision();
-		} else if (n_playerColliding && _playerColliding == true) {
-			onColliding();
-		} else {
-			//nothing lol
-		}
-		_playerColliding = n_playerColliding;
-	}
+//	public void	computeCollision(WallCollision wc) {
+//		boolean n_playerColliding = (wc != null);
+//		if (n_playerColliding && is_playerColliding() == false) {
+//			onStartCollision();
+//		} else if (!n_playerColliding && is_playerColliding() == true) {
+//			onEndCollision();
+//		} else if (n_playerColliding && is_playerColliding() == true) {
+//			onColliding();
+//		} else {
+//			//nothing lol
+//		}
+//		set_playerColliding(n_playerColliding);
+//	}
 
 	public void draw(Game parent) {
 		//parent.ellipse(_posX, _levelScene.getCamera().getOffset() + 0.5f, _sizeX * _scale, _sizeY * _scale);
@@ -108,5 +118,13 @@ public class Player {
 
 	public PVector getBoundingBox() {
 		return _boundingBox;
+	}
+
+	public boolean isPlayerColliding() {
+		return _playerColliding;
+	}
+
+	public void setIsPlayerColliding(boolean _playerColliding) {
+		this._playerColliding = _playerColliding;
 	}
 }

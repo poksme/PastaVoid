@@ -30,6 +30,7 @@ public class LevelScene extends AScene {
     //should be in GUIScene
     private PauseMenuScene	pauseMenu;
     private AudioPlayer playingSong;
+    private GuiScene	guiScene;
     
     public LevelScene(Game game, Configuration.Level level, AudioPlayer playingSong) {
     	super(game, true, true); // VISIBLE UPDTABLE
@@ -41,6 +42,7 @@ public class LevelScene extends AScene {
         this.player = new Player(this, level.getPlayerSpeed());
         this.isPaused = false;
         this.pauseMenu = null;
+        this.guiScene = null;
     }
 
     public void start() {
@@ -77,8 +79,9 @@ public class LevelScene extends AScene {
     		if (!this.isPaused) {
         		this.getCamera().update(timeElapsed);
                 this.player.update(timeElapsed);
-                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
-            	this.player.computeCollision(wc);    			
+                this.walls.computeCollision(this.player);
+//                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
+//            	this.player.computeCollision(wc);    			
     		}
     	}
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
@@ -112,6 +115,14 @@ public class LevelScene extends AScene {
         this.player.draw(parent);
      }
 
+    public	void setGuiScene(GuiScene scene) {
+    	guiScene = scene;
+    }
+    
+    public	GuiScene getGuiScene() {
+    	return guiScene;
+    }
+    
     public float getSpeed() {
         return speed;
     }

@@ -20,8 +20,13 @@ public class StepManager {
     private float     sizeY;
     private LevelScene parent;
 
+    private	boolean		_hasHitCurrentStep;
+    private	int			_currentStepIndex;
+    
     public StepManager(LevelScene parent) {
         this.parent = parent;
+        this._currentStepIndex = -1;
+        this._hasHitCurrentStep = false;
     }
 
     public  void    generate() {
@@ -59,37 +64,60 @@ public class StepManager {
         parent.line(this.getSizeX(), y, this.getSizeX(), y + 32.0f);
         parent.popMatrix();
     }
-
-    //version POS,SIZE
-//    public WallCollision	isColliding(PVector pos, PVector size) {
-//    	int yPos = Math.round(pos.y);
-//    	
-//    	//size.y must be < 0.5f (tmp)
-//    	if (yPos > this.getSizeY()) {
-//        	return null;    		
-//    	}
-//    	Step step = this.walls[yPos];
-//    	if (!step.isWall) {
-//        	return null;    		
-//    	}
-//    	if ((pos.x) > step.x - step.holeSize / 2 && pos.x < (step.x + size.x) + step.holeSize / 2) {
-//        	return null;
-//    	}
-//    	float posX = 0.0f;
-//    	if ((pos.x) > step.x - step.holeSize / 2) {
-//    		posX = pos.x;
-//    	} else {
-//    		posX = pos.x + size.x;
-//    	}
-//    	WallCollision coll = new WallCollision(step, new PVector(posX, yPos));
-//		return coll;
-//    }
-
     
+    public void				computeCollision(Player player) {
+    	//check out of bounds
+    	//check if new current frame
+    	//check if colliding current frame
+    	
+    	int yPos = (int)Math.ceil(player.getPosition().y);
+    	
+    	//if player is outside the bounds 
+    	if (yPos < 0.0f || yPos >= this.getSizeY()) {
+    		return;
+    	}
+    	
+    	if (yPos != this._currentStepIndex) {
+    		if (this._currentStepIndex != -1) {
+        		if (!this._hasHitCurrentStep && this.walls[this._currentStepIndex].isWall) {
+        			//passed the step/wall
+        			//Step passedStep = this.walls[this._currentStepIndex]
+        			player.onPassedStep();
+        		}
+    		}
+    		this._currentStepIndex = yPos;
+    		this._hasHitCurrentStep = false;    			
+    	}
+    	Step step = this.walls[yPos];
+    	if (step.isWall
+    			&& (		(player.getPosition().x - player.getBoundingBox().x / 2 < step.x - step.holeSize / 2 
+    					||	(player.getPosition().x + player.getBoundingBox().x / 2 > step.x + step.holeSize / 2)))
+    			&& (		(player.getPosition().y - player.getBoundingBox().y / 2 < step.y)
+    					||	(player.getPosition().y + player.getBoundingBox().y / 2 > step.y))) {
+    		//collision
+    		if (!player.isPlayerColliding()) {
+    			player.onStartCollision();
+    			this._hasHitCurrentStep = true;
+    		} else {
+    			player.onColliding();
+    		}
+    	} else {
+    		//no collision
+    		if (player.isPlayerColliding()) {
+    			player.onEndCollision();
+    		}
+    	}
+//    	float posX = 0.0f;
+//    	if ((player.getPosition().x - player.getBoundingBox().x / 2) < step.x - step.holeSize / 2) {
+//    		posX = player.getPosition().x - player.getBoundingBox().x / 2;
+//    	} else {
+//    		posX = player.getPosition().x + player.getBoundingBox().x / 2;
+//    	}
+//    	WallCollision coll = new WallCollision(step, new PVector(posX, yPos));   	
+    }
     //version CENTER/SIZE
     public WallCollision	isColliding(PVector pos, PVector size) {
-    	int yPos = Math.round(pos.y);
-    	
+    	int yPos = (int)(Math.ceil(pos.y));
     	if (yPos < 0.f) {
     		return null;
     	}
@@ -99,7 +127,7 @@ public class StepManager {
     	}
     	Step step = this.walls[yPos];
     	if (!step.isWall) {
-        	return null;    		
+        	return null;
     	}
     	if ((pos.x - size.x / 2) > step.x - step.holeSize / 2 && (pos.x + size.x / 2) < step.x + step.holeSize / 2) {
         	return null;
