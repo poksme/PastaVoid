@@ -33,8 +33,8 @@ public class ParticleSystem {
 		      if (p.isDead()) {
 		        particles.remove(i);
 		      }
-		    }
-		  }
+		}
+	}
 	
 	public	void	draw(Game parent) {
 		parent.pushMatrix();

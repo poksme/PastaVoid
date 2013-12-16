@@ -43,11 +43,13 @@ public class MenuScene extends AScene {
 		}
 		if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER)) {
 			game.getSongPlayer().get(curSong).play();
+			game.setCurrentSong(game.getSongPlayer().get(curSong));
+			//game.getSongPlayer().get(curSong).mute();
 			this.setDrawable(false);
 			this.setUpdatable(false);
-	        LevelScene tmpLevelScene = new LevelScene(game, game.getConfig().getLevels().get(curSong));
-	        SceneManager.getInstance().addScene(tmpLevelScene);
-	        SceneManager.getInstance().addScene(new PlayerScene(game, game.WIDTH, tmpLevelScene));
+	        LevelScene levelScene = new LevelScene(game, game.getConfig().getLevels().get(curSong));
+	        SceneManager.getInstance().addScene(levelScene);
+//	        SceneManager.getInstance().addScene(new Player(game, game.WIDTH, tmpLevelScene));
 		}
 	}
 

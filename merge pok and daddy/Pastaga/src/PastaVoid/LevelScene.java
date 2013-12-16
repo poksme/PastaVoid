@@ -2,6 +2,7 @@ package PastaVoid;
 
 import Configuration.Config;
 import GameEngine.AScene;
+import GameEngine.KeysManager;
 import processing.core.PVector;
 
 /**
@@ -20,8 +21,10 @@ public class LevelScene extends AScene {
     private float       speed;
     private Configuration.Level      level;
     private IsoCamera   camera;
-    private int delayTime;
+    private int			delayTime;
     private boolean		delayDone;
+    private	Player		player;
+    private boolean		isPaused;
 
     
     public LevelScene(Game game, Configuration.Level level) {
@@ -30,16 +33,18 @@ public class LevelScene extends AScene {
         this.speed = level.getBpm();
         this.delayTime = level.getIntroDelay();
         this.delayDone = false;
+        this.player = new Player(this);
+        this.isPaused = false;
     }
 
     public void start() {
         this.setWalls(new StepManager(this));
         this.getWalls().generate();
         this.setCamera(new IsoCamera(this));
+        this.player.start();
     }
 
     public void update(long timeElapsed) {
-    	// DO SOMETHING WITH THE DELAY
     	if (!delayDone) {
     		delayTime -= timeElapsed;
     		if (delayTime < 0) {
@@ -49,8 +54,25 @@ public class LevelScene extends AScene {
     			System.out.println(delayTime);
     		}
     	} else {
-    		this.getCamera().update(timeElapsed);
-    	}    	
+    		if (!this.isPaused) {
+        		this.getCamera().update(timeElapsed);
+                this.player.update(timeElapsed);
+                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
+            	this.player.computeCollision(wc);    			
+    		}
+    	}
+    	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
+    		if (!this.isPaused) {
+    			this.isPaused = true;
+    			//cut sound
+    			this.game.getCurrentSong().pause();
+    		} else {
+    			this.isPaused = false;
+    			//resume sound
+    			this.game.getCurrentSong().play();
+    		}
+		// ADD PAUSE HERE
+    	}
     }
 
     public void draw(Game parent) {
@@ -64,46 +86,14 @@ public class LevelScene extends AScene {
         parent.stroke(108, 91, 242);
         parent.strokeWeight(0.15f);
         this.walls.draw(parent);
+        this.player.draw(parent);
         parent.blur();
         
         parent.stroke(68, 51, 202);
         parent.strokeWeight(0.05f);
         this.walls.draw(parent);
-       
-        
-        //TMP!
-        //ceci est tmp
-        /*float posy = this.camera.getOffset() + 0.5f;
-        float width = 0.1f;
-        float height = 0.4f;
-        
-        WallCollision wc = this.walls.isColliding(new PVector(0.5f, posy), new PVector(width, height));
-        
-        if (wc != null) {
-            parent.stroke(255, 0, 0);
-        } else {
-            parent.stroke(0, 255, 0);
-        }
-        
-        
-        parent.line(0.50f - width /2, posy - height / 2, 0.50f + width /2, posy - height / 2);
-        parent.line(0.50f - width /2, posy + 0.2f, 0.50f + width /2, posy + height / 2);
-        parent.line(0.50f - width /2, posy - height / 2, 0.50f - width /2, posy + height / 2);
-        parent.line(0.50f + width /2, posy - height / 2, 0.50f + width /2, posy + height / 2);
-        
-        float z = 0.1f;
-        
-        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f + width /2, posy - height / 2, z);
-        parent.line(0.50f - width /2, posy + 0.2f, z, 0.50f + width /2, posy + height / 2, z);
-        parent.line(0.50f - width /2, posy - height / 2, z, 0.50f - width /2, posy + height / 2, z);
-        parent.line(0.50f + width /2, posy - height / 2, z, 0.50f + width /2, posy + height / 2, z);
-
-        parent.stroke(255, 255, 0);
-        parent.fill(255, 255, 0);
-        if (wc != null) {
-            parent.ellipse(wc.getCollisionPoint().x, wc.getCollisionPoint().y, 0.05f, 0.2f);        	
-        }*/
-    }
+        this.player.draw(parent);
+     }
 
     public float getSpeed() {
         return speed;
