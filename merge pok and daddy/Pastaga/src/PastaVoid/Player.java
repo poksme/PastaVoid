@@ -55,6 +55,7 @@ public class Player {
 
 	public void	onPassedStep() {
 //		System.out.println("Successfully passed a step!");
+		_levelScene.getGuiScene().playerPass();
 		_color.red = 0;
 		_color.green = 255;
 		_color.blue = 0;
@@ -65,6 +66,7 @@ public class Player {
 		_color.red = 255;
 		_color.green = 0;
 		_color.blue = 0;
+		_levelScene.getGuiScene().playerTouched();
 	}
 	
 	public void	onColliding() {
