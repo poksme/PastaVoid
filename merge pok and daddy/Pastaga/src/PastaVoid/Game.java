@@ -38,7 +38,6 @@ public class Game extends PApplet {
     public void setup() {
         size(800, 600, P3D);
         background(0);
-        
         // FONT
         this.font = this.loadFont("fonts" + java.io.File.separator + "Orbitron-Light-48.vlw");
         this.textFont(this.font, 48);
@@ -106,5 +105,15 @@ public class Game extends PApplet {
         sceneManager.update(this.watch.getElapsedTime());
         this.watch.start();
         sceneManager.draw(this);
-    }		
+    }
+    
+    
+    // NOW TRYING TO CLOSE MUSIC BUFFERS
+    public void exit() {
+		 for (int i =0; i < songPlayer.size(); i++) {
+			 songPlayer.get(i).close();
+		 }
+		 minim.stop();
+    	super.exit();
+    }
 }

@@ -2,6 +2,7 @@ package PastaVoid;
 
 import Configuration.Config;
 import GameEngine.AScene;
+import GameEngine.KeysManager;
 import processing.core.PVector;
 
 /**
@@ -39,7 +40,6 @@ public class LevelScene extends AScene {
     }
 
     public void update(long timeElapsed) {
-    	// DO SOMETHING WITH THE DELAY
     	if (!delayDone) {
     		delayTime -= timeElapsed;
     		if (delayTime < 0) {
@@ -50,7 +50,10 @@ public class LevelScene extends AScene {
     		}
     	} else {
     		this.getCamera().update(timeElapsed);
-    	}    	
+    	}
+    	if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.SPACE)) { 
+    		// ADD PAUSE HERE
+    	}
     }
 
     public void draw(Game parent) {

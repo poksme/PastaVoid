@@ -8,7 +8,7 @@ public class PlayerScene extends AScene {
 	float  _posX;
 	float  _scale = 1.f;
 	float  _sizeX = 0.075f;
-	float  _speed = 0.007f;
+	float  _speed = 0.007f / 20f;
 	int	   _widthScreen;
 	float  _yDeg = 45.f;
 	LevelScene	_levelScene;
@@ -27,16 +27,17 @@ public class PlayerScene extends AScene {
 		
 	}
 
+	// DON'T FORGET  TO USE ELAPSEDTIME ON UPDATES
 	@Override
 	public void update(long elapsedTime) {
-		_yDeg+=2.f;
+		_yDeg+= (2.f / 20f) * elapsedTime;
 		if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.LEFT) == true) {
-			if (_posX > _sizeX/2)
-				_posX -= _speed;
+			if (_posX > _sizeX / 2)
+				_posX -= _speed * elapsedTime;
 		}
 		else if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.RIGHT) == true) {
-			if (_posX < 1.f - _sizeX/2)
-			_posX += _speed;
+			if (_posX < 1.f - _sizeX / 2)
+			_posX += _speed * elapsedTime;
 		}
 	}
 
