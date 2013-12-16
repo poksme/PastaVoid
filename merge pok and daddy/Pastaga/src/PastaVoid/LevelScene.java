@@ -98,13 +98,15 @@ public class LevelScene extends AScene {
         this.getCamera().draw(parent);
 
 
-        parent.stroke(108, 91, 242);
+//        parent.stroke(108, 91, 242);
+        parent.stroke(48, 117, 232);
         parent.strokeWeight(0.15f);
         this.walls.draw(parent);
         this.player.draw(parent);
         parent.blur();
         
-        parent.stroke(68, 51, 202);
+//        parent.stroke(68, 51, 202);
+        parent.stroke(30, 73, 145);
         parent.strokeWeight(0.05f);
         this.walls.draw(parent);
         this.player.draw(parent);
