@@ -55,6 +55,7 @@ public class LevelScene extends AScene {
     		this.getCamera().update(timeElapsed);
             this.player.update(timeElapsed);
             WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
+        	this.player.computeCollision(wc);
     	}    	
     }
 
