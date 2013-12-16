@@ -3,6 +3,7 @@
 	"artist" : "Birdy Nam Nam",
 	"bpm" : 94.0,
 	"barNumber": 84,
+	"playerSpeed" : 0.0005;
 	"introDelay": 300,
 	"patternPaths" : [
 		"my_first_pattern.json",

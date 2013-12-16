@@ -2,6 +2,7 @@
 	"name": "Daft Punk",
 	"artist" : "WDPK 83.7 FM",
 	"bpm" : 111.0,
+	"playerSpeed" : 0.0005;
 	"barNumber": 13,
 	"introDelay": 300,
 	"patternPaths" : [

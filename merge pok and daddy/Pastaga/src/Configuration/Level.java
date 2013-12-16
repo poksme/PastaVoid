@@ -22,6 +22,7 @@ public class Level {
     int barNumber;
     float bpm;
     int introDelay;
+    float playerSpeed;
     ArrayList<LevelPart> patterns;
     HashMap<String, Pattern> patternLibrary;
 
@@ -36,6 +37,7 @@ public class Level {
         bpm = musicScript.getFloat("bpm");
         barNumber = musicScript.getInt("barNumber");
         introDelay = musicScript.getInt("introDelay");
+        playerSpeed = musicScript.getFloat("playerSpeed");
         patternLibrary = new HashMap<String, Pattern>(patternPaths.size());
 
         // Create HashMap with pattern name / pattern object from the patternPaths
@@ -124,6 +126,11 @@ public class Level {
         return false;
     }
 
+    public float getPlayerSpeed()
+    {
+    	return playerSpeed;
+    }
+    
     public StepInfo getStepInfo(int stepID) {
         for (int i = 0; i < patterns.size(); i++) {
             LevelPart tmpLp = patterns.get(i);

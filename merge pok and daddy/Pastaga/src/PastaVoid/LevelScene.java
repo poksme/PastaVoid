@@ -38,7 +38,7 @@ public class LevelScene extends AScene {
         this.speed = level.getBpm();
         this.delayTime = level.getIntroDelay();
         this.delayDone = false;
-        this.player = new Player(this);
+        this.player = new Player(this, level.getPlayerSpeed());
         this.isPaused = false;
         this.pauseMenu = null;
     }
