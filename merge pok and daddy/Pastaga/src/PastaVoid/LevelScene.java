@@ -18,14 +18,18 @@ public class LevelScene extends AScene {
     private boolean     drawn = true;
     private StepManager walls;
     private float       speed;
-    private Config      config;
+    private Configuration.Level      level;
     private IsoCamera   camera;
+    private int delayTime;
+    private boolean		delayDone;
 
     
-    public LevelScene(Game game, Config config) {
+    public LevelScene(Game game, Configuration.Level level) {
     	super(game, true, true); // VISIBLE UPDTABLE
-        this.config = config;
-        this.speed = config.getLevels().get(0).getBpm();
+        this.level = level;
+        this.speed = level.getBpm();
+        this.delayTime = level.getIntroDelay();
+        this.delayDone = false;
     }
 
     public void start() {
@@ -35,8 +39,18 @@ public class LevelScene extends AScene {
     }
 
     public void update(long timeElapsed) {
-    	this.getCamera().update(timeElapsed);
-    	
+    	// DO SOMETHING WITH THE DELAY
+    	if (!delayDone) {
+    		delayTime -= timeElapsed;
+    		if (delayTime < 0) {
+    			delayDone = true;
+    	    	this.getCamera().update(delayTime * -1);		
+    		} else {
+    			System.out.println(delayTime);
+    		}
+    	} else {
+    		this.getCamera().update(timeElapsed);
+    	}    	
     }
 
     public void draw(Game parent) {
@@ -99,8 +113,8 @@ public class LevelScene extends AScene {
         this.speed = speed;
     }
 
-    public Config getConfig() {
-        return config;
+    public Configuration.Level getConfigurationLevel() {
+        return level;
     }
 
 	public StepManager getWalls() {

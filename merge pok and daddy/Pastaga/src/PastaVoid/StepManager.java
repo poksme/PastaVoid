@@ -25,12 +25,12 @@ public class StepManager {
     }
 
     public  void    generate() {
-        this.sizeY = this.parent.getConfig().getLevels().get(0).getBarNumber() * 16; // bar number x step per bar
+        this.sizeY = this.parent.getConfigurationLevel().getBarNumber() * 16; // bar number x step per bar
         this.setWalls(new Step[(int)sizeY]);
 
         for (int i = 0; i < sizeY; i++) {
-            if (parent.getConfig().getLevels().get(0).hasDoor(i)) {
-                Door tmpSI = parent.getConfig().getLevels().get(0).getStepInfo(i).getDoors().get(0); // getting only one door for now
+            if (parent.getConfigurationLevel().hasDoor(i)) {
+                Door tmpSI = parent.getConfigurationLevel().getStepInfo(i).getDoors().get(0); // getting only one door for now
                 this.getWalls()[i] = new Step(tmpSI.getPosition(), i, tmpSI.getSize(), true);
             } else {
                 this.getWalls()[i] = new Step(0, i, 0, false);
@@ -90,6 +90,9 @@ public class StepManager {
     public WallCollision	isColliding(PVector pos, PVector size) {
     	int yPos = Math.round(pos.y);
     	
+    	if (yPos < 0.f) {
+    		return null;
+    	}
     	//size.y must be < 0.5f (tmp)
     	if (yPos > this.getSizeY()) {
         	return null;    		

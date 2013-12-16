@@ -3,6 +3,7 @@
 	"artist" : "Birdy Nam Nam",
 	"bpm" : 94.0,
 	"barNumber": 84,
+	"introDelay": 300,
 	"patternPaths" : [
 		"my_first_pattern.json",
 		"arpeggio_part_1.json",

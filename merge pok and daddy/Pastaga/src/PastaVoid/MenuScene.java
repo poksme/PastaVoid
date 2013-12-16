@@ -6,6 +6,7 @@ import Configuration.Config;
 import GameEngine.AScene;
 import GameEngine.KeysManager;
 import GameEngine.KeysManager.EKeys;
+import GameEngine.SceneManager;
 
 public class MenuScene extends AScene {
 	
@@ -43,6 +44,10 @@ public class MenuScene extends AScene {
 		if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER)) {
 			game.getSongPlayer().get(curSong).play();
 			this.setDrawable(false);
+			this.setUpdatable(false);
+	        LevelScene tmpLevelScene = new LevelScene(game, game.getConfig().getLevels().get(curSong));
+	        SceneManager.getInstance().addScene(tmpLevelScene);
+	        SceneManager.getInstance().addScene(new PlayerScene(game, game.WIDTH, tmpLevelScene));
 		}
 	}
 

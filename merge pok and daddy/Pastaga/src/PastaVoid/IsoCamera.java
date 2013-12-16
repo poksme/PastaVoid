@@ -19,6 +19,8 @@ public class IsoCamera {
     public IsoCamera(LevelScene scene) {
         this.scene = scene;
         this.stepPerMilliSec = scene.getSpeed() * 4.f / 60.f / 1000.f;
+//        System.out.println(introDelay);
+        this.offset = 0;
     }
 
     public void update(long elapsedTime) {
