@@ -1,0 +1,15 @@
+{
+	"name": "Daft Punk",
+	"artist" : "WDPK 83.7 FM",
+	"bpm" : 111.0,
+	"barNumber": 13,
+	"introDelay": 300,
+	"patternPaths" : [
+		"my_first_pattern.json"
+	],
+	"patterns" : [{
+		"startBar": 0,
+		"endBar": 12,
+		"patternName" : "myFirstPattern"
+	}]
+}
