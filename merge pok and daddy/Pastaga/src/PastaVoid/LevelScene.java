@@ -77,8 +77,9 @@ public class LevelScene extends AScene {
     		if (!this.isPaused) {
         		this.getCamera().update(timeElapsed);
                 this.player.update(timeElapsed);
-                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
-            	this.player.computeCollision(wc);    			
+                this.walls.computeCollision(this.player);
+//                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
+//            	this.player.computeCollision(wc);    			
     		}
     	}
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {

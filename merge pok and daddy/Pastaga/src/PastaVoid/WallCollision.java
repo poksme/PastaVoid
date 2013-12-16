@@ -2,6 +2,10 @@ package PastaVoid;
 
 import processing.core.PVector;
 
+//last Step
+//current Step
+//is Hitting
+
 public class WallCollision {
 
 	private Step	step;
@@ -26,6 +30,5 @@ public class WallCollision {
 
 	public void setCollisionPoint(PVector collisionPoint) {
 		this.collisionPoint = collisionPoint;
-	}
-	
+	}	
 }
