@@ -1,33 +1,40 @@
 package PastaVoid;
 
+import processing.core.PVector;
 import GameEngine.KeysManager;
 import GameEngine.AScene;
 
-public class PlayerScene extends AScene {
+public class Player {
 
 	float  _posX;
 	float  _scale = 1.f;
 	float  _sizeX = 0.075f;
 	float  _speed = 0.007f;
-	int	   _widthScreen;
+	//int	   _widthScreen;
 	float  _yDeg = 45.f;
 	LevelScene	_levelScene;
+	private PVector		_boundingBox;
 	  
-	public PlayerScene(Game game, int widthScreen, LevelScene levelScene) {
-		super(game, true, true);
+//	public Player(Game game, int widthScreen, LevelScene levelScene) {
+//		super(game, true, true);
+//		// TODO Auto-generated constructor stub
+//		//_widthScreen = widthScreen;
+//	    _posX = 0.5f;
+//	    _levelScene = levelScene;
+//	}
+	public Player(LevelScene levelScene) {
 		// TODO Auto-generated constructor stub
-		_widthScreen = widthScreen;
+		//_widthScreen = widthScreen;
 	    _posX = 0.5f;
 	    _levelScene = levelScene;
+	    this._boundingBox = new PVector(_sizeX, _sizeX * 4f);
 	}
 
-	@Override
 	public void start() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void update(long elapsedTime) {
 		_yDeg+=2.f;
 		if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.LEFT) == true) {
@@ -40,7 +47,6 @@ public class PlayerScene extends AScene {
 		}
 	}
 
-	@Override
 	public void draw(Game parent) {
 		//parent.ellipse(_posX, _levelScene.getCamera().getOffset() + 0.5f, _sizeX * _scale, _sizeY * _scale);
 		parent.pushMatrix();
@@ -56,4 +62,11 @@ public class PlayerScene extends AScene {
 		parent.popMatrix();
 	}
 
+	public PVector		getPosition() {
+		return new PVector(_posX, _levelScene.getCamera().getOffset() + 0.5f);
+	}
+
+	public PVector getBoundingBox() {
+		return _boundingBox;
+	}
 }
