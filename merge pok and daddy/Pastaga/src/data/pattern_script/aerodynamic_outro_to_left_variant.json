@@ -1,0 +1,29 @@
+{
+	"patternName": "aerodynamic_outro_to_left_variant",
+	"pattern": [
+	{
+        "stepID" : 0,
+        "doors" : [{
+                "position": 0.80,
+                "size": 0.40
+        }]
+	}, {
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.60,
+                "size": 0.40
+        }]
+	}, {
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.40
+        }]
+	}, {
+        "stepID" : 12,
+        "doors" : [{
+                "position": 0.20,
+                "size": 0.40
+        }]
+	}] 
+}
