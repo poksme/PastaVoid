@@ -12,6 +12,8 @@ public class KeysManager {
 		RIGHT(39),
 		SPACE(32),
 		ENTER(10),
+		UP(38),
+		DOWN(40),
 		NONE(-1);
 		
 	    private final int id;

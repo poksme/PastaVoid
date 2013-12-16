@@ -3,6 +3,7 @@ package PastaVoid;
 import Configuration.Config;
 import GameEngine.AScene;
 import GameEngine.KeysManager;
+import GameEngine.SceneManager;
 import processing.core.PVector;
 
 /**
@@ -25,7 +26,8 @@ public class LevelScene extends AScene {
     private boolean		delayDone;
     private	Player		player;
     private boolean		isPaused;
-
+    //should be in GUIScene
+    private PauseMenuScene	pauseMenu;
     
     public LevelScene(Game game, Configuration.Level level) {
     	super(game, true, true); // VISIBLE UPDTABLE
@@ -35,6 +37,7 @@ public class LevelScene extends AScene {
         this.delayDone = false;
         this.player = new Player(this);
         this.isPaused = false;
+        this.pauseMenu = null;
     }
 
     public void start() {
@@ -42,6 +45,20 @@ public class LevelScene extends AScene {
         this.getWalls().generate();
         this.setCamera(new IsoCamera(this));
         this.player.start();
+    }
+    
+    public void togglePause() {
+		if (!this.isPaused) {
+			this.isPaused = true;
+			this.game.getCurrentSong().pause();
+			this.pauseMenu = new PauseMenuScene(this.game, this);
+			SceneManager.getInstance().addScene(this.pauseMenu);
+		} else {
+			this.isPaused = false;
+			this.game.getCurrentSong().play();
+			SceneManager.getInstance().removeScene(this.pauseMenu);;
+			this.pauseMenu = null;
+		}    	
     }
 
     public void update(long timeElapsed) {
@@ -62,16 +79,7 @@ public class LevelScene extends AScene {
     		}
     	}
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
-    		if (!this.isPaused) {
-    			this.isPaused = true;
-    			//cut sound
-    			this.game.getCurrentSong().pause();
-    		} else {
-    			this.isPaused = false;
-    			//resume sound
-    			this.game.getCurrentSong().play();
-    		}
-		// ADD PAUSE HERE
+    		this.togglePause();
     	}
     }
 
