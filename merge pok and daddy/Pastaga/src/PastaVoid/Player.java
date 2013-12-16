@@ -10,7 +10,7 @@ public class Player {
 	float  _posX;
 	float  _scale = 1.f;
 	float  _sizeX = 0.075f;
-	float  _speed = 0.07f / 20;//0.010f;
+	float  _speed = 0.07f / 200f;//0.010f;
 	//int	   _widthScreen;
 	float  _yDeg = 45.f;
 	LevelScene	_levelScene;
