@@ -28,6 +28,8 @@ public class LevelScene extends AScene {
     private PauseScene	pauseMenu;
     private AudioPlayer playingSong;
     private GuiScene	guiScene;
+    private	ParticleSystemSimple particleSystemSimple;
+    private	ParticleSystemSmallBean	particleSystemSmallBean;
     
     public LevelScene(Game game, Configuration.Level level, AudioPlayer playingSong) {
     	super(game, true, true); // VISIBLE UPDTABLE
@@ -40,6 +42,8 @@ public class LevelScene extends AScene {
         this.isPaused = false;
         this.pauseMenu = null;
         this.guiScene = null;
+        this.particleSystemSmallBean = new ParticleSystemSmallBean(this.game, this.game.width, this.game.height);
+        this.particleSystemSimple = new ParticleSystemSimple(new PVector(400,520), this.game);
     }
         
     public void setPaused(boolean flag) {
@@ -80,6 +84,7 @@ public class LevelScene extends AScene {
         		this.getCamera().update(timeElapsed);
                 this.player.update(timeElapsed);
                 this.walls.computeCollision(this.player);
+                this.particleSystemSimple.run();
 //                WallCollision wc = this.walls.isColliding(this.player.getPosition(), this.player.getBoundingBox());
 //            	this.player.computeCollision(wc);    			
     		}
@@ -102,27 +107,38 @@ public class LevelScene extends AScene {
     }
 
     public void draw(Game parent) {
-
+		parent.colorMode(parent.RGB);
     	// THIS MAY BE NEED FOR BETTER BLUR ?
         parent.smooth();
         parent.background(0);
-        this.getCamera().draw(parent);
 
 
 //        parent.stroke(108, 91, 242);
         parent.stroke(48, 117, 232);
         parent.strokeWeight(0.15f);
+        this.getCamera().draw(parent);
         this.walls.draw(parent);
         this.player.draw(parent);
+        this.particleSystemSimple.draw(parent);
         parent.blur();
         
 //        parent.stroke(68, 51, 202);
         parent.stroke(30, 73, 145);
         parent.strokeWeight(0.05f);
+        this.getCamera().draw(parent);
         this.walls.draw(parent);
         this.player.draw(parent);
+        this.particleSystemSimple.draw(parent);
+        
+       // particleSystemSmallBean.draw(this.game, player._posX, this.getCamera().getOffset() + 0.5f, false);
+//        this.particleSystemSimple.run();
      }
 
+    public void drawBeanParticleSystem(){
+    	//particleSystemSmallBean.draw(this.game, player._posX, this.getCamera().getOffset() + 0.5f, true);
+    	particleSystemSimple.createParticleSystem(this.game, player._posX * game.width);
+    }
+    
     public	void setGuiScene(GuiScene scene) {
     	guiScene = scene;
     }

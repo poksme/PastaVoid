@@ -60,6 +60,7 @@ public class Player {
 		_color.red = 0;
 		_color.green = 255;
 		_color.blue = 0;
+		_levelScene.drawBeanParticleSystem();
 	}
 	
 	public void	onStartCollision() {
