@@ -1,4 +1,6 @@
 /data
+/bin
+/application.windows
 /Configuration
 /GameEngine
 /PastaVoid

@@ -2,7 +2,8 @@
 	"name": "Aerodynamic",
 	"artist" : "Daft Punk",
 	"bpm" : 123,
-	"barNumber": 84,
+	"playerSpeed" : 0.0005;
+	"barNumber": 150,
 	"introDelay": 0,
 	"patternPaths" : [
 		"my_first_pattern.json",
@@ -15,6 +16,8 @@
 		"aerodynamic_intro_to_right_kick.json",
 		"aerodynamic_intro_to_left_variant.json",
 		"aerodynamic_intro_to_left_variant_kick.json",
+		"arpeggio_part_1.json",	
+		"arpeggio_part_2.json",
 		"arpeggio_part_3.json",
 		"arpeggio_part_4.json",
 		"aerodynamic_stairs_2_to_left.json",
@@ -22,16 +25,32 @@
 		"aerodynamic_stairs_3_to_left.json",
 		"aerodynamic_stairs_3_to_right.json",
 		"aerodynamic_stairs_4_to_left.json",
-		"aerodynamic_stairs_4_to_right.json"
+		"aerodynamic_stairs_4_to_right.json",
+		"aerodynamic_solo_1.json",
+		"aerodynamic_solo_2.json",
+		"aerodynamic_solo_3.json",
+		"aerodynamic_solo_4.json",
+		"aerodynamic_outro_to_right.json",
+		"aerodynamic_outro_to_left.json",	
+		"aerodynamic_outro_to_right_variant.json",
+		"aerodynamic_outro_to_left_variant.json"
 	],
 	"patterns" : [{
 		"startBar": 0,
 		"endBar": 0,
-		"patternName" : "aerodynamic_stairs_4_to_left"
+		"patternName" : "aerodynamic_solo_1"
+	}, {
+		"startBar": 1,
+		"endBar": 1,
+		"patternName" : "aerodynamic_solo_2"
 	}, {
 		"startBar": 2,
 		"endBar": 2,
-		"patternName" : "aerodynamic_stairs_4_to_left"
+		"patternName" : "aerodynamic_solo_3"
+	}, {
+		"startBar": 3,
+		"endBar": 3,
+		"patternName" : "aerodynamic_solo_4"
 	}, {
 		"startBar": 4,
 		"endBar": 4,
@@ -191,7 +210,7 @@
 	}, {
 		"startBar": 45,
 		"endBar": 45,
-		"patternName" : "aerodynamic_stairs_4_to_right"
+		"patternName" : "aerodynamic_stairs_4_to_left"
 	}, {
 		"startBar": 46,
 		"endBar": 46,
@@ -200,9 +219,225 @@
 		"startBar": 47,
 		"endBar": 47,
 		"patternName" : "aerodynamic_stairs_4_to_left"
-	},{
+	}, {
 		"startBar": 48,
+		"endBar": 48,
+		"patternName" : "aerodynamic_solo_1"
+	}, {
+		"startBar": 49,
+		"endBar": 49,
+		"patternName" : "aerodynamic_solo_2"
+	}, {
+		"startBar": 50,
+		"endBar": 50,
+		"patternName" : "aerodynamic_solo_3"
+	}, {
+		"startBar": 51,
+		"endBar": 51,
+		"patternName" : "aerodynamic_solo_4"
+	},{
+		"startBar": 52,
+		"endBar": 52,
+		"patternName" : "aerodynamic_solo_4"
+	}, {
+		"startBar": 53,
+		"endBar": 53,
+		"patternName" : "aerodynamic_solo_3"
+	}, {
+		"startBar": 54,
+		"endBar": 54,
+		"patternName" : "aerodynamic_solo_2"
+	}, {
+		"startBar": 55,
+		"endBar": 55,
+		"patternName" : "aerodynamic_solo_1"
+	}, {
+		"startBar": 56,
+		"endBar": 56,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 57,
+		"endBar": 57,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 58,
+		"endBar": 58,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 59,
+		"endBar": 59,
+		"patternName" : "arpeggioPart2"
+	},{
+		"startBar": 60,
+		"endBar": 60,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 61,
+		"endBar": 61,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 62,
+		"endBar": 62,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 63,
+		"endBar": 63,
+		"patternName" : "arpeggioPart2"
+	},{
+		"startBar": 64,
+		"endBar": 64,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 65,
+		"endBar": 65,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 66,
+		"endBar": 66,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 67,
+		"endBar": 67,
+		"patternName" : "arpeggioPart2"
+	},{
+		"startBar": 68,
+		"endBar": 68,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 69,
+		"endBar": 69,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 70,
+		"endBar": 70,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 71,
+		"endBar": 71,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 72,
+		"endBar": 72,
+		"patternName" : "aerodynamic_stairs_4_to_right"
+	},{
+		"startBar": 76,
+		"endBar": 76,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 77,
+		"endBar": 77,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 78,
+		"endBar": 78,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 79,
+		"endBar": 79,
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 80,
+		"endBar": 80,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 81,
+		"endBar": 81,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 82,
+		"endBar": 82,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 83,
 		"endBar": 83,
-		"patternName" : "myFirstPattern"
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 84,
+		"endBar": 84,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 85,
+		"endBar": 85,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 86,
+		"endBar": 86,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 87,
+		"endBar": 87,
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 88,
+		"endBar": 88,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 89,
+		"endBar": 89,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 90,
+		"endBar": 90,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 91,
+		"endBar": 91,
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 92,
+		"endBar": 92,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 93,
+		"endBar": 93,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 94,
+		"endBar": 94,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 95,
+		"endBar": 95,
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 96,
+		"endBar": 96,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 97,
+		"endBar": 97,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 98,
+		"endBar": 98,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 99,
+		"endBar": 99,
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 100,
+		"endBar": 100,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 101,
+		"endBar": 101,
+		"patternName" : "aerodynamic_outro_to_left"
+	}, {
+		"startBar": 102,
+		"endBar": 102,
+		"patternName" : "aerodynamic_outro_to_right"
+	}, {
+		"startBar": 103,
+		"endBar": 103,
+		"patternName" : "aerodynamic_outro_to_left_variant"
+	},{
+		"startBar": 108,
+		"endBar": 108,
+		"patternName" : "aerodynamic_stairs_4_to_right"
+	},{
+		"startBar": 109,
+		"endBar": 109,
+		"patternName" : "aerodynamic_stairs_4_to_left"
 	}]
 }

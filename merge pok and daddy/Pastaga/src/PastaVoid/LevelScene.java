@@ -30,6 +30,7 @@ public class LevelScene extends AScene {
     //should be in GUIScene
     private PauseMenuScene	pauseMenu;
     private AudioPlayer playingSong;
+    private GuiScene	guiScene;
     
     public LevelScene(Game game, Configuration.Level level, AudioPlayer playingSong) {
     	super(game, true, true); // VISIBLE UPDTABLE
@@ -38,9 +39,10 @@ public class LevelScene extends AScene {
         this.speed = level.getBpm();
         this.delayTime = level.getIntroDelay();
         this.delayDone = false;
-        this.player = new Player(this);
+        this.player = new Player(this, level.getPlayerSpeed());
         this.isPaused = false;
         this.pauseMenu = null;
+        this.guiScene = null;
     }
 
     public void start() {
@@ -71,7 +73,7 @@ public class LevelScene extends AScene {
     			delayDone = true;
     	    	this.getCamera().update(delayTime * -1);		
     		} else {
-    			System.out.println(delayTime);
+//    			System.out.println(delayTime);
     		}
     	} else {
     		if (!this.isPaused) {
@@ -85,9 +87,11 @@ public class LevelScene extends AScene {
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
     		this.togglePause();
     	}
-    	if (!this.playingSong.isPlaying()) {
+    	if (!this.playingSong.isPlaying() && !this.isPaused) {
     		// PRINT AND OF GAME SCREEN AND GO BACK TO MAIN MENU
     		SceneManager.getInstance().removeScene(this);
+    		SceneManager.getInstance().removeScene(guiScene);
+    		SceneManager.getInstance().addScene(new GameOverScene(42, this.game, true, true));
     	}
     }
 
@@ -113,6 +117,14 @@ public class LevelScene extends AScene {
         this.player.draw(parent);
      }
 
+    public	void setGuiScene(GuiScene scene) {
+    	guiScene = scene;
+    }
+    
+    public	GuiScene getGuiScene() {
+    	return guiScene;
+    }
+    
     public float getSpeed() {
         return speed;
     }

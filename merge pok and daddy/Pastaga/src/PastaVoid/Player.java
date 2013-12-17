@@ -9,7 +9,7 @@ public class Player {
 	float  _posX;
 	float  _scale = 1.f;
 	float  _sizeX = 0.075f;
-	float  _speed = 0.07f / 100f;//0.010f;
+	float  _speed;// = 0.07f / 100f;//0.010f;
 	//int	   _widthScreen;
 	float  _yDeg = 45.f;
 	LevelScene	_levelScene;
@@ -24,9 +24,10 @@ public class Player {
 //	    _posX = 0.5f;
 //	    _levelScene = levelScene;
 //	}
-	public Player(LevelScene levelScene) {
+	public Player(LevelScene levelScene, float playerSpeed) {
 		// TODO Auto-generated constructor stub
 		//_widthScreen = widthScreen;
+		_speed = playerSpeed;
 	    _posX = 0.5f;
 	    _levelScene = levelScene;
 	    float bboxScale = 0.7f;
@@ -55,6 +56,7 @@ public class Player {
 
 	public void	onPassedStep() {
 //		System.out.println("Successfully passed a step!");
+		_levelScene.getGuiScene().playerPass();
 		_color.red = 0;
 		_color.green = 255;
 		_color.blue = 0;
@@ -65,6 +67,7 @@ public class Player {
 		_color.red = 255;
 		_color.green = 0;
 		_color.blue = 0;
+		_levelScene.getGuiScene().playerTouched();
 	}
 	
 	public void	onColliding() {
