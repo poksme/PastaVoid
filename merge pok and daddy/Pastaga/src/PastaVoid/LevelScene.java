@@ -16,9 +16,6 @@ import processing.core.PVector;
  */
 
 public class LevelScene extends AScene {
-
-    private boolean     updated = true;
-    private boolean     drawn = true;
     private StepManager walls;
     private float       speed;
     private Configuration.Level      level;
@@ -44,7 +41,7 @@ public class LevelScene extends AScene {
         this.pauseMenu = null;
         this.guiScene = null;
     }
-    
+        
     public void setPaused(boolean flag) {
     	isPaused = flag;
     }
@@ -55,6 +52,19 @@ public class LevelScene extends AScene {
         this.setCamera(new IsoCamera(this));
         this.player.start();
     }
+    
+    public void reset() {
+    	delayTime = level.getIntroDelay();
+    	this.playingSong.rewind();
+    	this.delayDone = false;
+    	this.player = new Player(this, level.getPlayerSpeed());
+        this.setWalls(new StepManager(this));
+        this.getWalls().generate();
+        this.setCamera(new IsoCamera(this));
+        this.player.start();
+        guiScene = new GuiScene(game, this);
+        SceneManager.getInstance().addScene(guiScene);
+        }
     
     public void update(long timeElapsed) {
     	if (!delayDone) {

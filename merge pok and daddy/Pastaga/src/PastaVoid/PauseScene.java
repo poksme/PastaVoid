@@ -41,9 +41,19 @@ public class PauseScene extends AScene {
     		pausedLevel.setPaused(false);
     		SceneManager.getInstance().removeScene(this);
 			} else if (curElem == 1) {
-				
+				pausedLevel.reset();
+	    		pausedLevel.setUpdatable(true);
+	    		pausedLevel.setDrawable(true);
+	    		pausedLevel.getGuiScene().setDrawable(true);
+	    		pausedLevel.getGuiScene().setUpdatable(true);
+	    		pausedLevel.setPaused(false);
+	    		SceneManager.getInstance().removeScene(this);
+	    		this.game.getCurrentSong().play();
 			} else if (curElem == 2) {
-				
+				SceneManager.getInstance().removeScene(this);
+				SceneManager.getInstance().removeScene(this.pausedLevel);
+	    		SceneManager.getInstance().removeScene(this.pausedLevel.getGuiScene());
+	    		SceneManager.getInstance().addScene(new MenuScene(this.game, this.game.getConfig()));
 			}
 		}
 	}
@@ -53,7 +63,7 @@ public class PauseScene extends AScene {
 		parent.camera();
 		parent.textAlign(parent.CENTER);
 		parent.image(pausePic, parent.width / 2 - 340, 60);
-		parent.text("PRESS START OR SPACE TO CONTINUE", parent.width / 2, parent.height + 500 , -1000);
+		parent.text("UP AND DOWN TO SELECT AND ENTER TO VALIDATE", parent.width / 2, parent.height + 500 , -1000);
 		// TODO Auto-generated method stub
 		
 		parent.text("RESUME", parent.width / 2, parent.height / 2 + 40  - 80, 0);
