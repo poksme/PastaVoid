@@ -74,7 +74,7 @@ public class MenuScene extends AScene {
 //      parent.text("PASTAVOID", parent.width / 2, parent.height / 2 - 100, 200);
 //      parent.blur();
 
-	      parent.image(logo, parent.width / 2 - 340, 60);
+	  parent.image(logo, parent.width / 2 - 340, 60);
       parent.fill(255);
       parent.text(songLibrary.get(curSong).getTitle(), parent.width / 2, parent.height / 2 , posZ);
       int trSize = 30;

@@ -28,7 +28,7 @@ public class LevelScene extends AScene {
     private	Player		player;
     private boolean		isPaused;
     //should be in GUIScene
-    private PauseMenuScene	pauseMenu;
+    private PauseScene	pauseMenu;
     private AudioPlayer playingSong;
     private GuiScene	guiScene;
     
@@ -44,6 +44,10 @@ public class LevelScene extends AScene {
         this.pauseMenu = null;
         this.guiScene = null;
     }
+    
+    public void setPaused(boolean flag) {
+    	isPaused = flag;
+    }
 
     public void start() {
         this.setWalls(new StepManager(this));
@@ -52,20 +56,6 @@ public class LevelScene extends AScene {
         this.player.start();
     }
     
-    public void togglePause() {
-		if (!this.isPaused) {
-			this.isPaused = true;
-			this.game.getCurrentSong().pause();
-			this.pauseMenu = new PauseMenuScene(this.game, this);
-			SceneManager.getInstance().addScene(this.pauseMenu);
-		} else {
-			this.isPaused = false;
-			this.game.getCurrentSong().play();
-			SceneManager.getInstance().removeScene(this.pauseMenu);;
-			this.pauseMenu = null;
-		}    	
-    }
-
     public void update(long timeElapsed) {
     	if (!delayDone) {
     		delayTime -= timeElapsed;
@@ -85,7 +75,13 @@ public class LevelScene extends AScene {
     		}
     	}
     	if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
-    		this.togglePause();
+    		this.game.getCurrentSong().pause();
+    		this.setUpdatable(false);
+    		this.setDrawable(false);
+    		guiScene.setDrawable(false);
+    		guiScene.setUpdatable(false);
+    		this.setPaused(true);
+    		SceneManager.getInstance().addScene(new PauseScene(this.game, true, true, this));
     	}
     	if (!this.playingSong.isPlaying() && !this.isPaused) {
     		// PRINT AND OF GAME SCREEN AND GO BACK TO MAIN MENU
