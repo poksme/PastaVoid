@@ -9,18 +9,23 @@ public class GuiScene extends AScene{
 	float			_life;
 	float			_gaugeMaxHeight;
 	float			_gaugeHeight;
-	float			_bars;
+	float			_steps;
+	float			_doors;
 	float			_hit;
 	
 	public GuiScene(Game game, LevelScene levelScene) {
 		super(game, true, true);
 		_levelScene = levelScene;
 		_life = 0.5f;
-		_gaugeHeight = 250.0f;
+		_gaugeHeight = 500.0f;
 		_gaugeMaxHeight = 500;
-		_bars = _levelScene.getConfigurationLevel().getBarNumber();
-		_hit = _gaugeMaxHeight / _bars;
+		_steps = _levelScene.getConfigurationLevel().getBarNumber() * 16;
 		_levelScene.setGuiScene(this);
+		for (int i = 0; i < _steps; i++) {
+            if (_levelScene.getConfigurationLevel().hasDoor(i)) 
+            	_doors++; 
+        }
+		_hit = _gaugeMaxHeight / _doors;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -50,7 +55,9 @@ public class GuiScene extends AScene{
 		parent.strokeWeight(0);
 		parent.rect(20, 20, 40, _gaugeHeight);
 		// COMMENTED BECAUSE A PRINT AT EACH DRAW SLOW DOWN MY COMPUTER
-//		parent.println(_hit);
+		parent.println(_hit);
+		parent.println(_doors);
+		parent.println(_steps);
 		// TODO Auto-generated method stub
 	}
 	
