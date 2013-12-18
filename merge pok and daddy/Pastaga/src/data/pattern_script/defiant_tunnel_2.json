@@ -1,70 +1,70 @@
 {
-	"patternName": "defiant_tunnel",
+	"patternName": "defiant_tunnel_2",
 	"pattern": [
 	{
-        "stepID" : 0,
+        "stepID" : 15,
         "doors" : [{
-                "position": 0.50,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 1,
-        "doors" : [{
-                "position": 0.60,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 3,
-        "doors" : [{
-                "position": 0.70,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 4,
-        "doors" : [{
-                "position": 0.60,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 6,
-        "doors" : [{
-                "position": 0.70,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 7,
-        "doors" : [{
-                "position": 0.80,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 9,
-        "doors" : [{
-               "position": 0.70,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 10,
-        "doors" : [{
-                "position": 0.60,
-                "size": 0.25
-                }]
-        }, {
-        "stepID" : 12,
-        "doors" : [{
-               "position": 0.40,
+                "position": 0.425,
                 "size": 0.25
                 }]
         }, {
         "stepID" : 13,
         "doors" : [{
-               "position": 0.50,
+                "position": 0.475,
                 "size": 0.25
                 }]
         }, {
-        "stepID" : 15,
+        "stepID" : 12,
         "doors" : [{
-                "position": 0.40,
+                "position": 0.575,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 10,
+        "doors" : [{
+                "position": 0.475,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 9,
+        "doors" : [{
+                "position": 0.575,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 7,
+        "doors" : [{
+                "position": 0.675,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 6,
+        "doors" : [{
+               "position": 0.575,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.475,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 3,
+        "doors" : [{
+               "position": 0.325,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 1,
+        "doors" : [{
+               "position": 0.40,
+                "size": 0.25
+                }]
+        }, {
+        "stepID" : 0,
+        "doors" : [{
+                "position": 0.325,
                 "size": 0.25
                 }]
         }] 

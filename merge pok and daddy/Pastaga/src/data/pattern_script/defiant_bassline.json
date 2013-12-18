@@ -1,0 +1,23 @@
+{
+	"patternName": "defiant_bassline",
+	"pattern": [
+	{
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.20,
+                "size": 0.20
+                }]
+        }, {
+        "stepID" : 12,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.20
+                }]
+        }, {
+        "stepID" : 15,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.20
+                }]
+       }] 
+}
