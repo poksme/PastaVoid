@@ -1,0 +1,29 @@
+{
+	"patternName": "refrain1",
+	"pattern": [
+	{
+        "stepID" : 5,
+        "doors" : [{
+                "position": 0.55,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 7,
+        "doors" : [{
+                "position": 0.45,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 9,
+        "doors" : [{
+                "position": 0.55,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 11,
+        "doors" : [{
+                "position": 0.45,
+                "size": 0.25
+        }]
+	}] 
+}

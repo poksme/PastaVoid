@@ -1,0 +1,94 @@
+{
+	"name": "The Suburbs",
+	"artist" : "Mr. Little Jeans",
+	"bpm" : 70.0,
+	"barNumber": 88,
+	"playerSpeed" : 0.0005,
+	"introDelay": 200,
+	"patternPaths" : [
+		"suburbs_kick_right.json",
+		"suburbs_kick_left.json",
+		"suburbs_refrain1.json"
+	],
+	"patterns" : [{
+		"startBar": 5,
+		"endBar": 5,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 6,
+		"endBar": 6,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 7,
+		"endBar": 7,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 8,
+		"endBar": 8,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 9,
+		"endBar": 9,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 10,
+		"endBar": 10,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 11,
+		"endBar": 11,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 12,
+		"endBar": 12,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 13,
+		"endBar": 13,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 14,
+		"endBar": 14,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 15,
+		"endBar": 15,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 16,
+		"endBar": 16,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 17,
+		"endBar": 17,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 18,
+		"endBar": 18,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 19,
+		"endBar": 19,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 20,
+		"endBar": 20,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 21,
+		"endBar": 21,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 22,
+		"endBar": 22,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 23,
+		"endBar": 23,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 24,
+		"endBar": 24,
+		"patternName" : "refrain1"
+	}]
+}
