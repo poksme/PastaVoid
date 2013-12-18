@@ -11,17 +11,14 @@ public class Spring {
 
 	  Spring(float tempXpos, float tempYpos, int colortemp) {
 	   Xpos = tempXpos;
-	   System.out.println(tempXpos);
 	   Ypos = tempYpos;
 	   colorness = colortemp;
 	  }
 	  
 	  void render(Game parent, float playerPosX, float playerPosY, boolean trigger) {
 	    Xpos += Xvel;
-	    Ypos += Yvel;
+	    Ypos += Yvel;	    	
 	    if (parent.mousePressed == true) {
-	    	
-	    //if (trigger == true) {
 	      Xvel += (4000.f / parent.dist(playerPosX, playerPosY, Xpos, Ypos) * ((0.009 * (playerPosX - Xpos))) / 50.f);
 	      Yvel += (4000.f / parent.dist(playerPosX, playerPosY, Xpos, Ypos) * ((0.009 * (playerPosX - Ypos))) / 50.f);
 	    } else {
@@ -31,8 +28,8 @@ public class Spring {
 	    
 	    colorness = parent.dist(Xpos, Ypos, Pxpos, Pypos) * 10;
 	    
-	    parent.colorMode(parent.HSB);
-	    parent.strokeWeight(0.01f);
+	    //parent.colorMode(parent.HSB);
+	    parent.strokeWeight(2f);
 	    parent.fill(colorness, 255, 255);
 	    parent.stroke(colorness, 255, 255, 20);
 	    parent.line(Xpos, Ypos, 0, Pxpos, Pypos, 0);

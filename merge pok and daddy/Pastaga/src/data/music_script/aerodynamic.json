@@ -38,19 +38,11 @@
 	"patterns" : [{
 		"startBar": 0,
 		"endBar": 0,
-		"patternName" : "aerodynamic_solo_1"
-	}, {
-		"startBar": 1,
-		"endBar": 1,
-		"patternName" : "aerodynamic_solo_2"
+		"patternName" : "aerodynamic_stairs_4_to_left"
 	}, {
 		"startBar": 2,
 		"endBar": 2,
-		"patternName" : "aerodynamic_solo_3"
-	}, {
-		"startBar": 3,
-		"endBar": 3,
-		"patternName" : "aerodynamic_solo_4"
+		"patternName" : "aerodynamic_stairs_4_to_left"
 	}, {
 		"startBar": 4,
 		"endBar": 4,
@@ -214,7 +206,7 @@
 	}, {
 		"startBar": 46,
 		"endBar": 46,
-		"patternName" : "aerodynamic_stairs_4_to_left"
+		"patternName" : "aerodynamic_stairs_4_to_right"
 	}, {
 		"startBar": 47,
 		"endBar": 47,

@@ -131,12 +131,11 @@ public class LevelScene extends AScene {
         this.player.draw(parent);
         this.particleSystemSimple.draw(parent);
         
-       // particleSystemSmallBean.draw(this.game, player._posX, this.getCamera().getOffset() + 0.5f, false);
-//        this.particleSystemSimple.run();
+        //particleSystemSmallBean.draw(this.game, player._posX, true);
      }
 
     public void drawParticleSystem(){
-    	//particleSystemSmallBean.draw(this.game, player._posX, this.getCamera().getOffset() + 0.5f, true);
+    	//particleSystemSmallBean.draw(this.game, player._posX, true);
     	particleSystemSimple.createParticleSystem(this.game, player._posX * game.width - ((player._posX - 0.5f) * game.width/5));
     }
     

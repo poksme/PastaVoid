@@ -2,7 +2,7 @@ package PastaVoid;
 
 public class ParticleSystemSmallBean {
 	
-	private int longness = 5000;
+	private int longness = 2000;
 	private Spring[] springs = new Spring[longness];
 	
 	ParticleSystemSmallBean(Game game, int screenWidth,int screenHeight) {
@@ -11,18 +11,13 @@ public class ParticleSystemSmallBean {
 		    }
 	}
 	
-	void draw(Game parent, float playerPosX, float playerPosY, boolean trigger){
+	void draw(Game parent, float playerPosX, boolean trigger){
 		parent.camera();
-
-	parent.pushMatrix();
-	  parent.translate(playerPosX, playerPosY, 0.f);
-//	  parent.println(playerPosY);
-		playerPosY = 200.f;
-		playerPosX = 300.f;
+		parent.pushMatrix();
+		playerPosX = parent.width * playerPosX;
 	  for (int i = 0; i < longness ; i++) {
-	    springs[i].render(parent, playerPosX, playerPosY, trigger);
+	    springs[i].render(parent, playerPosX, 520, trigger);
 	  }
-	  
-	  parent.popMatrix();	  
+	  parent.popMatrix();
 	}
 }
