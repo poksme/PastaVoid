@@ -15,7 +15,10 @@
 		"defiant_snare_roll_2.json",
 		"defiant_kick_snare_2.json",
 		"defiant_tunnel.json",
-		"defiant_tunnel_2.json"
+		"defiant_tunnel_2.json",
+		"defiant_bassline.json",
+		"defiant_bassline_2.json",
+		"defiant_bassline_3.json"
 		
 	],
 	"patterns" : [{
@@ -72,7 +75,23 @@
 		"patternName" : "defiant_tunnel"
 	}, {
 		"startBar": 20,
-		"endBar": 84,
+		"endBar": 23,
 		"patternName" : "defiant_tunnel_2"
+	}, {
+		"startBar": 24,
+		"endBar": 27,
+		"patternName" : "defiant_bassline"
+	}, {
+		"startBar": 28,
+		"endBar": 30,
+		"patternName" : "defiant_bassline_2"
+	}, {
+		"startBar": 31,
+		"endBar": 31,
+		"patternName" : "defiant_snare_roll"
+	}, {
+		"startBar": 32,
+		"endBar": 84,
+		"patternName" : "defiant_bassline_3"
 	}]
 }
