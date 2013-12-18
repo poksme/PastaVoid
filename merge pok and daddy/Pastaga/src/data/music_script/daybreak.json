@@ -6,15 +6,16 @@
 	"barNumber": 127,
 	"introDelay": 0,
 	"patternPaths" : [
-		"my_first_pattern.json",
 		"daybreak_intro_1.json",
+		"daybreak_intro_2.json",
+		"daybreak_intro_3.json",
 		"daybreak_drop_1.json"
-	],
+	], 
 	"patterns" : [{
-		"startBar": 0,
-		"endBar": 31,
-		"patternName" : "daybreak_intro_1"
-	}, {
+		"startBar": 1,
+		"endBar": 30,
+		"patternName" : "daybreak_intro_2"
+	},{
 		"startBar": 32,
 		"endBar": 130,
 		"patternName" : "daybreak_drop_1"

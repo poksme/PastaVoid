@@ -1,5 +1,5 @@
 {
-	"patternName": "daybreak_intro_1",
+	"patternName": "daybreak_intro_3",
 	"pattern": [
 	{
         "stepID" : 4,
@@ -9,12 +9,6 @@
         }]
 	}, {
         "stepID" : 12,
-        "doors" : [{
-                "position": 0.40,
-                "size": 0.20
-        }]
-	}, {
-        "stepID" : 13,
         "doors" : [{
                 "position": 0.40,
                 "size": 0.20
