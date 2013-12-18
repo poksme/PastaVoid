@@ -1,0 +1,65 @@
+{
+	"patternName": "defiant_kick_snare_2",
+	"pattern": [
+	{
+        "stepID" : 0,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.20
+        }, {
+                "position": 0.60,
+                "size": 0.20        
+        }]
+	}, {
+        "stepID" : 2,
+        "doors" : [{
+                "position": 0.55,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.45,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 6,
+        "doors" : [{
+                "position": 0.55,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.20
+        }, {
+                "position": 0.60,
+                "size": 0.20        
+        }]
+	}, {
+        "stepID" : 10,
+        "doors" : [{
+                "position": 0.55,
+                "size": 0.20
+        }, {
+                "position": 0.60,
+                "size": 0.20        
+        }]
+	}, {
+        "stepID" : 12,
+        "doors" : [{
+                "position": 0.45,
+                "size": 0.20
+        }, {
+                "position": 0.60,
+                "size": 0.20        
+        }]
+	}, {
+        "stepID" : 14,
+        "doors" : [{
+                "position": 0.55,
+                "size": 0.20
+        }]
+	}] 
+}

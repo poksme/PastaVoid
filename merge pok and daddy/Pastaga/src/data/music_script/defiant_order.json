@@ -3,14 +3,19 @@
 	"artist" : "Birdy Nam Nam",
 	"bpm" : 94.0,
 	"barNumber": 84,
-	"playerSpeed" : 0.0005;
+	"playerSpeed" : 0.0004;
 	"introDelay": 300,
 	"patternPaths" : [
 		"my_first_pattern.json",
 		"arpeggio_part_1.json",
 		"arpeggio_part_2.json",
 		"arpeggio_part_3.json",
-		"arpeggio_part_4.json"
+		"arpeggio_part_4.json",
+		"defiant_snare_roll.json",
+		"defiant_snare_roll_2.json",
+		"defiant_kick_snare_2.json",
+		"defiant_tunnel.json"
+		
 	],
 	"patterns" : [{
 		"startBar": 0,
@@ -43,10 +48,26 @@
 	}, {
 		"startBar": 7,
 		"endBar": 7,
-		"patternName" : "arpeggioPart4"
+		"patternName" : "defiant_snare_roll"
 	}, {
 		"startBar": 8,
-		"endBar": 83,
+		"endBar": 10,
 		"patternName" : "myFirstPattern"
+	}, {
+		"startBar": 11,
+		"endBar": 11,
+		"patternName" : "defiant_snare_roll_2"		
+	}, {
+		"startBar": 12,
+		"endBar": 14,
+		"patternName" : "defiant_kick_snare_2"
+	}, {
+		"startBar": 15,
+		"endBar": 15,
+		"patternName" : "defiant_snare_roll_2"
+	}, {
+		"startBar": 16,
+		"endBar": 84,
+		"patternName" : "defiant_tunnel"
 	}]
 }

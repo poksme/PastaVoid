@@ -47,7 +47,7 @@ public class Player {
 	    _color = new Color(255, 255, 255);
 	    setIsPlayerColliding(false);
 	    this._alphabyStep = 50;
-	    this._immuneStepNumber = 30;
+	    this._immuneStepNumber = 7;
 	    this._immuneSteps = 0;
 	    this._startAlpha = 50;
 	    this._alphabyStep = (255 - 50) / this._immuneStepNumber;
