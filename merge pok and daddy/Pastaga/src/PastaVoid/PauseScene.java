@@ -66,10 +66,11 @@ public class PauseScene extends AScene {
 		parent.text("UP AND DOWN TO SELECT AND ENTER TO VALIDATE", parent.width / 2, parent.height + 500 , -1000);
 		// TODO Auto-generated method stub
 		
+		parent.fill(255);
 		parent.text("RESUME", parent.width / 2, parent.height / 2 + 40  - 80, 0);
 		parent.text("RESTART", parent.width / 2, parent.height / 2 + 40, 0);
 		parent.text("QUIT", parent.width / 2, parent.height / 2 + 40 + 80, 0);
-		
+	      parent.strokeWeight(0);
 		int trSize = 30;
 
 	      int trY = parent.height / 2 - 80 + 80 * curElem;

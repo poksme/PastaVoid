@@ -2,7 +2,7 @@
 	"name": "Aerodynamic",
 	"artist" : "Daft Punk",
 	"bpm" : 123,
-	"playerSpeed" : 0.0005;
+	"playerSpeed" : 0.0005,
 	"barNumber": 105,
 	"introDelay": 0,
 	"patternPaths" : [

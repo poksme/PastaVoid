@@ -81,6 +81,7 @@ public class MenuScene extends AScene {
 	  parent.image(logo, parent.width / 2 - 340, 60);
       parent.fill(255);
       parent.text(songLibrary.get(curSong).getTitle(), parent.width / 2, parent.height / 2 , posZ);
+      parent.strokeWeight(0);
       int trSize = 30;
 
       int trY = parent.height / 2;

@@ -3,7 +3,7 @@
 	"artist" : "Endless Fantasy",
 	"bpm" : 129.0,
 	"barNumber": 84,
-	"playerSpeed" : 0.0005;
+	"playerSpeed" : 0.0005,
 	"introDelay": 0,
 	"patternPaths" : [
 		"my_first_pattern.json",

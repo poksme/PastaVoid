@@ -2,7 +2,7 @@
 	"name": "Daybreak",
 	"artist" : "Overwerk",
 	"bpm" : 127.0,
-	"playerSpeed" : 0.0010;
+	"playerSpeed" : 0.0010,
 	"barNumber": 127,
 	"introDelay": 0,
 	"patternPaths" : [
