@@ -102,7 +102,7 @@ public class LevelScene extends AScene {
     		// PRINT AND OF GAME SCREEN AND GO BACK TO MAIN MENU
     		SceneManager.getInstance().removeScene(this);
     		SceneManager.getInstance().removeScene(guiScene);
-    		SceneManager.getInstance().addScene(new GameOverScene(42, this.game, true, true));
+    		SceneManager.getInstance().addScene(new GameOverScene(guiScene.getPlayerScore(), this.game, true, true));
     	}
     }
 
