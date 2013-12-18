@@ -2,7 +2,7 @@
 	"patternName": "paris_break_1",
 	"pattern": [
 	{
-        "stepID" : 2,
+        "stepID" : 0,
         "doors" : [{
                 "position": 0.50,
                 "size": 0.80
@@ -11,10 +11,10 @@
         "stepID" : 4,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.40
+                "size": 0.20
         }]
 	}, {
-        "stepID" : 10,
+        "stepID" : 8,
         "doors" : [{
                 "position": 0.50,
                 "size": 0.80

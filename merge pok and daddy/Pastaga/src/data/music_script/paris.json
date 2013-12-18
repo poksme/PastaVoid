@@ -14,16 +14,16 @@
 		"paris_intro_5.json",
 		"paris_break_1.json",
 		"my_first_pattern.json",
-		"paris_break_2_to_the_left.json"
+		"paris_break_2_left.json"
 	],
 	"patterns" : [{
 		"startBar": 0,
 		"endBar": 0,
-		"patternName" : "paris_break_2_to_the_left"
+		"patternName" : "paris_break_2_left"
 	}, {
 		"startBar": 1,
 		"endBar": 1,
-		"patternName" : "paris_break_2_to_the_left"
+		"patternName" : "paris_break_2_left"
 	}, {
 		"startBar": 2,
 		"endBar": 2,
@@ -175,9 +175,53 @@
 	},{
 		"startBar": 39,
 		"endBar": 39,
-		"patternName" : "paris_intro_5"
+		"patternName" : "paris_break_2_left"
 	},{
 		"startBar": 40,
+		"endBar": 40,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 41,
+		"endBar": 41,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 42,
+		"endBar": 42,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 43,
+		"endBar": 43,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 44,
+		"endBar": 44,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 45,
+		"endBar": 45,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 46,
+		"endBar": 46,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 47,
+		"endBar": 47,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 48,
+		"endBar": 48,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 49,
+		"endBar": 49,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 50,
+		"endBar": 50,
+		"patternName" : "paris_break_2_left"
+	},{
+		"startBar": 21,
 		"endBar": 84,
 		"patternName" : "myFirstPattern"
 	}]

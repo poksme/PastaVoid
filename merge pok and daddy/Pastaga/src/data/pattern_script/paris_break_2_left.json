@@ -1,0 +1,35 @@
+{
+	"patternName": "paris_break_2_left",
+	"pattern": [
+	{
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 7,
+        "doors" : [{
+                "position": 0.20,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.20,
+                "size": 0.20
+        }]
+	},{
+        "stepID" : 14,
+        "doors" : [{
+                "position": 0.20,
+                "size": 0.20
+        }]
+	}, {
+        "stepID" : 15,
+        "doors" : [{
+                "position": 0.20,
+                "size": 0.20
+        }]
+	}] 
+}
