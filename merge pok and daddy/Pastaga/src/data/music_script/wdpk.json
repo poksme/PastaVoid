@@ -1,6 +1,6 @@
 {
-	"name": "Daft Punk",
-	"artist" : "WDPK 83.7 FM",
+	"name": "WDPK 83.7 FM",
+	"artist" : "Daft Punk",
 	"bpm" : 111.0,
 	"playerSpeed" : 0.0005;
 	"barNumber": 13,

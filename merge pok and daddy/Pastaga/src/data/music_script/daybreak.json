@@ -1,0 +1,22 @@
+{
+	"name": "Daybreak",
+	"artist" : "Overwerk",
+	"bpm" : 127.0,
+	"playerSpeed" : 0.0010;
+	"barNumber": 127,
+	"introDelay": 0,
+	"patternPaths" : [
+		"my_first_pattern.json",
+		"daybreak_intro_1.json",
+		"daybreak_drop_1.json"
+	],
+	"patterns" : [{
+		"startBar": 0,
+		"endBar": 31,
+		"patternName" : "daybreak_intro_1"
+	}, {
+		"startBar": 32,
+		"endBar": 130,
+		"patternName" : "daybreak_drop_1"
+	}]
+}

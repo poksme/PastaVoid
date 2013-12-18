@@ -17,6 +17,9 @@
 		},{
 		"music": "the_suburbs.mp3",
 		"script" : "the_suburbs.json"
+		},{
+		"music": "daybreak.mp3",
+		"script" : "daybreak.json"
 		}],
 	"version" : "0.2a"
 }
