@@ -5,25 +5,25 @@
         "stepID" : 0,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.70
         }]
 	},{
         "stepID" : 1,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.75
         }]
 	},{
         "stepID" : 2,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.50
         }]
 	},{
         "stepID" : 3,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.25
         }]
 	},{
         "stepID" : 4,
@@ -35,49 +35,49 @@
         "stepID" : 5,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.40
         }]
 	},{
         "stepID" : 6,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.60
         }]
 	},{
         "stepID" : 7,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.70
         }]
 	},{
         "stepID" : 8,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.75
         }]
 	},{
         "stepID" : 9,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.70
         }]
 	},{
         "stepID" : 10,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.60
         }]
 	},{
         "stepID" : 11,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.40
         }]
 	},{
         "stepID" : 12,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.25
         }]
 	},{
         "stepID" : 13,
@@ -89,13 +89,13 @@
         "stepID" : 14,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.40
         }]
 	},{
         "stepID" : 15,
         "doors" : [{
                 "position": 0.50,
-                "size": 0.30
+                "size": 0.60
         }]
 	}]
 	}] 
