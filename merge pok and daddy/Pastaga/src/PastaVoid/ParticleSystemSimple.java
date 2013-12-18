@@ -28,7 +28,7 @@ public class ParticleSystemSimple {
 		  float cur = particleNb;
 		  int whiteParticleNb = (int)(cur * (cur/maxParticleNb));
 
-		  parent.println(cur);
+//		  parent.println(cur);
 		  for (int i = 0; i < (int)particleNb; i++)
 		  {
 			  if (i < whiteParticleNb)
