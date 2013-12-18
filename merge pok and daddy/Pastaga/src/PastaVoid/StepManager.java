@@ -22,6 +22,8 @@ public class StepManager {
 
     private	boolean		_hasHitCurrentStep;
     private	int			_currentStepIndex;
+    private boolean		_ignoreCurrentCollision;
+    private boolean		_ignoreNextCollision;
     
     public StepManager(LevelScene parent) {
         this.parent = parent;
@@ -79,21 +81,26 @@ public class StepManager {
     	
     	if (yPos != this._currentStepIndex) {
     		if (this._currentStepIndex != -1) {
+    			
+    			player.onPassedStep();
         		if (!this._hasHitCurrentStep && this.walls[this._currentStepIndex].isWall) {
         			//passed the step/wall
         			//Step passedStep = this.walls[this._currentStepIndex]
-        			player.onPassedStep();
+        			player.onPassedWall();
         		}
     		}
     		this._currentStepIndex = yPos;
-    		this._hasHitCurrentStep = false;    			
+    		this._hasHitCurrentStep = false;
+    		if (player.isPlayerColliding()) {
+    			player.onEndCollision();    			
+    		}
     	}
     	Step step = this.walls[yPos];
     	if (step.isWall
     			&& (		(player.getPosition().x - player.getBoundingBox().x / 2 < step.x - step.holeSize / 2 
     					||	(player.getPosition().x + player.getBoundingBox().x / 2 > step.x + step.holeSize / 2)))
     			&& (		(player.getPosition().y - player.getBoundingBox().y / 2 < step.y)
-    					||	(player.getPosition().y + player.getBoundingBox().y / 2 > step.y))) {
+    					&&	(player.getPosition().y + player.getBoundingBox().y / 2 > step.y))) {
     		//collision
     		if (!player.isPlayerColliding()) {
     			player.onStartCollision();
