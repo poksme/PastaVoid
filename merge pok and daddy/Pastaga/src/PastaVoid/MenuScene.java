@@ -26,7 +26,7 @@ public class MenuScene extends AScene {
     	songLibrary = new ArrayList<SongEntry>();
     	for (int i = 0; i < config.getLevels().size(); i++) {
     		songLibrary.add(new SongEntry(config.getLevels().get(i).getArtist() + "\n" + config.getLevels().get(i).getName()));
-    		game.getSongPlayer().add(game.getMinim().loadFile("music" + java.io.File.separator + config.getLevels().get(i).getMusicPath()));
+    		game.getSongPlayer().add(game.getMinim().loadFile("music/" + config.getLevels().get(i).getMusicPath()));
     	}
     }
     
