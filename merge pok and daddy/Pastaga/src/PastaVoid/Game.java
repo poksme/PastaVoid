@@ -24,6 +24,7 @@ public class Game extends PApplet {
     private AudioPlayer		currentSong;
 
     public static void main(String args[]) {
+    	// SWITCH THESE TWO LINES TO ENABLE FULLSCREEN
 //        PApplet.main(new String[] { "--present", "PastaVoid.Game" });
     	PApplet.main(new String[] { "PastaVoid.Game" });
       }
@@ -40,7 +41,7 @@ public class Game extends PApplet {
         size(800, 600, P3D);
         background(0);
         // FONT
-        this.font = this.loadFont("fonts" + java.io.File.separator + "Orbitron-Light-48.vlw");
+        this.font = this.loadFont("fonts/Orbitron-Light-48.vlw");
         this.textFont(this.font, 48);
 
       	// MUSIC PLAYER

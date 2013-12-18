@@ -27,7 +27,7 @@ public class Level {
     HashMap<String, Pattern> patternLibrary;
 
     public Level(PApplet parent, String musicPath, String scriptPath) {
-        JSONObject musicScript = parent.loadJSONObject("music_script" + java.io.File.separator + scriptPath);
+        JSONObject musicScript = parent.loadJSONObject("music_script/" + scriptPath);
         JSONArray patternPaths = musicScript.getJSONArray("patternPaths");
 
         this.scriptPath = scriptPath;
@@ -44,7 +44,7 @@ public class Level {
    /* For each pattern paths, create an entry in the patternLibrary */
         for (int i = 0; i < patternPaths.size(); i++) {
      /* Load the JsonObject from the pattern path */
-            JSONObject patternInfo = parent.loadJSONObject("pattern_script" + java.io.File.separator + patternPaths.getString(i));
+            JSONObject patternInfo = parent.loadJSONObject("pattern_script/" + patternPaths.getString(i));
       /* Create an entry into the pattern library */
             patternLibrary.put(patternInfo.getString("patternName"), new Pattern(patternInfo.getJSONArray("pattern")));
         }

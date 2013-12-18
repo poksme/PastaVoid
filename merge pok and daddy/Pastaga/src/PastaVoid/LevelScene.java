@@ -98,11 +98,12 @@ public class LevelScene extends AScene {
     		this.setPaused(true);
     		SceneManager.getInstance().addScene(new PauseScene(this.game, true, true, this));
     	}
-    	if (!this.playingSong.isPlaying() && !this.isPaused) {
+    	if ((!this.playingSong.isPlaying() && !this.isPaused) || this.guiScene.barIsEmpty()) {
     		// PRINT AND OF GAME SCREEN AND GO BACK TO MAIN MENU
+    		this.playingSong.pause();
     		SceneManager.getInstance().removeScene(this);
     		SceneManager.getInstance().removeScene(guiScene);
-    		SceneManager.getInstance().addScene(new GameOverScene(42, this.game, true, true));
+    		SceneManager.getInstance().addScene(new GameOverScene(guiScene.getPlayerScore(), this.game, true, true));
     	}
     }
 
