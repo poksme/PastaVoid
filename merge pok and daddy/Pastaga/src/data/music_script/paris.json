@@ -13,16 +13,17 @@
 		"paris_intro_4.json",
 		"paris_intro_5.json",
 		"paris_break_1.json",
-		"my_first_pattern.json"
+		"my_first_pattern.json",
+		"paris_break_2_to_the_left.json"
 	],
 	"patterns" : [{
 		"startBar": 0,
 		"endBar": 0,
-		"patternName" : "paris_intro_1"
+		"patternName" : "paris_break_2_to_the_left"
 	}, {
 		"startBar": 1,
 		"endBar": 1,
-		"patternName" : "paris_intro_2"
+		"patternName" : "paris_break_2_to_the_left"
 	}, {
 		"startBar": 2,
 		"endBar": 2,
@@ -169,6 +170,14 @@
 		"patternName" : "paris_intro_2"
 	},{
 		"startBar": 38,
+		"endBar": 38,
+		"patternName" : "paris_intro_5"
+	},{
+		"startBar": 39,
+		"endBar": 39,
+		"patternName" : "paris_intro_5"
+	},{
+		"startBar": 40,
 		"endBar": 84,
 		"patternName" : "myFirstPattern"
 	}]
