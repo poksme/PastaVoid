@@ -3,12 +3,13 @@
 	"artist" : "Mr. Little Jeans",
 	"bpm" : 70.0,
 	"barNumber": 88,
-	"playerSpeed" : 0.0005,
+	"playerSpeed" : 0.0004,
 	"introDelay": 200,
 	"patternPaths" : [
 		"suburbs_kick_right.json",
 		"suburbs_kick_left.json",
-		"suburbs_refrain1.json"
+		"suburbs_refrain.json",
+		"suburbs_crysis.json"
 	],
 	"patterns" : [{
 		"startBar": 5,
@@ -89,6 +90,26 @@
 	},{
 		"startBar": 24,
 		"endBar": 24,
-		"patternName" : "refrain1"
+		"patternName" : "refrain"
+	},{
+		"startBar": 25,
+		"endBar": 25,
+		"patternName" : "refrain"
+	},{
+		"startBar": 26,
+		"endBar": 26,
+		"patternName" : "refrain"
+	},{
+		"startBar": 27,
+		"endBar": 27,
+		"patternName" : "refrain"
+	},{
+		"startBar": 28,
+		"endBar": 28,
+		"patternName" : "crysis"
+	},{
+		"startBar": 29,
+		"endBar": 29,
+		"patternName" : "crysis"
 	}]
 }

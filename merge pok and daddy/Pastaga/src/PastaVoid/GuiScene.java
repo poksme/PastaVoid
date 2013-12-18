@@ -32,7 +32,7 @@ public class GuiScene extends AScene{
             if (_levelScene.getConfigurationLevel().hasDoor(i)) 
             	_doors++; 
         }
-		_hit = _gaugeMaxHeight / _doors;
+		_hit = (_gaugeMaxHeight / _doors) * 3;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -56,12 +56,12 @@ public class GuiScene extends AScene{
 	}
 	
 	public void playerTouched() {
-		if (_gaugeHeight > 0 && _gaugeHeight < _gaugeMaxHeight)
-			_gaugeHeight += _hit;
+		if (_gaugeHeight <= _gaugeMaxHeight)
+			_gaugeHeight += _hit * 10;
 	}
 	
 	public void playerPass() {
-		if (_gaugeHeight >= 0 && _gaugeHeight <= _gaugeMaxHeight)
+		if (_gaugeHeight >= 0)
 			_gaugeHeight -= _hit;
 		_playerScore += _scoring;
 	}

@@ -1,7 +1,25 @@
 {
-	"patternName": "refrain1",
+	"patternName": "refrain",
 	"pattern": [
 	{
+        "stepID" : 0,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 1,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 2,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.25
+        }]
+	},{
         "stepID" : 3,
         "doors" : [{
                 "position": 0.435,
@@ -53,6 +71,30 @@
         "stepID" : 11,
         "doors" : [{
                 "position": 0.40,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 12,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 13,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 14,
+        "doors" : [{
+                "position": 0.60,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 15,
+        "doors" : [{
+                "position": 0.50,
                 "size": 0.25
         }]
 	}] 
