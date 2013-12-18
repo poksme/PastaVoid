@@ -1,5 +1,6 @@
 package PastaVoid;
 
+import GameEngine.Color;
 import processing.core.PVector;
 
 public class Particle {
@@ -8,8 +9,9 @@ public class Particle {
 	  private PVector acceleration;
 	  private PVector prevLocation;
 	  float lifespan;
+	  Color	color;
 	
-	  Particle(PVector l, Game parent) {
+	  Particle(PVector l, Game parent, Color particleColor) {
 	    acceleration = new PVector(0,0.08f);
 	    prevLocation = new PVector(0, 0);
 	    velocity = new PVector(parent.random(-3,3),parent.random(-1,3));
@@ -17,20 +19,22 @@ public class Particle {
 	    prevLocation.x = location.x;
 	    prevLocation.y = location.y;
 	    lifespan = 200.0f;
+	    color = particleColor;
 	  }
 	
 	  // Method to update location
 	  public void update() {
-		    prevLocation.x = location.x;
-		    prevLocation.y = location.y;
+		prevLocation.x = location.x;
+		prevLocation.y = location.y;
 	    velocity.add(acceleration);
 	    location.add(velocity);
-	    lifespan -= 1.0;
+	    lifespan -= 1.0f;
 	  }
 	
 	  // Method to display
 	  public void display(Game parent) {
-	    parent.stroke(255,lifespan);
+		 
+		parent.stroke(color.red, color.green, color.blue, lifespan);
 	    parent.fill(255,lifespan);
 	    parent.strokeWeight(10);
 	    

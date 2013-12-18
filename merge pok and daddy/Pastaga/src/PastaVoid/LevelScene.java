@@ -134,9 +134,9 @@ public class LevelScene extends AScene {
 //        this.particleSystemSimple.run();
      }
 
-    public void drawBeanParticleSystem(){
+    public void drawParticleSystem(){
     	//particleSystemSmallBean.draw(this.game, player._posX, this.getCamera().getOffset() + 0.5f, true);
-    	particleSystemSimple.createParticleSystem(this.game, player._posX * game.width);
+    	particleSystemSimple.createParticleSystem(this.game, player._posX * game.width - ((player._posX - 0.5f) * game.width/5));
     }
     
     public	void setGuiScene(GuiScene scene) {

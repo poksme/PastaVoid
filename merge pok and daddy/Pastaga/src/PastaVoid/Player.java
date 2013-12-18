@@ -57,10 +57,10 @@ public class Player {
 	public void	onPassedStep() {
 //		System.out.println("Successfully passed a step!");
 		_levelScene.getGuiScene().playerPass();
-		_color.red = 0;
+		/*_color.red = 0;
 		_color.green = 255;
-		_color.blue = 0;
-		_levelScene.drawBeanParticleSystem();
+		_color.blue = 0;*/
+		_levelScene.drawParticleSystem();
 	}
 	
 	public void	onStartCollision() {
