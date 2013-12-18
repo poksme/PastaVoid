@@ -20,6 +20,9 @@
 		},{
 		"music": "daybreak.mp3",
 		"script" : "daybreak.json"
+		},{
+		"music": "crayon_pop.mp3",
+		"script" : "crayon_pop.json"
 		}],
 	"version" : "0.2a"
 }

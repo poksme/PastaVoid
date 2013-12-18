@@ -1,0 +1,20 @@
+{
+	"name": "Bar Bar Bar",
+	"artist" : "Crayon Pop",
+	"bpm" : 134.0,
+	"playerSpeed" : 0.0010;
+	"barNumber": 127,
+	"introDelay": 300,
+	"patternPaths" : [
+		"crayon_intro_1.json"
+	], 
+	"patterns" : [{
+		"startBar": 0,
+		"endBar": 6,
+		"patternName" : "crayon_intro_1"
+	},{
+		"startBar": 9,
+		"endBar": 100,
+		"patternName" : "crayon_intro_1"
+	}]
+}
