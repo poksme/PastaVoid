@@ -1,5 +1,6 @@
 package PastaVoid;
 
+import processing.core.PImage;
 import GameEngine.AScene;
 import GameEngine.KeysManager;
 
@@ -14,6 +15,7 @@ public class GuiScene extends AScene{
 	float			_hit;
 	int				_scoring;
 	int				_playerScore;
+	private PImage 	_healthBar;
 	
 	public GuiScene(Game game, LevelScene levelScene) {
 		super(game, true, true);
@@ -25,6 +27,7 @@ public class GuiScene extends AScene{
 		_playerScore = 0;
 		_steps = _levelScene.getConfigurationLevel().getBarNumber() * 16;
 		_levelScene.setGuiScene(this);
+		_healthBar = game.loadImage("HealthBar.png");
 		for (int i = 0; i < _steps; i++) {
             if (_levelScene.getConfigurationLevel().hasDoor(i)) 
             	_doors++; 
@@ -41,26 +44,15 @@ public class GuiScene extends AScene{
 
 	@Override
 	public void update(long elapsedTime) {
-		// TODO Auto-generated method stub
-		//if (KeysManager.getInstance().keyIsPressed(KeysManager.EKeys.LEFT) == true) {
-			//if (_gaugeHeight > 0)
-				//_gaugeHeight -= _hit;
-		//}
+
 	}
 
 	@Override
 	public void draw(Game parent) {
 		parent.camera();
-		parent.fill(42, 124, 214);
-		parent.stroke(255);
-		parent.strokeWeight(3);
-		parent.rect(20, 20, 40, _gaugeMaxHeight);
-		parent.fill(0);
-		parent.strokeWeight(0);
-		parent.rect(20, 20, 40, _gaugeHeight);
-		// COMMENTED BECAUSE A PRINT AT EACH DRAW SLOW DOWN MY COMPUTER
-		//parent.println(_playerScore);
-		// TODO Auto-generated method stub
+		parent.image(_healthBar, 
+					20, 20 + _gaugeHeight, 	50, _gaugeMaxHeight - _gaugeHeight,
+					0, (int)(_gaugeHeight), 50, (int)(_gaugeMaxHeight));
 	}
 	
 	public void playerTouched() {
