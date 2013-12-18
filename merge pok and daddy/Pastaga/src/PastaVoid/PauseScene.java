@@ -33,13 +33,13 @@ public class PauseScene extends AScene {
 		}
 		if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER) || KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.SPACE)) {
 			if (curElem == 0) {
-    		this.game.getCurrentSong().play();
     		pausedLevel.setUpdatable(true);
     		pausedLevel.setDrawable(true);
     		pausedLevel.getGuiScene().setDrawable(true);
     		pausedLevel.getGuiScene().setUpdatable(true);
     		pausedLevel.setPaused(false);
     		SceneManager.getInstance().removeScene(this);
+    		this.game.getCurrentSong().play();
 			} else if (curElem == 1) {
 				pausedLevel.reset();
 	    		pausedLevel.setUpdatable(true);
