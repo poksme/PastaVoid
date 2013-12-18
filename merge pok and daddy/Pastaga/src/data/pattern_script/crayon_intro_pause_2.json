@@ -1,13 +1,7 @@
 {
-	"patternName": "crayon_intro_1",
+	"patternName": "crayon_intro_pause_2",
 	"pattern": [
 	{
-        "stepID" : 0,
-       "doors" : [{
-                "position": 0.20,
-                "size": 1.0
-        }]
-	},	{
         "stepID" : 4,
        "doors" : [{
                 "position": 0.20,

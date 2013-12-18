@@ -60,7 +60,8 @@ public class Game extends PApplet {
 //        LevelScene tmpLevelScene = new LevelScene(this, config);
 //        this.sceneManager.addScene(tmpLevelScene);
 //        this.sceneManager.addScene(new PlayerScene(this, Game.WIDTH, tmpLevelScene));
-        this.sceneManager.addScene(new MenuScene(this, config));
+//        this.sceneManager.addScene(new MenuScene(this, config));
+        this.sceneManager.addScene(new SecretScene(this, config));
 //=======
 //        LevelScene tmpLevelScene = new LevelScene(this, config);
 //        this.sceneManager.addScene(tmpLevelScene);

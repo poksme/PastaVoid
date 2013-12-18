@@ -4,14 +4,33 @@
 	"bpm" : 134.0,
 	"playerSpeed" : 0.0010;
 	"barNumber": 127,
-	"introDelay": 300,
+	"introDelay": 200,
 	"patternPaths" : [
-		"crayon_intro_1.json"
+		"crayon_intro_1.json",
+		"crayon_intro_2.json",
+		"crayon_intro_pause_1.json",
+		"crayon_intro_pause_2.json"
 	], 
 	"patterns" : [{
 		"startBar": 0,
+		"endBar": 2,
+		"patternName" : "crayon_intro_1"
+	},{
+		"startBar": 3,
+		"endBar": 3,
+		"patternName" : "crayon_intro_2"
+	}, {
+		"startBar": 4,
 		"endBar": 6,
 		"patternName" : "crayon_intro_1"
+	},{
+		"startBar": 7,
+		"endBar": 7,
+		"patternName" : "crayon_intro_pause_1"
+	},{
+		"startBar": 8,
+		"endBar": 8,
+		"patternName" : "crayon_intro_pause_2"
 	},{
 		"startBar": 9,
 		"endBar": 100,

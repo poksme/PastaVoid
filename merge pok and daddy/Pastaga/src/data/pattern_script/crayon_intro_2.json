@@ -1,35 +1,23 @@
 {
-	"patternName": "crayon_intro_1",
+	"patternName": "crayon_intro_2",
 	"pattern": [
 	{
         "stepID" : 0,
-       "doors" : [{
+        "doors" : [{
                 "position": 0.20,
                 "size": 1.0
         }]
-	},	{
+	}, {
         "stepID" : 4,
        "doors" : [{
                 "position": 0.20,
                 "size": 0.40
         }]
-	},   {
+	}, {
         "stepID" : 8,
         "doors" : [{
                 "position": 0.20,
                 "size": 0.40
-        }]
-	}, {
-        "stepID" : 9,
-        "doors" : [{
-                "position": 0.20,
-                "size": 0.60
-        }]
-	}, {
-        "stepID" : 10,
-        "doors" : [{
-                "position": 0.20,
-                "size": 0.60
         }]
 	}, {
         "stepID" : 12,
