@@ -29,7 +29,7 @@ public class LevelScene extends AScene {
     private AudioPlayer playingSong;
     private GuiScene	guiScene;
     private	ParticleSystemSimple particleSystemSimple;
-    private	ParticleSystemSmallBean	particleSystemSmallBean;
+//    private	ParticleSystemSmallBean	particleSystemSmallBean;
     
     public LevelScene(Game game, Configuration.Level level, AudioPlayer playingSong) {
     	super(game, true, true); // VISIBLE UPDTABLE
@@ -42,7 +42,7 @@ public class LevelScene extends AScene {
         this.isPaused = false;
         this.pauseMenu = null;
         this.guiScene = null;
-        this.particleSystemSmallBean = new ParticleSystemSmallBean(this.game, this.game.width, this.game.height);
+//        this.particleSystemSmallBean = new ParticleSystemSmallBean(this.game, this.game.width, this.game.height);
         this.particleSystemSimple = new ParticleSystemSimple(new PVector(400,520), this.game);
     }
         
@@ -107,6 +107,10 @@ public class LevelScene extends AScene {
     	}
     }
 
+    public boolean maxChain() {
+    	return particleSystemSimple.maximumParticle();
+    }
+    
     public void draw(Game parent) {
 		parent.colorMode(parent.RGB);
     	// THIS MAY BE NEED FOR BETTER BLUR ?

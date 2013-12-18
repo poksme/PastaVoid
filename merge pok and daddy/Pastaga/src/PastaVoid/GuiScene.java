@@ -16,6 +16,7 @@ public class GuiScene extends AScene{
 	int				_scoring;
 	int				_playerScore;
 	private PImage 	_healthBar;
+	private PImage 	_healthBg;
 	
 	public GuiScene(Game game, LevelScene levelScene) {
 		super(game, true, true);
@@ -28,6 +29,7 @@ public class GuiScene extends AScene{
 		_steps = _levelScene.getConfigurationLevel().getBarNumber() * 16;
 		_levelScene.setGuiScene(this);
 		_healthBar = game.loadImage("HealthBar.png");
+		_healthBg = game.loadImage("HealthBackground.png");
 		for (int i = 0; i < _steps; i++) {
             if (_levelScene.getConfigurationLevel().hasDoor(i)) 
             	_doors++; 
@@ -50,9 +52,13 @@ public class GuiScene extends AScene{
 	@Override
 	public void draw(Game parent) {
 		parent.camera();
+		parent.image(_healthBg, 20, 20);
 		parent.image(_healthBar, 
 					20, 20 + _gaugeHeight, 	50, _gaugeMaxHeight - _gaugeHeight,
 					0, (int)(_gaugeHeight), 50, (int)(_gaugeMaxHeight));
+		parent.fill(255);
+		parent.textAlign(parent.RIGHT);
+		parent.text("SCORE\n" + _playerScore + "\n" + getMultiplierString(), game.width + 200, -100, -300);
 	}
 	
 	public void playerTouched() {
@@ -60,10 +66,22 @@ public class GuiScene extends AScene{
 			_gaugeHeight += _hit * 10;
 	}
 	
+	public String getMultiplierString() {
+		if (_levelScene.maxChain()) {
+			return "x2";
+		} else {
+			return "";
+		}
+	}
+	
 	public void playerPass() {
 		if (_gaugeHeight >= 0)
 			_gaugeHeight -= _hit;
-		_playerScore += _scoring;
+		if (_levelScene.maxChain()) {
+			_playerScore += _scoring * 2;
+		} else {
+			_playerScore += _scoring;			
+		}
 	}
 	
 	public	int	getPlayerScore() {

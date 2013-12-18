@@ -34,12 +34,16 @@ public class ParticleSystemSimple {
 			  if (i < whiteParticleNb)
 				  particles.add(new Particle(location, parent, new Color(255, 255, 255)));
 			  else {
-				  if ((int)parent.random(2) == 1)
+				  if (i%2 == 0)
 						particles.add(new Particle(location, parent, new Color(30, 73, 145)));
 					else
 						particles.add(new Particle(location, parent, new Color(48, 117, 232)));
 			  }
 		  }
+	  }
+	  
+	  public boolean maximumParticle() {
+		  return ((int)particleNb >= maxParticleNb);
 	  }
 	  
 	  void resetParticleSystem(){
