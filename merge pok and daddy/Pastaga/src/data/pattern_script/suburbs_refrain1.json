@@ -2,27 +2,57 @@
 	"patternName": "refrain1",
 	"pattern": [
 	{
+        "stepID" : 3,
+        "doors" : [{
+                "position": 0.435,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.25
+        }]
+	},{
         "stepID" : 5,
         "doors" : [{
-                "position": 0.55,
+                "position": 0.585,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 6,
+        "doors" : [{
+                "position": 0.50,
                 "size": 0.25
         }]
 	},{
         "stepID" : 7,
         "doors" : [{
-                "position": 0.45,
+                "position": 0.40,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.50,
                 "size": 0.25
         }]
 	},{
         "stepID" : 9,
         "doors" : [{
-                "position": 0.55,
+                "position": 0.60,
+                "size": 0.25
+        }]
+	},{
+        "stepID" : 10,
+        "doors" : [{
+                "position": 0.50,
                 "size": 0.25
         }]
 	},{
         "stepID" : 11,
         "doors" : [{
-                "position": 0.45,
+                "position": 0.40,
                 "size": 0.25
         }]
 	}] 
