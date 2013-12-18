@@ -19,11 +19,11 @@
 	"patterns" : [{
 		"startBar": 0,
 		"endBar": 0,
-		"patternName" : "paris_break_2_left"
+		"patternName" : "paris_intro_1"
 	}, {
 		"startBar": 1,
 		"endBar": 1,
-		"patternName" : "paris_break_2_left"
+		"patternName" : "paris_intro_2"
 	}, {
 		"startBar": 2,
 		"endBar": 2,
