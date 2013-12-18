@@ -1,0 +1,102 @@
+{
+	"patternName": "crysis1",
+	"pattern": [
+	{
+        "stepID" : 0,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 1,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.15
+        }]
+	},{
+        "stepID" : 2,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 3,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.15
+        }]
+	},{
+        "stepID" : 5,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 6,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 7,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 8,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 9,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 10,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 11,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 12,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 13,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.15
+        }]
+	},{
+        "stepID" : 14,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	},{
+        "stepID" : 15,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.30
+        }]
+	}]
+	}] 
+}
