@@ -3,7 +3,7 @@
 	"artist" : "Daft Punk",
 	"bpm" : 123,
 	"playerSpeed" : 0.0005;
-	"barNumber": 150,
+	"barNumber": 105,
 	"introDelay": 0,
 	"patternPaths" : [
 		"my_first_pattern.json",
@@ -424,12 +424,8 @@
 		"endBar": 103,
 		"patternName" : "aerodynamic_outro_to_left_variant"
 	},{
-		"startBar": 108,
-		"endBar": 108,
+		"startBar": 104,
+		"endBar": 104,
 		"patternName" : "aerodynamic_stairs_4_to_right"
-	},{
-		"startBar": 109,
-		"endBar": 109,
-		"patternName" : "aerodynamic_stairs_4_to_left"
 	}]
 }

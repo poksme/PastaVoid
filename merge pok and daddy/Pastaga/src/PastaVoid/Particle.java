@@ -38,8 +38,11 @@ public class Particle {
 	    parent.fill(255,lifespan);
 	    parent.strokeWeight(10);
 	    
-	    //parent.rect(location.x,location.y,5,5);
-	    parent.line(location.x, location.y, 0, prevLocation.x, prevLocation.y, 0);
+	    /*if (color.red == 255)
+	    	parent.rect(location.x,location.y,5,5);
+	    else*/
+	    	parent.line(location.x, location.y, 0, prevLocation.x, prevLocation.y, 0);
+	    
 	    parent.smooth();
 	  }
 	  

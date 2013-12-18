@@ -1,6 +1,7 @@
 package PastaVoid;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import GameEngine.Color;
 import processing.core.PVector;
@@ -8,24 +9,41 @@ import processing.core.PVector;
 public class ParticleSystemSimple {
 	 ArrayList<Particle> particles;
 	 PVector origin;
-	 int	particleNb = 20;
+	 float	particleNb = 0f;
+	 int	maxParticleNb = 25;
 	 
 	  ParticleSystemSimple(PVector location, Game parent) {
-	    particles = new ArrayList<Particle>(particleNb);
+	    particles = new ArrayList<Particle>(maxParticleNb);
 	  }
 	  
 	  void createParticleSystem(Game parent, float posX)
 	  {
-		  for (int i = 0; i < particleNb; i++)
-		    addParticle(parent, new PVector(posX, 520));
+		  if (particleNb < maxParticleNb)
+			  particleNb+=0.5f;
+		  //for (int i = 0; i < (int)particleNb; i++)
+		    addParticles(parent, new PVector(posX, 520));
 	  }
 	  
-	  void addParticle(Game parent, PVector location) {
-		if ((int)parent.random(2) == 1)
-			particles.add(new Particle(location, parent, new Color(30, 73, 145)));
-		else
-			particles.add(new Particle(location, parent, new Color(48, 117, 232)));
-			//particles.add(new Particle(location, parent, new Color(255,255,255)));
+	  void addParticles(Game parent, PVector location) {
+		  float cur = particleNb;
+		  int whiteParticleNb = (int)(cur * (cur/maxParticleNb));
+
+		  parent.println(cur);
+		  for (int i = 0; i < (int)particleNb; i++)
+		  {
+			  if (i < whiteParticleNb)
+				  particles.add(new Particle(location, parent, new Color(255, 255, 255)));
+			  else {
+				  if ((int)parent.random(2) == 1)
+						particles.add(new Particle(location, parent, new Color(30, 73, 145)));
+					else
+						particles.add(new Particle(location, parent, new Color(48, 117, 232)));
+			  }
+		  }
+	  }
+	  
+	  void resetParticleSystem(){
+		  particleNb = 0f;
 	  }
 	  
 	  void draw(Game parent){

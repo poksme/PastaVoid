@@ -69,6 +69,7 @@ public class Player {
 		_color.green = 0;
 		_color.blue = 0;
 		_levelScene.getGuiScene().playerTouched();
+		_levelScene.resetParticleSystem();
 	}
 	
 	public void	onColliding() {

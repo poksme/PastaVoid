@@ -139,6 +139,10 @@ public class LevelScene extends AScene {
     	particleSystemSimple.createParticleSystem(this.game, player._posX * game.width - ((player._posX - 0.5f) * game.width/5));
     }
     
+    public void resetParticleSystem(){
+    	particleSystemSimple.resetParticleSystem();
+    }
+    
     public	void setGuiScene(GuiScene scene) {
     	guiScene = scene;
     }
