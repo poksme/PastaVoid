@@ -19,8 +19,8 @@ public class GuiScene extends AScene{
 		super(game, true, true);
 		_levelScene = levelScene;
 		_life = 0.5f;
-		_gaugeHeight = 500.0f;
-		_gaugeMaxHeight = 500;
+		_gaugeHeight = 400.0f;
+		_gaugeMaxHeight = 500.f;
 		_scoring = 100;
 		_playerScore = 0;
 		_steps = _levelScene.getConfigurationLevel().getBarNumber() * 16;
@@ -76,5 +76,9 @@ public class GuiScene extends AScene{
 	
 	public	int	getPlayerScore() {
 		return _playerScore;
+	}
+	
+	public boolean barIsEmpty() {
+		return (_gaugeHeight >= _gaugeMaxHeight);
 	}
 }
