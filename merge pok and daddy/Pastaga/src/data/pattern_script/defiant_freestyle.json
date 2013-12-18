@@ -1,0 +1,47 @@
+{
+	"patternName": "defiant_freestyle",
+	"pattern": [
+	{
+        "stepID" : 1,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.50
+                }]
+        }, {
+        "stepID" : 4,
+        "doors" : [{
+                "position": 0.30,
+                "size": 0.15
+                }]
+        }, {
+        "stepID" : 6,
+        "doors" : [{
+                "position": 0.35,
+                "size": 0.50
+                }]
+        }, {
+        "stepID" : 10,
+        "doors" : [{
+                "position": 0.50,
+                "size": 0.15
+                }]
+        }, {        
+        "stepID" : 11,
+        "doors" : [{
+                "position": 0.30,
+                "size": 0.50
+                }]
+        }, {
+        "stepID" : 14,
+        "doors" : [{
+                "position": 0.70,
+                "size": 0.50
+                }]
+        }, {
+        "stepID" : 15,
+        "doors" : [{
+                "position": 0.40,
+                "size": 0.50
+                }]
+       }] 
+}

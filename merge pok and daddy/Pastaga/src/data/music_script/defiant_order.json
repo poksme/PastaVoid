@@ -18,7 +18,9 @@
 		"defiant_tunnel_2.json",
 		"defiant_bassline.json",
 		"defiant_bassline_2.json",
-		"defiant_bassline_3.json"
+		"defiant_bassline_3.json",
+		"defiant_bassline_4.json",
+		"defiant_freestyle.json"
 		
 	],
 	"patterns" : [{
@@ -91,7 +93,83 @@
 		"patternName" : "defiant_snare_roll"
 	}, {
 		"startBar": 32,
-		"endBar": 84,
+		"endBar": 35,
 		"patternName" : "defiant_bassline_3"
+	}, {
+		"startBar": 36,
+		"endBar": 39,
+		"patternName" : "defiant_bassline_4"
+	}, {
+		"startBar": 40,
+		"endBar": 47,
+		"patternName" : "defiant_freestyle"
+	}, {
+		"startBar": 49,
+		"endBar": 49,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 50,
+		"endBar": 50,
+		"patternName" : "arpeggioPart1"
+	}, {
+		"startBar": 51,
+		"endBar": 51,
+		"patternName" : "arpeggioPart2"
+	}, {
+		"startBar": 52,
+		"endBar": 52,
+		"patternName" : "arpeggioPart3"
+	}, {
+		"startBar": 53,
+		"endBar": 53,
+		"patternName" : "arpeggioPart4"
+	}, {
+		"startBar": 54,
+		"endBar": 54,
+		"patternName" : "arpeggioPart3"
+	}, {
+		"startBar": 55,
+		"endBar": 55,
+		"patternName" : "defiant_snare_roll"
+	}, {
+		"startBar": 56,
+		"endBar": 58,
+		"patternName" : "myFirstPattern"
+	}, {
+		"startBar": 59,
+		"endBar": 63,
+		"patternName" : "defiant_bassline"
+	}, {
+		"startBar": 64,
+		"endBar": 66,
+		"patternName" : "defiant_bassline_2"
+	}, {
+		"startBar": 67,
+		"endBar": 67,
+		"patternName" : "defiant_snare_roll"
+	}, {
+		"startBar": 68,
+		"endBar": 71,
+		"patternName" : "defiant_bassline_3"
+	}, {
+		"startBar": 72,
+		"endBar": 72,
+		"patternName" : "defiant_snare_roll_2"		
+	}, {
+		"startBar": 73,
+		"endBar": 75,
+		"patternName" : "defiant_kick_snare_2"
+	}, {
+		"startBar": 76,
+		"endBar": 76,
+		"patternName" : "defiant_snare_roll_2"
+	}, {
+		"startBar": 77,
+		"endBar": 80,
+		"patternName" : "defiant_tunnel"
+	}, {
+		"startBar": 81,
+		"endBar": 84,
+		"patternName" : "defiant_tunnel_2"
 	}]
 }
