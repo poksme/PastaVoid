@@ -45,8 +45,8 @@ public class MenuScene extends AScene {
 			curSong = ((curSong - 1) < 0) ? songLibrary.size() - 1 : curSong - 1;
 		}
 		if (KeysManager.getInstance().keyIsPressedOnce(KeysManager.EKeys.ENTER)) {
-			game.getSongPlayer().get(curSong).play();
-			game.setCurrentSong(game.getSongPlayer().get(curSong));
+//			game.getSongPlayer().get(curSong).play();
+//			game.setCurrentSong(game.getSongPlayer().get(curSong));
 			//game.getSongPlayer().get(curSong).mute();
 			this.setDrawable(false);
 			this.setUpdatable(false);
@@ -55,6 +55,9 @@ public class MenuScene extends AScene {
 	        SceneManager.getInstance().addScene(levelScene);
 	        GuiScene guiScene = new GuiScene(game, levelScene);
 	        SceneManager.getInstance().addScene(guiScene);
+			game.setCurrentSong(game.getSongPlayer().get(curSong));
+			// NEED TO PLAY AS THE LEAST ACTION
+			game.getSongPlayer().get(curSong).play();
 //	        SceneManager.getInstance().addScene(new Player(game, game.WIDTH, tmpLevelScene));
 		}
 	}
