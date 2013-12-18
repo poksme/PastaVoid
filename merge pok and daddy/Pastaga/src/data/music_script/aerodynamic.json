@@ -7,9 +7,6 @@
 	"introDelay": 0,
 	"patternPaths" : [
 		"my_first_pattern.json",
-		"aerodynamic_bell_middle.json",
-		"aerodynamic_bell_left.json",
-		"aerodynamic_bell_right.json",
 		"aerodynamic_intro_to_left.json",
 		"aerodynamic_intro_to_right.json",
 		"aerodynamic_intro_to_left_kick.json",
