@@ -12,7 +12,9 @@
 		"suburbs_crysis1.json",
 		"suburbs_crysis2.json",
 		"suburbs_crysis3.json",
-		"suburbs_bass.json"
+		"suburbs_bass.json",
+		"suburbs_refrain_hard.json",
+		"suburbs_keyboard.json"
 	],
 	"patterns" : [{
 		"startBar": 5,
@@ -194,5 +196,89 @@
 		"startBar": 55,
 		"endBar": 55,
 		"patternName" : "kick_right"
+	},{
+		"startBar": 56,
+		"endBar": 56,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 58,
+		"endBar": 58,
+		"patternName" : "crysis1"
+	},{
+		"startBar": 59,
+		"endBar": 59,
+		"patternName" : "crysis2"
+	},{
+		"startBar": 60,
+		"endBar": 60,
+		"patternName" : "crysis1"
+	},{
+		"startBar": 61,
+		"endBar": 61,
+		"patternName" : "crysis3"
+	},{
+		"startBar": 62,
+		"endBar": 62,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 63,
+		"endBar": 63,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 64,
+		"endBar": 64,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 65,
+		"endBar": 65,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 66,
+		"endBar": 66,
+		"patternName" : "kick_left"
+	},{
+		"startBar": 67,
+		"endBar": 67,
+		"patternName" : "kick_right"
+	},{
+		"startBar": 68,
+		"endBar": 68,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 69,
+		"endBar": 69,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 70,
+		"endBar": 70,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 71,
+		"endBar": 71,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 72,
+		"endBar": 72,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 73,
+		"endBar": 73,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 74,
+		"endBar": 74,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 75,
+		"endBar": 75,
+		"patternName" : "refrain_hard"
+	},{
+		"startBar": 76,
+		"endBar": 76,
+		"patternName" : "keyboard"
+	},{
+		"startBar": 77,
+		"endBar": 77,
+		"patternName" : "keyboard"
 	}]
 }
