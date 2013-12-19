@@ -25,8 +25,8 @@ public class Game extends PApplet {
 
     public static void main(String args[]) {
     	// SWITCH THESE TWO LINES TO ENABLE FULLSCREEN
-//        PApplet.main(new String[] { "--present", "PastaVoid.Game" });
-    	PApplet.main(new String[] { "PastaVoid.Game" });
+        PApplet.main(new String[] { "--present", "PastaVoid.Game" });
+//    	PApplet.main(new String[] { "PastaVoid.Game" });
       }
     
     public ArrayList<AudioPlayer> getSongPlayer() {
