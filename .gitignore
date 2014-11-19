@@ -5,3 +5,4 @@ Pastaga/application.linux
 Pastaga/applet
 *.class
 *.mp3
+.DS_Store
