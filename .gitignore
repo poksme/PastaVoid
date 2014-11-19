@@ -1,6 +1,7 @@
-merge pok and daddy/Pastaga/bin
-merge pok and daddy/Pastaga/application.windows
-merge pok and daddy/Pastaga/application.macosx
-merge pok and daddy/Pastaga/application.linux
-merge pok and daddy/Pastaga/applet
+Pastaga/bin
+Pastaga/application.windows
+Pastaga/application.macosx
+Pastaga/application.linux
+Pastaga/applet
 *.class
+*.mp3
